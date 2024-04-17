@@ -13,73 +13,361 @@
 </head>
 
 <body>
-    <!--=================
-        START OF HEADER
+    <!--START OF SIDE CART-->
+    <!--side cart-->
+    <div class="side_cart">
+        <div class="side_cart_bg"></div>
+        <div class="side_cart_wrapper">
+            <div class="rate_mini_popup">
+                <div class="mini_popup_bg3"></div>
+                <div class="rate_wrapper">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <span><i class="fa-solid fa-box-tissue"></i></span>
+                        <p>Estimate shipping rates:</p>
+                    </div>
+                    <form class="shiping_form d-flex flex-column gap-3">
+                        <div class="single_input d-flex justify-content-center flex-column">
+                            <label for="country_select">Country</label>
+                            <select id="country_select" disabled required>
+                                <option value="" selected>Select Country</option>
+                                <option value="">United Kindom</option>
+                                <option value="">United State</option>
+                                <option value="">China</option>
+                                <option value="">Bangladesh</option>
+                                <option value="">Japan</option>
+                                <option value="">Butan</option>
+                                <option value="">Saudi Arabia</option>
+                            </select>
+                        </div>
+                        <div class="single_input d-flex justify-content-center flex-column">
+                            <label for="State">State</label>
+                            <select id="State" disabled required>
+                                <option value="" selected>Select State</option>
+                                <option value="">United Kindom</option>
+                                <option value="">United State</option>
+                                <option value="">China</option>
+                                <option value="">Bangladesh</option>
+                                <option value="">Japan</option>
+                                <option value="">Butan</option>
+                                <option value="">Saudi Arabia</option>
+                            </select>
+                        </div>
+                        <div class="single_input d-flex justify-content-center flex-column">
+                            <label for="postal_code">Zip/Postal Code</label>
+                            <input type="text" id="postal_code" placeholder="Zip/Postal Code" required>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center gap-2 flex-column">
+                            <button type="submit">Calculate Shipping Rates</button>
+                            <button class="rate_cancle">Cancle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="gift_mini_popup">
+                <div class="mini_popup_bg2"></div>
+                <div class="gift_wrap">
+                    <span><i class="fa-solid fa-gift"></i></span>
+                    <p>Do you want a gift wrap? Only $80</p>
+                    <button class="gift_btn">Add A Gift Wra</button>
+                    <button class=" delete_gift">Cancle</button>
+                </div>
+            </div>
+            <div class="mini_popup">
+                <div class="mini_popup_bg1"></div>
+                <div class="popup_div">
+                    <div class="d-flex align-items-center gap-2 ">
+                        <span>
+                            <i class="fa-solid fa-file-lines"></i>
+                        </span>
+                        <span>Add Order Note</span>
+                    </div>
+                    <div class="note_form">
+                        <textarea id="note_input" required></textarea>
+                        <div class="form_btns">
+                            <button type="submit">Save</button>
+                            <button class="delete_card">Cancle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_up">
+                <div class="cart_header d-flex align-items-center justify-content-between">
+                    <h3>Shopping Cart</h3>
+                    <span class="cart_close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="product_list">
+                    <div class="single_cart_product">
+                        <div class="cart_img">
+                            <img class="img-fluid" src="img/card-2.png" alt="cart image">
+                        </div>
+                        <div class="product_info">
+                            <div class="d-flex align-items-center justify-content-between ">
+                                <h3><a href="#">Primium Vitamin Shirap</a></h3>
+                                <span class="remove_btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                </span>
+                            </div>
+                            <span>$180</span>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="quantity d-flex align-items-center">
+                                    <button class="decrease">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <input type="number" id="cart_value" class="cart_value" min="1" value="01">
+                                    <button class="increase">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_bottom">
+                <div class="progress_area d-flex flex-column gap-2">
+                    <div class="progress_bar">
+                        <div class="fill_area"></div>
+                        <span class="free_shiping_icon"><i class="fa-solid fa-truck-fast"></i></span>
+                    </div>
+                    <p class="mb-0">Congratulations! You've got <span>Free Shipping!</span></p>
+                </div>
+                <div class="cart_option d-flex align-items-center justify-content-between">
+                    <button class="note_btn">
+                        <i class="fa-regular fa-note-sticky"></i>
+                    </button>
+                    <button class="gift_btn">
+                        <i class="fa-solid fa-gift"></i>
+                    </button>
+                    <button class="estimate_btn">
+                        <i class="fa-solid fa-hand-holding-droplet"></i>
+                    </button>
+                </div>
+                <div class="cart_count d-flex justify-content-between 
+            align-items-center">
+                    <b>Subtotal</b>
+                    <span>$486</span>
+                </div>
+                <div class="cart_btns d-flex gap-2 flex-column">
+                    <button>View Cart</button>
+                    <button>Check Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END OF SIDE CART-->
+
+    <!--==================
+         START OF MOBILE MENU 
+    ====================-->
+    <div class="mobile_menu">
+        <div class="mobile_menu_bg"></div>
+        <div class="mobile_wrapper">
+            <span class="mobile_menu_close">
+                <i class="fa-solid fa-x"></i>
+            </span>
+            <div class="mobile_menu_header">
+                <img class="img-fluid" src="img/logo.png" alt="logo image">
+            </div>
+            <div class="mobile_menu_body">
+                <ul>
+                    <li class="list-unstyled menu_item dropdowm_p"><span>Home</span>
+                        <span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                        <div class="inner_items_area">
+                            <h4><span class="back_page">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>Home</h4>
+                            <ul>
+                                <li class="list-unstyled"><a href="index.html">Go To Home</a></li>
+                                <li class="list-unstyled"><a href="#">Home-01</a></li>
+                                <li class="list-unstyled"><a href="#">Home-01</a></li>
+                                <li class="list-unstyled"><a href="#">Home-01</a></li>
+                                <li class="list-unstyled"><a href="#">Home-01</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-unstyled menu_item dropdowm_p"><span>Shop</span>
+                        <span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                        <div class="inner_items_area">
+                            <h4><span class="back_page">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>Shop</h4>
+                            <ul>
+                                <li class="list-unstyled"><a href="shop.html">Go To Shop</a></li>
+                                <li class="list-unstyled"><a href="#">Cart</a></li>
+                                <li class="list-unstyled"><a href="#">Checkout</a></li>
+                                <li class="list-unstyled"><a href="#">My Account</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-unstyled menu_item"><a href="#">Causes</a></li>
+                    <li class="list-unstyled menu_item"><span>Pages</span>
+                        <span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                    </li>
+                    <li class="list-unstyled menu_item"><a href="#">Blog</a></li>
+                    <li class="list-unstyled menu_item"><a href="#">Contact</a></li>
+                    <li class="list-unstyled user_option menu_item"><a href="#"><span><i
+                                    class="fa-regular fa-user me-2"></i>Login/
+                                Register</span></a></li>
+                </ul>
+                <div class="menu_buttons">
+                    <a href="#" class="btn_hover">Donate Now</a>
+                    <a href="#" class="btn_hover btn_x">Become A Volunter</a>
+                </div>
+                <div class="menu_header_optoin">
+                    <h4>Languages</h4>
+                    <ul class="d-flex gap-3 flex-wrap menu_language">
+                        <li class="list-unstyled"><a href="#" class="active"><span class="flag_ln us"></span>English</a>
+                        </li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln es"></span>Spanish</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln fr"></span>Franch</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln sa"></span>English</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln ru"></span>Russian</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln cn"></span>Chinies</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln bd"></span>Bangali</a></li>
+                    </ul>
+                </div>
+                <div class="menu_header_optoin">
+                    <h4>Currancy</h4>
+                    <ul class="d-flex gap-3 flex-wrap menu_currancy">
+                        <li class="list-unstyled "><a href="#" class="active">USD ($)</a></li>
+                        <li class="list-unstyled "><a href="#">EURO (€)</a></li>
+                        <li class="list-unstyled "><a href="#">POUND (£)</a></li>
+                        <li class="list-unstyled "><a href="#">TAKA (৳)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=================  
+         START OF HEADER
     ===================== -->
     <header>
+        <!--START OF SCROL INFO-->
+        <div class="scrolling_news header_news">
+            <div class="container-fluid container-xl">
+                <div class="scrolling_news_wrapper d-flex align-items-center gap-5">
+                    <div class="single_news d-flex align-items-center">
+                        <a href="#">How Your Support Transforms Lives</a>
+                        <a href="#">Innovation and Progress in the World of Charity</a>
+                        <a href="#">Partnering with Organizations for Greater Impact</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                    </div>
+                    <div class="single_news d-flex align-items-center">
+                        <a href="#">How Your Support Transforms Lives</a>
+                        <a href="#">Innovation and Progress in the World of Charity</a>
+                        <a href="#">Partnering with Organizations for Greater Impact</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                    </div>
+                    <div class="single_news d-flex align-items-center">
+                        <a href="#">How Your Support Transforms Lives</a>
+                        <a href="#">Innovation and Progress in the World of Charity</a>
+                        <a href="#">Partnering with Organizations for Greater Impact</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF SCROL INFO-->
         <!--START OF HEADER INFO-->
         <div class="header_info_area">
             <div class="container-fluid container-xl">
-                <div class="info_area_wrapper">
-                    <div class="row align-items-center ">
-                        <div class="col-12 col-md-9">
-                            <div class="hb_left_side d-flex align-items-center gap-2">
-                                <span><i class="fa-solid fa-triangle-exclamation"></i></span>
-                                <p class="mb-0 ">Donation Update: <b>$5035 USD</b> raised of<b>$ 100000 USD</b> goal</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3">
-                            <div class="hb_right_side d-flex justify-content-end ">
-                                <a href="#">
-                                    <span>
-                                        <i class="fa-solid fa-heart"></i>
-                                    </span>
-                                    Give Now
-                                </a>
-                            </div>
-                        </div>
+                <div
+                    class="info_area_wrapper flex-column flex-md-row d-flex align-items-center justify-content-center justify-content-md-between gap-2 gap-md-0">
+                    <div
+                        class="hb_left_side d-flex align-items-center gap-2 justify-content-center justify-content-sm-start">
+                        <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        <p class="mb-0 ">Donation Update: <b>$5035 USD</b> raised of<b>$ 100000 USD</b> goal</p>
+                    </div>
+
+                    <div class="hb_right_side d-flex justify-content-center  justify-content-sm-end ">
+                        <a href="#">
+                            <span>
+                                <i class="fa-solid fa-heart"></i>
+                            </span>
+                            Give Now
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <!--END OF HEADER INFO-->
         <!--START OF TOP HEADER-->
-        <div class="top_header">
+        <div class="top_header d-none d-md-block">
             <div class="container-fluid container-xl">
-                <div class="top_header_wrapper">
-                    <div class="row align-items-center ">
-                        <div class="col-12 col-md-6">
-                            <div class="left_side d-flex align-items-center gap-4">
-                                <div class="phone d-flex align-items-center gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-phone"></i>
-                                    </span>
-                                    <span>+0121 21223 321</span>
-                                </div>
-                                <div class="email d-flex align-items-center gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </span>
-                                    <span>abc1234@gmail.com</span>
-                                </div>
-                            </div>
+                <div class="top_header_wrapper d-flex align-items-center justify-content-between">
+                    <div class="left_side d-flex align-items-center gap-4">
+                        <div class="phone d-flex align-items-center gap-2">
+                            <span>
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span>+0121 21223 321</span>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <div class="right_side d-flex justify-content-end ">
-                                <div class="social_icons d-flex align-items-center gap-2 ">
-                                    <a href="#">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa-brands fa-x-twitter"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </a>
+                        <div class="email d-flex align-items-center gap-2">
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span>abc1234@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="right_side d-flex justify-content-end ">
+                        <div class="right_side_wrapper d-flex align-items-center gap-4">
+                            <div class="language_dropdown">
+                                <div class="selected_item">
+                                    English <span><i class="fa-solid fa-chevron-down"></i></span>
                                 </div>
+                                <ul class="option_dropdown">
+                                    <li class="list-unstyled "><a href="#">English</a></li>
+                                    <li class="list-unstyled es"><a href="#">Spanish</a></li>
+                                    <li class="list-unstyled fr"><a href="#">Franch</a></li>
+                                    <li class="list-unstyled sa"><a href="#">Arabic</a></li>
+                                    <li class="list-unstyled cN"><a href="#">Chinies</a></li>
+                                    <li class="list-unstyled ru"><a href="#">Russian</a></li>
+                                    <li class="list-unstyled bd"><a href="#">Bangali</a></li>
+                                </ul>
+                            </div>
+                            <div class="currancy_dropdown">
+                                <div class="selected_item">
+                                    USD ($)<span><i class="fa-solid fa-chevron-down"></i></span>
+                                </div>
+                                <ul class="option_dropdown">
+                                    <li class="list-unstyled "><a href="#">USD ($)</a></li>
+                                    <li class="list-unstyled "><a href="#">EURO (€)</a></li>
+                                    <li class="list-unstyled "><a href="#">POUND (£)</a></li>
+                                    <li class="list-unstyled "><a href="#">TAKA (৳)</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -90,42 +378,47 @@
         <!--START OF MIDDLE HEADER-->
         <div class="middle_header">
             <div class="container-fluid container-xl ">
-                <div class="middle_header_wrapper">
-                    <div class="row align-items-center ">
-                        <div class="col-3">
-                            <div class="left_side">
-                                <a class="logo">
-                                    <img class="img-fluid" src="img/logo.png" alt="logo image">
+                <div class="middle_header_wrapper d-flex align-items-center justify-content-between ">
+                    <div class="left_side">
+                        <a class="logo">
+                            <img class="img-fluid" src="img/logo.png" alt="logo image">
+                        </a>
+                    </div>
+                    <div class="right_side d-flex align-items-center justify-content-end  gap-4">
+                        <form class="search_bar d-none d-lg-block">
+                            <input type="search" id="desktop_searcbar" placeholder="Searching For...." required>
+                            <button class="search_btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <ul class="side_icons d-flex align-items-center gap-4 mb-0 ps-0 ">
+                            <li class="list-unstyled d-block d-lg-none tooltip_area ">
+                                <a href="#" class="sm_search_icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
-                            </div>
-                        </div>
-                        <div class="col-9">
-                            <div class="right_side d-flex align-items-center justify-content-end  gap-4">
-                                <form class="search_bar">
-                                    <input type="search" id="desktop_searcbar" placeholder="Searching For...." required>
-                                    <button class="search_btn" type="submit">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </form>
-                                <ul class="side_icons d-flex align-items-center gap-4 mb-0 ps-0 ">
-                                    <li class="list-unstyled">
-                                        <a href="#">
-                                            <i class="fa-regular fa-user"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-unstyled">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-unstyled">
-                                        <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                                <span class="tooltip_span tt_top">Search Icon</span>
+                            </li>
+                            <li class="list-unstyled tooltip_area">
+                                <a href="#">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span class="d-none d-lg-inline ">Signup</span>
+                                </a>
+                                <span class="tooltip_span tt_top">Signup</span>
+                            </li>
+                            <li class="list-unstyled tooltip_area">
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                    <span class="d-none d-lg-inline ">Login</span>
+                                </a>
+                                <span class="tooltip_span tt_top">Login</span>
+                            </li>
+                            <li class="list-unstyled tooltip_area">
+                                <a href="#" class="cart_icon">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <span class="tooltip_span tt_top">Cart</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -135,18 +428,32 @@
         <div class="menu_header">
             <div class="container-fluid container-xl ">
                 <div class="menu_header_wrapper d-flex align-items-center justify-content-between ">
-                    <ul class="main_menu d-flex ps-0 mb-0 align-items-center">
+                    <div class="menu_btn_area tooltip_area d-block d-lg-none">
+                        <button class="menu_open  d-grid">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <span class="tooltip_span">Menu Open</span>
+                    </div>
+
+                    <ul class="main_menu d-none d-lg-flex ps-0 mb-0 align-items-center">
                         <li class="list-unstyled">
                             <a href="#">Home <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span></a>
                             <ul class="dropdown_menu">
                                 <li class="list-unstyled "><a href="#">Home -01</a></li>
-                                <li class="list-unstyled "><a href="#">Home -01</a></li>
-                                <li class="list-unstyled "><a href="#">Home -01</a></li>
-                                <li class="list-unstyled "><a href="#">Home -01</a></li>
-                                <li class="list-unstyled "><a href="#">Home -01</a></li>
+                                <li class="list-unstyled "><a href="#">Home -02</a></li>
+                                <li class="list-unstyled "><a href="#">Home -03</a></li>
+                                <li class="list-unstyled "><a href="#">Home -04</a></li>
+                                <li class="list-unstyled "><a href="#">Home -05</a></li>
                             </ul>
                         </li>
-                        <li class="list-unstyled"><a href="#">About</a></li>
+                        <li class="list-unstyled"><a href="#">Shop <span class="ms-1"><i
+                                        class="fa-solid fa-chevron-down"></i></span></a>
+                            <ul class="dropdown_menu">
+                                <li class="list-unstyled "><a href="#">Cart</a></li>
+                                <li class="list-unstyled "><a href="#">Checkout</a></li>
+                                <li class="list-unstyled "><a href="#">My Account</a></li>
+                            </ul>
+                        </li>
                         <li class="list-unstyled">
                             <a href="#">Causes <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span></a>
                             <div class="mega_menu">
@@ -159,7 +466,7 @@
                                                 <p class="text-center ">Lorem ipsum dolor, sit amet consectetur
                                                     adipisicing elit. Doloremque libero eos accusantium ullam
                                                     .</p>
-                                                <a href="#">Sign up Today</a>
+                                                <a href="#" class="btn">Sign up Today</a>
                                             </div>
                                         </div>
                                         <div class="col-9">
@@ -169,19 +476,23 @@
                                                         <div class="swiper-slide">
                                                             <div class="single_cause d-flex align-items-center">
                                                                 <div class="cause_img">
-                                                                    <img class="img-fluid" src="img/h_cause-1.jpg"
+                                                                    <img class="img-fluid" src="img/cause/h_cause-3.jpg"
                                                                         alt="cause image">
                                                                 </div>
                                                                 <div class="cause_info">
                                                                     <a href="#" class="cause_category">Education</a>
-                                                                    <a href="#">Hungry Childen in Africa</a>
-                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facere optio aperiam, cumque corporis dolore.</p>
+                                                                    <a href="#">Empowering Minds Investing in
+                                                                        Education</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
                                                                     <div class="progress_bar">
                                                                         <div class="main_pb">
                                                                             <span>33.33%</span>
                                                                             <div class="fill_pb"></div>
                                                                         </div>
-                                                                        <div class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
                                                                             <div
                                                                                 class="single_box d-flex flex-column gap-1">
                                                                                 <b>Goal</b>
@@ -205,19 +516,22 @@
                                                         <div class="swiper-slide">
                                                             <div class="single_cause d-flex align-items-center two">
                                                                 <div class="cause_img">
-                                                                    <img class="img-fluid" src="img/h_cause-1.jpg"
+                                                                    <img class="img-fluid" src="img/cause/h_cause-2.jpg"
                                                                         alt="cause image">
                                                                 </div>
                                                                 <div class="cause_info">
-                                                                    <a href="#" class="cause_category">Education</a>
-                                                                    <a href="#">Hungry Childen in Africa</a>
-                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facere optio aperiam, cumque corporis dolore.</p>
+                                                                    <a href="#" class="cause_category">Health</a>
+                                                                    <a href="#">Health Awareness and Support</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
                                                                     <div class="progress_bar">
                                                                         <div class="main_pb">
                                                                             <span>20%</span>
                                                                             <div class="fill_pb"></div>
                                                                         </div>
-                                                                        <div class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
                                                                             <div
                                                                                 class="single_box d-flex flex-column gap-1">
                                                                                 <b>Goal</b>
@@ -241,19 +555,23 @@
                                                         <div class="swiper-slide">
                                                             <div class="single_cause d-flex align-items-center three">
                                                                 <div class="cause_img">
-                                                                    <img class="img-fluid" src="img/h_cause-1.jpg"
+                                                                    <img class="img-fluid" src="img/cause/h_cause-1.jpg"
                                                                         alt="cause image">
                                                                 </div>
                                                                 <div class="cause_info">
-                                                                    <a href="#" class="cause_category">Education</a>
-                                                                    <a href="#">Hungry Childen in Africa</a>
-                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facere optio aperiam, cumque corporis dolore.</p>
+                                                                    <a href="#" class="cause_category">Medical</a>
+                                                                    <a href="#">Medical Relief Initiative: Bringing Hope
+                                                                        and Healing</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
                                                                     <div class="progress_bar">
                                                                         <div class="main_pb">
                                                                             <span>71%</span>
                                                                             <div class="fill_pb"></div>
                                                                         </div>
-                                                                        <div class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
                                                                             <div
                                                                                 class="single_box d-flex flex-column gap-1">
                                                                                 <b>Goal</b>
@@ -277,19 +595,23 @@
                                                         <div class="swiper-slide">
                                                             <div class="single_cause d-flex align-items-center four">
                                                                 <div class="cause_img">
-                                                                    <img class="img-fluid" src="img/h_cause-1.jpg"
+                                                                    <img class="img-fluid" src="img/cause/h_cause-4.jpg"
                                                                         alt="cause image">
                                                                 </div>
                                                                 <div class="cause_info">
-                                                                    <a href="#" class="cause_category">Education</a>
-                                                                    <a href="#">Hungry Childen in Africa</a>
-                                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facere optio aperiam, cumque corporis dolore.</p>
+                                                                    <a href="#" class="cause_category">Human Rights</a>
+                                                                    <a href="#">Indigenous People's Rights and Cultural
+                                                                        Preservation</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
                                                                     <div class="progress_bar">
                                                                         <div class="main_pb">
                                                                             <span>65%</span>
                                                                             <div class="fill_pb"></div>
                                                                         </div>
-                                                                        <div class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
                                                                             <div
                                                                                 class="single_box d-flex flex-column gap-1">
                                                                                 <b>Goal</b>
@@ -317,22 +639,215 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                 </div>
                             </div>
-                            </a>
                         </li>
                         <li class="list-unstyled">
                             <a href="#">Pages <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span></a>
+                            <ul class="dropdown_menu">
+                                <li class="list-unstyled "><a href="#">Became A Volunter</a></li>
+                                <li class="list-unstyled "><a href="#">Blog</a></li>
+                                <li class="list-unstyled "><a href="#">Gallary</a></li>
+                                <li class="list-unstyled "><a href="#">Stories</a></li>
+                                <li class="list-unstyled "><a href="#">About Us</a></li>
+                                <li class="list-unstyled "><a href="#">Our Team</a></li>
+                                <li class="list-unstyled "><a href="#">Events</a></li>
+                                <li class="list-unstyled "><a href="#">Testimonials</a></li>
+                                <li class="list-unstyled "><a href="#">FAQs</a></li>
+                                <li class="list-unstyled "><a href="#">404 erorr Page</a></li>
+                            </ul>
                         </li>
-                        <li class="list-unstyled"><a href="#">Blog</a></li>
+                        <li class="list-unstyled"><a href="#">Blog <span class="ms-1"><i
+                                        class="fa-solid fa-chevron-down"></i></span></a>
+                            <div class="mega_menu">
+                                <h2>Latest News</h2>
+                                <div class="mega_menu_wrapper">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="list_blogs">
+                                                <div class="single_blog d-flex align-items-center">
+                                                    <div class="blog_thmb_img">
+                                                        <img class="img-fluid" src="img/blog/blog_1.jpg"
+                                                            alt="blog image">
+                                                    </div>
+                                                    <div class="blog_info">
+                                                        <a href="#" class="blog_category">Eudcation</a>
+                                                        <h3><a href="#">Breaking Barriers: Empowering Women in
+                                                                Sports</a></h3>
+                                                        <span>12 Jun, 2024</span>
+                                                    </div>
+                                                </div>
+                                                <div class="single_blog d-flex align-items-center">
+                                                    <div class="blog_thmb_img">
+                                                        <img class="img-fluid" src="img/blog/blog_2.jpg"
+                                                            alt="blog image">
+                                                    </div>
+                                                    <div class="blog_info">
+                                                        <a href="#" class="blog_category">Eudcation</a>
+                                                        <h3><a href="#">Breaking Barriers: Empowering Women in
+                                                                Sports</a></h3>
+                                                        <span>12 Jun, 2024</span>
+                                                    </div>
+                                                </div>
+                                                <div class="single_blog d-flex align-items-center">
+                                                    <div class="blog_thmb_img">
+                                                        <img class="img-fluid" src="img/blog/blog_3.jpg"
+                                                            alt="blog image">
+                                                    </div>
+                                                    <div class="blog_info">
+                                                        <a href="#" class="blog_category">Eudcation</a>
+                                                        <h3><a href="#">Breaking Barriers: Empowering Women in
+                                                                Sports</a></h3>
+                                                        <span>12 Jun, 2024</span>
+                                                    </div>
+                                                </div>
+                                                <div class="view_btn d-flex align-items-center justify-content-center ">
+                                                    <a href="#" class="btn">View All</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="recent_blog_h_slider">
+                                                <div class="swiper mySwiper2">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_4.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_5.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_4.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                                                    <div class="swiper-button-next swiper-button-next2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li class="list-unstyled"><a href="#">Contact</a></li>
                     </ul>
                     <div class="menu_header_btns d-flex align-items-center gap-3">
-                        <button class="donate_btn">Donate Now</button>
-                        <button class="donate_btn">Became a Volunter</button>
+                        <button class="donate_btn btn_hover">Donate Now</button>
+                        <button class="donate_btn btn_hover btn_x">Became a Volunter</button>
                     </div>
                 </div>
             </div>
