@@ -1,3 +1,23 @@
+//****STICKY HEADER HANDLER */
+const header = document.querySelector("header");
+const toggleClass = "sticky_animation";
+const top_header = document.querySelector(".top_header")
+const news_section = document.querySelector(".scrolling_news")
+
+
+$(document).ready(() => {
+  $(window).on("scroll", () => {
+    if ($(window).scrollTop()) {
+      header.classList.add(toggleClass);
+      top_header.style.display = "none"
+      news_section.style.display = "none"
+    } else {
+      header.classList.remove(toggleClass);
+      top_header.style.display = "block"
+      news_section.style.display = "block"
+    }
+  })
+})
 
 //***=================TOP HEADER LANGUAGE DROPDOWN HANDLER ===============*/
 
@@ -121,39 +141,141 @@ const mobile_menu_area_wrapper = document.querySelector(".mobile_wrapper");
 const mobile_menu_close_btn = document.querySelector(".mobile_menu_close");
 const mobile_menu_open_btn = document.querySelector(".menu_open");
 
+// Function to close the menu
+function closeMenu() {
+  mobile_menu_area.style.animation = "fade_out 1s ease-in forwards";
+  mobile_menu_area_wrapper.style.animation = "slide_left 1s ease-in forwards";
+}
+
+// Open menu event listener
 mobile_menu_open_btn.addEventListener("click", () => {
-  mobile_menu_area.style.animation = "fade_in 1s ease-in forwards"
+  mobile_menu_area.style.animation = "fade_in 1s ease-in forwards";
+  mobile_menu_area_wrapper.style.animation = "slide_right 1s ease-in forwards";
+  mobile_menu_area_wrapper.classList.add("show_menu")
+});
 
-  mobile_menu_area_wrapper.style.animation = "slide_right 1s ease-in forwards"
-})
-mobile_menu_close_btn.addEventListener("click", () => {
-  mobile_menu_area.style.animation = "fade_out 1s ease-in forwards"
+// Close menu event listener
+mobile_menu_close_btn.addEventListener("click", closeMenu);
 
-  mobile_menu_area_wrapper.style.animation = "slide_left 1s ease-in forwards"
+// Event listener to close menu when clicking outside of the menu wrapper
+
+document.body.addEventListener("click", (event) => {
+  if (mobile_menu_area_wrapper.className.includes("show_menu")) {
+    if (!mobile_menu_area_wrapper.contains(event.target) && !mobile_menu_open_btn.contains(event.target)) {
+      closeMenu();
+    }
+  }
+});
+
+//***SCRIPT OF DONATE POPUP */
+const volunteer_popup = document.querySelector(".volunteer_popup")
+const volunteer_wrapper = document.querySelector(".volunteer_wrapper")
+const volunteer_popup_close = document.querySelector(".volunteer_close")
+const volunteer_popup_open = document.querySelector(".volunter_btn ")
+
+volunteer_popup_open.addEventListener("click", () => {
+
+  volunteer_popup.style.animation = "fade_in 1s ease-in forwards"
+  volunteer_wrapper.style.animation = "slide_right 1s ease-in forwards"
+
 })
+volunteer_popup_close.addEventListener("click", () => {
+
+  volunteer_popup.style.animation = "fade_out 1s ease-in forwards"
+  volunteer_wrapper.style.animation = "slide_left 1s ease-in forwards"
+
+})
+
+
+//***SCRIPT OF DONATE POPUP */
+const donate_popup = document.querySelector(".donation_popup")
+const donate_wrapper = document.querySelector(".donation_wrapper")
+const donate_popup_close = document.querySelector(".d_popup_close")
+const donate_popup_open = document.querySelector(".donate_btn")
+
+donate_popup_open.addEventListener("click", () => {
+
+  donate_popup.style.animation = "fade_in 1s ease-in forwards"
+  donate_wrapper.style.animation = "slide_right 1s ease-in forwards"
+
+})
+donate_popup_close.addEventListener("click", () => {
+
+  donate_popup.style.animation = "fade_out 1s ease-in forwards"
+  donate_wrapper.style.animation = "slide_left 1s ease-in forwards"
+
+})
+
+
+//***SCRIPT FOR AMOUNT SELECTION */
+const amounts = document.querySelectorAll(".chooes_amount_wrapper button");
+const amount_show_input = document.querySelector("#amount_input");
+const amount_array = Array.from(amounts);
+
+amount_array.forEach((amt, index) => {
+  amount_show_input.readOnly = true;
+  amt.addEventListener("click", (e) => {
+
+    e.preventDefault();
+    amount_array.forEach(otherAmt => {
+      otherAmt.classList.remove("selected");
+    });
+
+    amt.classList.add("selected");
+
+    total_amount = amount_show_input.value = amt.textContent.substring(1);
+    amount_show_input.readOnly = index !== amount_array.length - 1;
+
+
+    if (index === amount_array.length - 1) {
+      amount_show_input.focus(); 
+    }
+    
+  });
+});
+
+
+//**SCRIPT FOR DONATION STATUS MANAGING */
+const donation_manage_input = document.querySelector("#donation_qantity_input");
+const donation_toggle_area = document.querySelector(".how_offen_donation");
+
+// Add event listener to the select element
+donation_manage_input.addEventListener("change", function() {
+    // Check if the selected value is "Weekly"
+    if (this.value === "Weekly" || this.value ==="Monthly") {
+        // If selected value is "Weekly", display the donation_toggle_area
+        donation_toggle_area.style.display = "flex";
+        console.log(this.value)
+    } else {
+        // If selected value is not "Weekly", hide the donation_toggle_area
+        donation_toggle_area.style.display = "none";
+        console.log(this.value)
+    }
+});
+
 
 //nested item handler
 const parent_items = document.querySelectorAll(".dropdowm_p");
-console.log(parent_items)
+
 parent_items.forEach(p_item => {
-    let inner_menu_item = p_item.querySelector(".inner_items_area");
-    let inner_menu_close = p_item.querySelector(".back_page");
+  let inner_menu_item = p_item.querySelector(".inner_items_area");
+  let inner_menu_close = p_item.querySelector(".back_page");
 
-    if (inner_menu_close && inner_menu_item) {
+  if (inner_menu_close && inner_menu_item) {
 
-        inner_menu_close.addEventListener("click", (event) => {
-            event.stopPropagation(); // Stop event propagation
-            inner_menu_item.classList.add("slide_left");
-            inner_menu_item.classList.remove("slide_right");
-        });
+    inner_menu_close.addEventListener("click", (event) => {
+      event.stopPropagation(); 
+      inner_menu_item.classList.add("slide_left");
+      inner_menu_item.classList.remove("slide_right");
+    });
 
-        p_item.addEventListener("click", () => {
-            inner_menu_item.classList.add("slide_right");
-            inner_menu_item.classList.remove("slide_left");
-        });
-    } else {
-        console.log("Inner menu item or close button not found for parent item:", p_item);
-    }
+    p_item.addEventListener("click", () => {
+      inner_menu_item.classList.add("slide_right");
+      inner_menu_item.classList.remove("slide_left");
+    });
+  } else {
+    console.log("Inner menu item or close button not found for parent item:", p_item);
+  }
 });
 //**==============SIDE CARD HANDLER============== */
 
@@ -203,6 +325,25 @@ $(".delete_card").on("click", () => {
   $(".popup_div").slideUp();
   $(".mini_popup").fadeToggle();
 });
+
+//**MOBILE SEARCH POPUP HANDLER */
+const sm_search_popup = document.querySelector(".mobile_search_popup")
+const sm_search_close = document.querySelector(".mobile_search_close")
+const sm_search_open = document.querySelector(".sm_search_icon")
+const sm_search_wrapper = document.querySelector(".mobile_search_wrapper")
+
+sm_search_open.addEventListener("click", () => {
+
+  sm_search_popup.style.animation = "fade_in 1s ease-in forwards"
+  sm_search_wrapper.style.animation = "slide_right 1s ease-in forwards"
+
+})
+sm_search_close.addEventListener("click", () => {
+
+  sm_search_popup.style.animation = "fade_out 1s ease-in forwards"
+  sm_search_wrapper.style.animation = "slide_left 1s ease-in forwards"
+
+})
 
 
 
