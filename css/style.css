@@ -291,13 +291,16 @@ a.logo {
 .menu_header .menu_header_wrapper .main_menu>li>.mega_menu .mega_menu_wrapper .mega_menu_slider .mySwiper {
     width: 100%;
 }
-
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: .35 !important;
+}
 
 .menu_header .menu_header_wrapper .main_menu>li>.mega_menu .mega_menu_wrapper .single_cause .cause_img {
     width: 300px;
     margin-right: 15px;
     height: 250px;
 }
+
 
 .single_cause .cause_info a:not(.cause_category) {
     color: var(--text-color);
@@ -473,12 +476,14 @@ a.logo {
 }
 
 .mySwiper:hover :where(.swiper-button-next, .swiper-button-prev),
+.mySwiper2:hover :where(.swiper-button-next, .swiper-button-prev),
 .cause_slider1:hover :where(.swiper-button-next, .swiper-button-prev),
 .cause_slider2:hover :where(.swiper-button-next, .swiper-button-prev),
 .cause_slider3:hover :where(.swiper-button-next, .swiper-button-prev),
 .cause_slider4:hover :where(.swiper-button-next, .swiper-button-prev),
 .cause_slider5:hover :where(.swiper-button-next, .swiper-button-prev),
-.donner_slider:hover :where(.swiper-button-next, .swiper-button-prev) {
+.donner_slider:hover :where(.swiper-button-next, .swiper-button-prev),
+.testimonial_slider:hover :where(.swiper-button-next, .swiper-button-prev) {
 
     transform: translate(0px, 0px);
     visibility: visible;
@@ -3079,6 +3084,7 @@ section.statistic_section .left_side>button {
 
 section.causes_section {
     padding: 70px 0;
+    padding-bottom: 0;
 }
 
 .section_title>h2 {
@@ -3156,17 +3162,46 @@ section.causes_section {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: .6s;
 }
-
+.single_cause_box .causes_image .c_img_inner::before {
+    background: var(--accent-color);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s linear;
+    left: -180%;
+}
+.single_cause_box .inner_ci {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: .6s;
+}
+.single_cause_box:hover .c_img_inner::before {
+    opacity: 0.5;
+    transform: rotate(0) scale(1.003) skew(14deg) translate(0);
+    left: -70%;
+}
 .single_cause_box {
     border-radius: 10px;
     background: var(--primary-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     transition: .6s;
 }
-
-
-.single_cause_box .causes_image>div {
+.single_cause_box:hover .causes_image img {
+    transform: scale(1.3) rotate(-10deg);
+    transition: .6s;
+}
+.single_cause_box .c_img_inner {
+    width: 100%;
+    height: 100%;
+}
+.single_cause_box .causes_image> div.donation_status {
     font-weight: 500;
     font-size: 14px;
     color: var(--primary-color);
@@ -3694,6 +3729,9 @@ section.event_section .upc_highlight .upc_highlight_event .upc_h_info {
 
 .f_event_info {
     width: calc(100% - 225px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .f_event_left .f_event_sch {
@@ -3765,7 +3803,10 @@ section.event_section .upc_highlight .upc_highlight_event .upc_h_info {
     flex-direction: column;
     gap: 15px;
 }
-
+.f_event_info>span> :where(svg, i) {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
 section.event_section {
     padding: 70px 0;
 }
@@ -4027,6 +4068,7 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
 section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_form button {
     position: absolute;
     right: 0;
+    top: 0;
     height: 100%;
     padding: 0px 10px;
     font-size: 14px;
@@ -4051,7 +4093,7 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
     margin:0;
     display:grid;
     place-items:center;
-    height: 65vh;
+    height: 350px;
   }
   
   .gallery{
@@ -4060,6 +4102,7 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
     height: 150px;
     transform-style:preserve-3d;
     animation:rotate 35s linear infinite;
+    top: -22px;
   }
   
   @keyframes rotate{
@@ -4182,8 +4225,113 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
 }
 
 /***========================END OF GALLERY SECTION STYLE***/
+/***========================START OF CONTACT SECTION STYLE***/
 
+.sc_image {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--accent-color);
+}
 
+.sc_header {
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.sc_info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.sc_info em {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+ul.sc_body {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+ul.sc_body > li> span:first-child {
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    color: var(--secondary-color);
+}
+
+ul.sc_body > li> span:nth-child(2) {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+ul.sc_body > li {
+    gap: 10px;
+}
+
+.contact_wrapper {
+    display: grid;
+    grid-template-columns: 28% 40% 28%;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+section.contact_section {
+    padding: 70px 0;
+}
+.single_contact {
+    padding: 10px;
+}
+
+.person_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.single_contact_box > iframe {
+    width: 100%;
+    height: 100%;
+}
+.contact_form input, .contact_form textarea {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 15px;
+    color: var(--text-color);
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--secondary-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.contact_form button {
+    height: 45px;
+    padding: 0px 40px;
+    outline: none;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    margin-top: 15px;
+}
+
+/***========================END OF CONTACT SECTION STYLE***/
 
 
 
@@ -4192,6 +4340,7 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
 footer {
     padding: 50px 0;
     padding-bottom: 0;
+    border: 1px solid var(--border-color);
 }
 
 .footer_wrapper {
@@ -4491,6 +4640,17 @@ footer {
 
 /**STYLE FOR SM LAPTOP SCREEN**/
 @media only screen and (max-width: 991px) {
+    .contact_wrapper {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto auto;
+        grid-row-gap: 50px;
+    }
+    
+    .contact_wrapper .single_contact_box:nth-child(2) {
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
     section.newsletter_section .newsletter_wrapper .newletter_right h2{
         font-size: 22px;
     }
@@ -4529,6 +4689,9 @@ footer {
 
 /**STYLE FOR MEDIUM SCREEN**/
 @media only screen and (max-width: 767px) {
+    .gallery {
+        top: -10px;
+    }
     .gallery_lightbox .lightbox_wrapper {
         width: calc(100% - 50px);
     }
@@ -4544,7 +4707,7 @@ footer {
     }
     
     .gallery_wrapper {
-        height: 50vh;
+        height: 280px;
     }
     .section_title>h2 {
         font-size: 25px;
@@ -4587,7 +4750,20 @@ footer {
 
 /**STYLE FOR SMALL SCREEN**/
 @media only screen and (max-width: 576px) {
+
+.single_contact_box > iframe {
+    height: 320px;
+}
+    .single_contact_box {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .contact_wrapper {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+    }
     
+
     .gallery {
         width: 145px;
         height: 100px;
@@ -4604,10 +4780,10 @@ footer {
         width: 170px;
     }
 
-    html {
+    /* html {
         overflow-y: auto;
         overflow-x: hidden;
-    }
+    } */
 
     section.hero_section .single_hero_slider .slider_left>h2 {
         font-size: 40px;
@@ -4623,14 +4799,13 @@ footer {
     .lightbox_header > h3 {
         font-size: 16px;
     }
-    .gallery_wrapper {
-        height: 40vh;
-    }
     .gallery {
         width: 120px;
         height: 70px;
     }
-    
+    .gallery_wrapper{
+        height: 200px;
+    }
     .gallery .gallery_image {
         transform: rotateY(calc(var(--i) * 45deg)) translateZ(170px);
     }

@@ -258,11 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (this.value === "Weekly" || this.value === "Monthly") {
       // If selected value is "Weekly", display the donation_toggle_area
       donation_toggle_area.style.display = "flex";
-      console.log(this.value)
+      
     } else {
       // If selected value is not "Weekly", hide the donation_toggle_area
       donation_toggle_area.style.display = "none";
-      console.log(this.value)
+      
     }
   });
 
@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   //MAIN MENU "BLOG" MEGA MENU SLIDER
-  var swiper = new Swiper(".mySwiper2", {
+  var swiper2 = new Swiper(".mySwiper2", {
     loop: true,
     autoplay: true,
     slidesPerView: 1,
@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //============================OUR CAUSE SECTION PRODUCT SLIDERS================
   var cause_slider1 = new Swiper(".cause_slider1", {
-    // loop: true,
+   
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -562,7 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider2 = new Swiper(".cause_slider2", {
-    // loop: true,
+ 
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -585,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider3 = new Swiper(".cause_slider3", {
-    // loop: true,
+
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -608,7 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider4 = new Swiper(".cause_slider4", {
-    // loop: true,
+    
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -631,7 +631,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider5 = new Swiper(".cause_slider5", {
-    // loop: true,
+   
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -691,10 +691,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  //DONNER SECTION SLIDER
+  //Testimonial Slider SECTION SLIDER
 
   var testimonialSlider = new Swiper(".testimonial_slider", {
-    // loop: true,
+  
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
