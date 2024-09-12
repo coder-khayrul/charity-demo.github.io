@@ -19,12 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
       top_header.style.display = "none";
       news_section.style.display = "none";
       header_info_section.style.display = "none";
+
     } else {
 
       header.classList.remove(toggleClass);
       top_header.style.display = "block";
       news_section.style.display = "block";
-      header_info_section.style.display = "block";
+      window.addEventListener("resize", () => {
+        if (window.matchMedia("(max-width: 767px)").matches) {
+          header_info_section.style.display = "none";
+        } else {
+          header_info_section.style.display = "block";
+        }
+      })
     }
 
     lastScrollTop = currentScrollTop;
@@ -258,11 +265,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (this.value === "Weekly" || this.value === "Monthly") {
       // If selected value is "Weekly", display the donation_toggle_area
       donation_toggle_area.style.display = "flex";
-      
+
     } else {
       // If selected value is not "Weekly", hide the donation_toggle_area
       donation_toggle_area.style.display = "none";
-      
+
     }
   });
 
@@ -290,54 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log("Inner menu item or close button not found for parent item:", p_item);
     }
   });
-  //**==============SIDE CARD HANDLER============== */
 
-
-  $(".cart_icon").on("click", () => {
-    $(".side_cart_wrapper").slideDown();
-    $(".side_cart").fadeToggle();
-  });
-
-  $(".cart_close").on("click", () => {
-    $(".side_cart_wrapper").slideUp();
-    $(".side_cart").fadeToggle();
-  });
-
-
-  $(document).on("click", (e) => {
-    if (!$(".side_cart_wrapper").has(e.target).length && !$(".cart_close").has(e.target).length && $(".side_cart").has(e.target).length) {
-      $(".side_cart_wrapper").slideUp();
-      $(".side_cart").fadeToggle();
-    }
-  });
-
-  $(".estimate_btn").on("click", () => {
-    $(".rate_wrapper").slideDown();
-    $(".rate_mini_popup").fadeToggle();
-  });
-
-  $(".rate_cancle").on("click", () => {
-    $(".rate_wrapper").slideUp();
-    $(".rate_mini_popup").fadeToggle();
-  });
-  $(".gift_btn").on("click", () => {
-    $(".gift_wrap").slideDown();
-    $(".gift_mini_popup").fadeToggle();
-  });
-
-  $(".delete_gift").on("click", () => {
-    $(".gift_wrap").slideUp();
-    $(".gift_mini_popup").fadeToggle();
-  });
-  $(".note_btn").on("click", () => {
-    $(".popup_div").slideDown();
-    $(".mini_popup").fadeToggle();
-  });
-
-  $(".delete_card").on("click", () => {
-    $(".popup_div").slideUp();
-    $(".mini_popup").fadeToggle();
-  });
 
   //**MOBILE SEARCH POPUP HANDLER */
   const sm_search_popup = document.querySelector(".mobile_search_popup")
@@ -514,8 +474,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //MAIN MENU "BLOG" MEGA MENU SLIDER
   var swiper2 = new Swiper(".mySwiper2", {
-    loop: true,
-    autoplay: true,
+    // loop: true,
+    // autoplay: true,
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -539,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //============================OUR CAUSE SECTION PRODUCT SLIDERS================
   var cause_slider1 = new Swiper(".cause_slider1", {
-   
+
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -562,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider2 = new Swiper(".cause_slider2", {
- 
+
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -608,7 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider4 = new Swiper(".cause_slider4", {
-    
+
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -631,7 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
   var cause_slider5 = new Swiper(".cause_slider5", {
-   
+
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -694,7 +654,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //Testimonial Slider SECTION SLIDER
 
   var testimonialSlider = new Swiper(".testimonial_slider", {
-  
+
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: {

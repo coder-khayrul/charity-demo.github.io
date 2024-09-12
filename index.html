@@ -671,22 +671,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="list-unstyled menu_item dropdowm_p"><span>Shop</span>
-                        <span>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </span>
-                        <div class="inner_items_area">
-                            <h4><span class="back_page">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>Shop</h4>
-                            <ul>
-                                <li class="list-unstyled"><a href="shop.html">Go To Shop</a></li>
-                                <li class="list-unstyled"><a href="#">Cart</a></li>
-                                <li class="list-unstyled"><a href="#">Checkout</a></li>
-                                <li class="list-unstyled"><a href="#">My Account</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li class="list-unstyled menu_item"><a href="#">About us</a></li>
                     <li class="list-unstyled menu_item"><a href="#">Causes</a></li>
                     <li class="list-unstyled menu_item dropdowm_p"><span>Pages</span>
                         <span>
@@ -711,9 +696,6 @@
                     </li>
                     <li class="list-unstyled menu_item"><a href="#">Blog</a></li>
                     <li class="list-unstyled menu_item"><a href="#">Contact</a></li>
-                    <li class="list-unstyled user_option menu_item"><a href="#"><span><i
-                                    class="fa-regular fa-user me-2"></i>Login/
-                                Register</span></a></li>
                 </ul>
                 <div class="menu_buttons">
                     <a href="#" class="btn_hover">Donate Now</a>
@@ -882,38 +864,22 @@
                         </a>
                     </div>
                     <div class="right_side d-flex align-items-center justify-content-end  gap-4">
-                        <form class="search_bar d-none d-lg-block">
+                        <form class="search_bar d-none d-md-block">
                             <input type="search" id="desktop_searcbar" placeholder="Searching For...." required>
                             <button class="search_btn" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
-                        <ul class="side_icons d-flex align-items-center gap-4 mb-0 ps-0 ">
-                            <li class="list-unstyled d-block d-lg-none tooltip_area ">
-                                <a href="#" class="sm_search_icon">
+                        <ul class="side_icons d-flex d-lg-none align-items-center gap-4 mb-0 ps-0 ">
+                            <li class="list-unstyled d-block d-md-none">
+                                <button class="menu_list_item sm_search_icon">
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                </a>
-                                <span class="tooltip_span tt_top">Search Icon</span>
+                                </button>
                             </li>
-                            <li class="list-unstyled tooltip_area">
-                                <a href="#">
-                                    <i class="fa-regular fa-user"></i>
-                                    <span class="d-none d-lg-inline ">Signup</span>
-                                </a>
-                                <span class="tooltip_span tt_top">Signup</span>
-                            </li>
-                            <li class="list-unstyled tooltip_area">
-                                <a href="#">
-                                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                    <span class="d-none d-lg-inline ">Login</span>
-                                </a>
-                                <span class="tooltip_span tt_top">Login</span>
-                            </li>
-                            <li class="list-unstyled tooltip_area">
-                                <a href="#" class="cart_icon">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </a>
-                                <span class="tooltip_span tt_top">Cart</span>
+                            <li class="list-unstyled">
+                                <button class="menu_list_item menu_open  d-grid ">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -922,15 +888,9 @@
         </div>
         <!--END OF MIDDLE HEADER-->
         <!--START OF MENU HEADER-->
-        <div class="menu_header">
+        <div class="menu_header d-none d-lg-block">
             <div class="container-fluid container-xl ">
                 <div class="menu_header_wrapper d-flex align-items-center justify-content-between ">
-                    <div class="menu_btn_area tooltip_area d-block d-lg-none">
-                        <button class="menu_open  d-grid">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <span class="tooltip_span">Menu Open</span>
-                    </div>
                     <ul class="main_menu d-none d-lg-flex ps-0 mb-0 align-items-center">
                         <li class="list-unstyled">
                             <a href="#">Home <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span></a>
@@ -940,14 +900,7 @@
                                 <li class="list-unstyled "><a href="#">Home -03</a></li>
                             </ul>
                         </li>
-                        <li class="list-unstyled"><a href="#">Shop <span class="ms-1"><i
-                                        class="fa-solid fa-chevron-down"></i></span></a>
-                            <ul class="dropdown_menu">
-                                <li class="list-unstyled "><a href="#">Cart</a></li>
-                                <li class="list-unstyled "><a href="#">Checkout</a></li>
-                                <li class="list-unstyled "><a href="#">My Account</a></li>
-                            </ul>
-                        </li>
+                        <li class="list-unstyled"><a href="#">About us</a></li>
                         <li class="list-unstyled">
                             <a href="#">Causes <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span></a>
                             <div class="mega_menu">
@@ -1208,133 +1161,130 @@
                                                                 <div class="blog_img">
                                                                     <img class="img-fluid" src="img/blog/blog_4.jpg"
                                                                         alt="blog_image">
+                                                                    <a href="#">Education</a>
                                                                 </div>
-                                                                <div class="donation_status"><i
-                                                                        class="fa-solid fa-user"></i> Donation: 413
-                                                                </div>
-                                                            </div>
-                                                            <div class="blog_info">
-                                                                <div
-                                                                    class="blog_head d-flex align-items-center  justify-content-between ">
-                                                                    <div class="date">
-                                                                        <span>
-                                                                            <i class="fa-regular fa-calendar-days"></i>
-                                                                        </span>
-                                                                        <span>14 Jun 2024</span>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="author">
-                                                                        <span>
-                                                                            <i class="fa-regular fa-user"></i>
-                                                                        </span>
-                                                                        <span>By Admin</span>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
                                                                     </div>
                                                                 </div>
-                                                                <div class="blog_body">
-                                                                    <h3>
-                                                                        <a href="#">
-                                                                            Stories of Hope: Inspiring Tales from
-                                                                            Our Beneficiarie
-                                                                        </a>
-                                                                    </h3>
-                                                                    <p>Suscipit necessitatibus voluptatum id velit,
-                                                                        temporibus nisi veniam incidunt excepturi,
-                                                                        officiis qui omnis alias, adipisci beatae!
-                                                                        Ullam error provident, Obcaecati, temporibus
-                                                                        commodi.</p>
-                                                                    <a href="#" class="btn">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_5.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_4.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="single_blog">
-                                                            <div class="blog_img">
-                                                                <img class="img-fluid" src="img/blog/blog_5.jpg"
-                                                                    alt="blog_image">
-                                                            </div>
-                                                            <div class="donation_status"><i
-                                                                    class="fa-solid fa-user"></i> Donation: 413
-                                                            </div>
-                                                        </div>
-                                                        <div class="blog_info">
-                                                            <div
-                                                                class="blog_head d-flex align-items-center  justify-content-between ">
-                                                                <div class="date">
-                                                                    <span>
-                                                                        <i class="fa-regular fa-calendar-days"></i>
-                                                                    </span>
-                                                                    <span>14 Jun 2024</span>
-                                                                </div>
-                                                                <div class="author">
-                                                                    <span>
-                                                                        <i class="fa-regular fa-user"></i>
-                                                                    </span>
-                                                                    <span>By Admin</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="blog_body">
-                                                                <h3>
-                                                                    <a href="#">
-                                                                        Stories of Hope: Inspiring Tales from
-                                                                        Our Beneficiarie
-                                                                    </a>
-                                                                </h3>
-                                                                <p>Suscipit necessitatibus voluptatum id velit,
-                                                                    temporibus nisi veniam incidunt excepturi,
-                                                                    officiis qui omnis alias, adipisci beatae!
-                                                                    Ullam error provident, Obcaecati, temporibus
-                                                                    commodi.</p>
-                                                                <a href="#" class="btn">Read More</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="single_blog">
-                                                        <div class="blog_img">
-                                                            <img class="img-fluid" src="img/blog/blog_4.jpg"
-                                                                alt="blog_image">
-                                                        </div>
-                                                        <div class="donation_status"><i class="fa-solid fa-user"></i>
-                                                            Donation: 413
-                                                        </div>
-                                                    </div>
-                                                    <div class="blog_info">
-                                                        <div
-                                                            class="blog_head d-flex align-items-center  justify-content-between ">
-                                                            <div class="date">
-                                                                <span>
-                                                                    <i class="fa-regular fa-calendar-days"></i>
-                                                                </span>
-                                                                <span>14 Jun 2024</span>
-                                                            </div>
-                                                            <div class="author">
-                                                                <span>
-                                                                    <i class="fa-regular fa-user"></i>
-                                                                </span>
-                                                                <span>By Admin</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="blog_body">
-                                                            <h3>
-                                                                <a href="#">
-                                                                    Stories of Hope: Inspiring Tales from
-                                                                    Our Beneficiarie
-                                                                </a>
-                                                            </h3>
-                                                            <p>Suscipit necessitatibus voluptatum id velit,
-                                                                temporibus nisi veniam incidunt excepturi,
-                                                                officiis qui omnis alias, adipisci beatae!
-                                                                Ullam error provident, Obcaecati, temporibus
-                                                                commodi.</p>
-                                                            <a href="#" class="btn">Read More</a>
-                                                        </div>
-                                                    </div>
+                                                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                                                    <div class="swiper-button-next swiper-button-next2"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="swiper-button-prev swiper-button-prev2"></div>
-                                        <div class="swiper-button-next swiper-button-next2"></div>
                                     </div>
                                 </div>
                             </div>
@@ -5462,7 +5412,7 @@
 
 
         <section class="gallery_section">
-            <div class="container-fluid container-lg">
+            <div class="container-fluid container-xl">
                 <div class="section_title">
                     <h2 class="text-center">Photo Highlights</h2>
                     <p class="text-center">Browse through moments captured from our events, projects, and community
@@ -5503,7 +5453,7 @@
 
         <!--=====================START OF CONTACT SECTION====================-->
         <section class="contact_section">
-            <div class="container-fluid container-lg">
+            <div class="container-fluid container-xl">
                 <div class="section_title">
                     <h2 class="text-center">Join the Conversation</h2>
                     <p class="text-center">Connect with us for inquiries, support, or to learn how you can get involved.
@@ -5638,9 +5588,6 @@
                         <div class="single_footer_list">
                             <h3>Useful Links</h3>
                             <ul>
-                                <li class="list-unstyled">
-                                    <a href="#">Shop</a>
-                                </li>
                                 <li class="list-unstyled">
                                     <a href="#">About Us</a>
                                 </li>
