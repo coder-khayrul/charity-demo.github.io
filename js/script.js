@@ -32,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
           header_info_section.style.display = "block";
         }
       })
+      window.dispatchEvent(new Event('resize'));
     }
-
+    
     lastScrollTop = currentScrollTop;
   });
 
@@ -455,6 +456,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
+
+
+
   //**========================SWIPER SCRIPTS ===========================*/
 
 
@@ -474,8 +478,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //MAIN MENU "BLOG" MEGA MENU SLIDER
   var swiper2 = new Swiper(".mySwiper2", {
-    // loop: true,
-    // autoplay: true,
+    loop: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -487,8 +491,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //HERO SECTION SCRIPT 
   var swiper_hero_slider = new Swiper(".hero_slider", {
-    // loop: true,
-    // autoplay: true,
+    loop: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 0,
     navigation: {
