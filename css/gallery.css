@@ -2202,6 +2202,102 @@ footer {
     padding: 8px 0px;
 }
 
+/**social section style*/
+.social_section {
+    padding: 35px 0;
+    background: var(--primary-color);
+    border-block: 1px solid var(--border-color);
+}
+
+
+.social_section .social_section_container .social_section_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social .social_name {
+    padding: 10px;
+    color: var(--text-color);
+    width: calc(100% - 45px);
+    font-size: 15px;
+    font-weight: 600;
+    transition: .6s;
+    height: 45px;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social .social_icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: #0866FF;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social {
+    background: var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:hover .social_name {
+    color: var(--primary-color);
+    background: #0866FF;
+    transition: .6s;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:nth-child(2) .social_icon {
+    background: #0A66C2;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:nth-child(2):hover .social_name {
+    color: var(--primary-color);
+    background-color: #0A66C2;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:nth-child(3) .social_icon {
+    background: #793CC4;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:nth-child(3):hover .social_name {
+    color: var(--primary-color);
+    background: #793CC4;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:nth-child(4) .social_icon {
+    background: black;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:nth-child(4):hover .social_name {
+    background: black;
+    color: var(--primary-color);
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:last-child .social_icon {
+    background: #DD4B39;
+}
+
+.social_section .social_section_container .social_section_wrapper .single_social:last-child:hover .social_name {
+    color: var(--primary-color);
+    background: #DD4B39;
+}
+
+.bottom_section {
+    padding: 20px 0;
+}
+
+.bottom_section_wrapper h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 

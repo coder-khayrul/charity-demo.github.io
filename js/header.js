@@ -1,44 +1,43 @@
-//****STICKY HEADER HANDLER */
 document.addEventListener('DOMContentLoaded', () => {
 
-  //****STICKY HEADER HANDLER */
-  const header = document.querySelector("header");
-  const toggleClass = "sticky_animation";
-  const top_header = document.querySelector(".top_header")
-  const news_section = document.querySelector(".scrolling_news");
-  const header_info_section = document.querySelector(".header_info_area")
-
-
-  let lastScrollTop = 0;
-
-  $(window).on("scroll", () => {
+    //****STICKY HEADER HANDLER */
+    const header = document.querySelector("header");
+    const toggleClass = "sticky_animation";
+    const top_header = document.querySelector(".top_header")
+    const news_section = document.querySelector(".scrolling_news");
+    const header_info_section = document.querySelector(".header_info_area")
+  
+  
+    let lastScrollTop = 0;
+  
+    $(window).on("scroll", () => {
       let currentScrollTop = $(window).scrollTop();
-
+  
       if (currentScrollTop < lastScrollTop && currentScrollTop > 0) {
-
-          header.classList.add(toggleClass);
-          top_header.style.display = "none";
-          news_section.style.display = "none";
-          header_info_section.style.display = "none";
-
+  
+        header.classList.add(toggleClass);
+        top_header.style.display = "none";
+        news_section.style.display = "none";
+        header_info_section.style.display = "none";
+  
       } else {
-
-          header.classList.remove(toggleClass);
-          top_header.style.display = "block";
-          news_section.style.display = "block";
-          window.addEventListener("resize", () => {
-              if (window.matchMedia("(max-width: 767px)").matches) {
-                  header_info_section.style.display = "none";
-              } else {
-                  header_info_section.style.display = "block";
-              }
-          })
-          window.dispatchEvent(new Event('resize'));
+  
+        header.classList.remove(toggleClass);
+        top_header.style.display = "block";
+        news_section.style.display = "block";
+        window.addEventListener("resize", () => {
+          if (window.matchMedia("(max-width: 767px)").matches) {
+            header_info_section.style.display = "none";
+          } else {
+            header_info_section.style.display = "block";
+          }
+        })
+        window.dispatchEvent(new Event('resize'));
       }
-
+      
       lastScrollTop = currentScrollTop;
-  });
-
+    });
+  
 
 
   //***=================TOP HEADER LANGUAGE DROPDOWN HANDLER ===============*/
