@@ -318,6 +318,136 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
+//custmize lightbox
+
+
+lightbox.option({
+    
+    'disableScrolling': true
+  })
+
+//***FOR ADDING VIDEO GALLERY SECTION */
+;
+// Array containing your local video files and their details
+let arrVideos = [
+    { data: 'video-01.mp4', name: 'Bringing Hope to the Homeless' },
+    { data: 'video-02.mp4', name: 'Supporting Children’s Dreams' },
+    { data: 'video-03.mp4', name: 'Disaster Relief: Rebuilding Lives' },
+    { data: 'video-04.mp4', name: 'Access to Clean Water for All' },
+    { data: 'video-05.mp4', name: 'Education for Every Child' },
+    { data: 'video-06.mp4', name: 'Warm Clothes for Cold Nights' },
+    { data: 'video-07.mp4', name: 'Building Homes, Building Futures' },
+    { data: 'video-08.mp4', name: 'Protecting Our Planet, One Step at a Time' }
+  ];
+  
+  // Current video element
+  let currentVideo = document.getElementById('current-video');
+  currentVideo.src = `img/gallery_videos/${arrVideos[0].data}`;
+  let currentVideoTitle = document.querySelector(".video_title");
+  currentVideoTitle.textContent = arrVideos[0].name; // Set initial title
+  
+  // Add gallery items dynamically
+  let gallery = document.querySelector('.gallery');
+  gallery.innerHTML = ``;
+  
+  for (let i = 0; i < arrVideos.length; i++) {
+    gallery.innerHTML += `
+      <div class="gallery__item" data="${arrVideos[i].data}" title="${arrVideos[i].name}">
+        <video class="gallery__item__video" src="img/gallery_videos/${arrVideos[i].data}" width="120" height="80" muted></video>
+      </div>`;
+  }
+  
+  // Add event listeners to play the clicked video and show title
+  gallery.addEventListener('click', (e) => {
+    let selectedVideo;
+    let selectedTitle;
+  
+    // When click on .gallery__item element
+    if (e.target.classList.contains('gallery__item')) {
+      selectedVideo = e.target.getAttribute('data');
+      selectedTitle = e.target.getAttribute('title');
+    }
+  
+    // When click on .gallery__item__video element
+    if (e.target.classList.contains('gallery__item__video')) {
+      selectedVideo = e.target.getAttribute('src');
+      selectedTitle = e.target.parentElement.getAttribute('title');
+    }
+  
+    // When click on .gallery__item__span element
+    if (e.target.classList.contains('gallery__item__span')) {
+      for (let i = 0; i < arrVideos.length; i++) {
+        if (arrVideos[i].name === e.target.innerText) {
+          selectedVideo = `img/gallery_videos/${arrVideos[i].data}`;
+          selectedTitle = arrVideos[i].name;
+          break;
+        }
+      }
+    }
+  
+    // Update current video and title if selected
+    if (selectedVideo) {
+      currentVideo.src = selectedVideo;
+      currentVideo.play();
+      currentVideoTitle.textContent = selectedTitle; // Update title
+    }
+  });
+  
+// // Array containing your local video files and their details
+// let arrVideos = [
+//     { data: 'video-01.mp4', name: 'Bringing Hope to the Homeless' },
+//     { data: 'video-02.mp4', name: 'Bringing Hope to the Homeless' },
+//     { data: 'video-03.mp4', name: 'Video 3' },
+//     { data: 'video-04.mp4', name: 'Video 3' },
+//     { data: 'video-05.mp4', name: 'Video 3' },
+//     { data: 'video-06.mp4', name: 'Video 3' },
+//     { data: 'video-07.mp4', name: 'Video 3' },
+//     { data: 'video-08.mp4', name: 'Video 3' }
+//   ];
+  
+//   // Current video element
+//   let currentVideo = document.getElementById('current-video')
+//   currentVideo.src = `img/gallery_videos/${arrVideos[0].data}`
+//   let currentVideoTitle = document.querySelector(".video_title")
+//   // Add gallery items dynamically
+//   let gallery = document.querySelector('.gallery')
+//   gallery.innerHTML = ``
+  
+//   for (let i = 0; i < arrVideos.length; i++) {
+//     gallery.innerHTML += `
+//       <div class="gallery__item" data="${arrVideos[i].data}">
+//         <video class="gallery__item__video" src="img/gallery_videos/${arrVideos[i].data}" width="120" height="80" muted></video>
+//         <span class="gallery__item__span">${arrVideos[i].name}</span>
+//       </div>`
+//       currentVideoTitle.setAttribute('name',`${arrVideos[i].name}`)
+//   }
+  
+//   // Add event listeners to play the clicked video
+//   gallery.addEventListener('click', (e) => {
+//     // When click on .gallery__item element
+//     if (e.target.classList.contains('gallery__item')) {
+//       currentVideo.src = `img/gallery_videos/${e.target.getAttribute('data')}`
+//       currentVideo.play()
+//       currentVideoTitle.textContent = e.target.getAttribute('name');
+//     }
+//     // When click on .gallery__item__video element
+//     if (e.target.classList.contains('gallery__item__video')) {
+//       let data = e.target.getAttribute('src')
+//       currentVideo.src = data
+//       currentVideo.play()
+//     }
+//     // When click on .gallery__item__span element
+//     if (e.target.classList.contains('gallery__item__span')) {
+//       for (let i = 0; i < arrVideos.length; i++) {
+//         if (arrVideos[i].name === e.target.innerText) {
+//           currentVideo.src = `img/gallery_videos/${arrVideos[i].data}`
+//           currentVideo.play()
+//         }
+//       }
+//     }
+//   })
+  
+
 
   //**========================SWIPER SCRIPTS ===========================*/
 

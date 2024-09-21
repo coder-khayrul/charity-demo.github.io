@@ -2320,6 +2320,12 @@ section.testimonial_section {
     border-radius: 10px;
 }
 
+/***========END OF MISSION SECTION STYLE===============***/
+
+
+
+/***========================START OF PAGE INTRO SECTION STYLE***/
+
 section.page_intro_section {
     background: linear-gradient(#00000080, #00000080), url(../img/event/event-02.jpg);
     background-position: center top;
@@ -2400,8 +2406,8 @@ section.page_intro_section {
     color: var(--accent-color);
     transition: .6s;
 }
+/***========================END OF PAGE INTRO SECTION STYLE***/
 
-/***========END OF MISSION SECTION STYLE===============***/
 
 /***========================START OF ABOUT SECTION STYLE***/
 
