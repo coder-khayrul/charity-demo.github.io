@@ -319,6 +319,132 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+    //***CHART.JS INITIALIZE */
+    var ctx = document.getElementById('mission_chart').getContext('2d');
+    var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['2020', '2021', '2022', '2023'], // X-axis labels (e.g., years)
+            datasets: [{
+                label: 'Funds Raised ($)',
+                data: [5000, 10000, 15000, 20000], // Y-axis data (e.g., amount raised)
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+
+    const itemsPerPage = 6; // Number of items per page
+    let currentPage = 1; // Current page
+    
+    // Get all cause cards
+    const cards = document.querySelectorAll('.single_cause_box');
+    const totalPages = Math.ceil(cards.length / itemsPerPage); // Calculate total pages
+    
+    // Function to display the current page
+    function showPage(page) {
+        // Hide all cards
+        cards.forEach((card, index) => {
+            card.style.display = 'none';
+        });
+    
+        // Calculate the range of items to show
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+    
+        // Show only the items for the current page
+        for (let i = start; i < end && i < cards.length; i++) {
+            cards[i].style.display = 'block';
+        }
+    
+        // Update the pagination controls
+        document.getElementById('prevBtn').disabled = (page === 1);
+        document.getElementById('nextBtn').disabled = (page === totalPages);
+        generatePageNumbers(); // Update the page numbers display
+    }
+    
+    // Function to generate page numbers dynamically
+    function generatePageNumbers() {
+        const pageNumbersContainer = document.getElementById('pageNumbers');
+        pageNumbersContainer.innerHTML = ''; // Clear existing numbers
+    
+        // Create page number buttons
+        for (let i = 1; i <= totalPages; i++) {
+            const pageNumberButton = document.createElement('button');
+            pageNumberButton.innerText = i;
+            pageNumberButton.classList.add('page-number');
+            pageNumberButton.onclick = () => {
+                currentPage = i;
+                showPage(currentPage);
+            };
+    
+            // Highlight the current page number
+            if (i === currentPage) {
+                pageNumberButton.classList.add("active");
+            }
+    
+            pageNumbersContainer.appendChild(pageNumberButton);
+        }
+    }
+    
+    // Navigate to the next page
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    }
+    
+    // Navigate to the previous page
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    }
+    
+    let previousButton = document.querySelector("#prevBtn");
+    let nextButton = document.querySelector("#nextBtn");
+    previousButton.addEventListener("click", prevPage)
+    nextButton.addEventListener("click", nextPage)
+
+    // Initially show the first page
+    showPage(currentPage);
+
+ 
+
+  
+
+
+
+
+
+
+
   //**========================SWIPER SCRIPTS ===========================*/
 
 
