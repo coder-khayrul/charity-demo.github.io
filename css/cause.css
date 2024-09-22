@@ -2627,10 +2627,37 @@ section.helping_card_section {
 }
 
 /***========================END OF HELPING CARD SECTION STYLE***/
+/***========================START OF CONTACT SECTION STYLE***/
+section.contact_section{
+    margin-bottom: 70px;
+}
+section.contact_section .contact_wrapper {
+    background: linear-gradient(#f75022d6, #f75022d6), url(../img/cause/h_cause-7.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 40px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+section.contact_section .contact_wrapper > p {
+    width: 483px;
+    font-size: 15px;
+    line-height: 1.6rem;
+    color: var(--sub-bg-color);
+    margin-bottom: 25px;
+}
+
+section.contact_section .contact_wrapper > h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
 
 
-
-
+/***========================END OF CONTACT SECTION STYLE***/
 
 
 
@@ -2644,6 +2671,7 @@ section.helping_card_section {
 footer {
     padding: 50px 0;
     padding-bottom: 0;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer_wrapper {
@@ -3017,6 +3045,10 @@ footer {
 
 /**STYLE FOR SMALL SCREEN**/
 @media only screen and (max-width: 576px) {
+    section.contact_section .contact_wrapper > p {
+        font-size: 14px;
+        width: 95%;
+    }
     .single_help_card {
         margin-inline: 20px;
     }
