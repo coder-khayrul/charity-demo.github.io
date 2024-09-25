@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity | Blog</title>
+    <!--style-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+
+
+    <!--============================header content start====================================-->
+
+    <!--START OF DONATION POPUP-->
+    <div class="donation_popup">
+        <div class="donation_popup_bg"></div>
+        <div class="donation_wrapper">
+            <span class="d_popup_close">
+                <i class="fa-solid fa-x"></i>
+            </span>
+            <div class="donation_inner">
+                <div class="d_popup_title">Give A Donation</div>
+                <form class="donation_form">
+                    <div class="amount_field">
+                        <span>
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </span>
+                        <input type="number" id="amount_input" value="10">
+                    </div>
+                    <div class="chooes_amount">
+                        <h3>Chooes An Amount</h3>
+                        <div class="chooes_amount_wrapper  d-flex align-items-center  flex-wrap gap-3">
+                            <button class="ten_doller selected">$10</button>
+                            <button class="fifty_doller">$50</button>
+                            <button class="seventy_five_doller">$75</button>
+                            <button class="hundred_doller">$100</button>
+                            <button class="hundred_doller">Custom Amount</button>
+                        </div>
+                    </div>
+                    <div class="manage_donation">
+                        <h4>Would you like to make regular donations?</h4>
+                        <div class="donation_qantity d-flex align-items-center gap-2 ">
+                            <span>I would like to make </span>
+                            <select id="donation_qantity_input">
+                                <option value="" selected>a One Time </option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Monthly">Monthly</option>
+                            </select>
+                            <span>donation(s)</span>
+                        </div>
+                        <div class="how_offen_donation  align-items-center gap-2">
+                            <span>How many times would you like this to recur? (including this payment)</span>
+                            <select id="donation_time_selection">
+                                <option value="" selected>02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payment_methods">
+                        <h3>Select Payment Method</h3>
+                        <ul class="payment_options nav-tabs" id="myTab" role="tablist">
+                            <li class="single_payment d-flex align-items-center gap-2 active " id="ts-tab"
+                                data-bs-toggle="tab" data-bs-target="#ts-tab-pane" role="tab" aria-selected="true">
+                                <span></span>
+                                <b>Test Donation</b>
+                            </li>
+                            <li class="single_payment d-flex align-items-center gap-2" id="od-tab" data-bs-toggle="tab"
+                                data-bs-target="#od-tab-pane" role="tab" aria-selected="true">
+                                <span></span>
+                                <b>Offline Donation</b>
+                            </li>
+                            <li class="single_payment d-flex align-items-center gap-2" id="scc-tab" data-bs-toggle="tab"
+                                data-bs-target="#scc-tab-pane" role="tab" aria-selected="true">
+                                <span></span>
+                                <b>Stripe - Credit Card</b>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="ts-tab-pane" role="tabpanel" tabindex="0">
+                                <div class="ts_tab">
+                                    <div class="tab_form">
+                                        <h4>Personal Info</h4>
+                                        <div class="input_group d-flex">
+                                            <div class="single_d_input">
+                                                <label for="first_name">First Name</label>
+                                                <input type="text" name="first_name" id="first_name"
+                                                    placeholder="Ex: Jhon">
+                                            </div>
+                                            <div class="single_d_input">
+                                                <label for="last_name">Last Name</label>
+                                                <input type="text" name="last_name" id="last_name"
+                                                    placeholder="Ex: Due">
+                                            </div>
+                                        </div>
+                                        <div class="input_group d-flex">
+                                            <div class="single_d_input">
+                                                <label for="email_d">Email</label>
+                                                <input type="email" name="email_d" id="email_d"
+                                                    placeholder="example1234@gmail.com">
+                                            </div>
+                                            <div class="single_d_input">
+                                                <label for="number_d">Phone Number(Optional)</label>
+                                                <input type="number" name="number_d" id="number_d"
+                                                    placeholder="+1234-567-8910">
+                                            </div>
+                                        </div>
+                                        <div class="single_checkbox">
+                                            <input type="checkbox" id="agree_btn">
+                                            <label for="agree_btn">By checked this box, you agree to <a href="#">Our
+                                                    Terms</a> of Use and <a href="#">Privacy Policy</a> .
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="od-tab-pane" role="tabpanel" tabindex="0">
+                                <div class="od_tab">
+                                    <div class="tab_form">
+                                        <h4>Personal Info</h4>
+                                        <div class="input_group d-flex">
+                                            <div class="single_d_input">
+                                                <label for="first_name2">First Name</label>
+                                                <input type="text" name="first_name2" id="first_name2"
+                                                    placeholder="Ex: Jhon">
+                                            </div>
+                                            <div class="single_d_input">
+                                                <label for="last_name2">Last Name</label>
+                                                <input type="text" name="last_name2" id="last_name2"
+                                                    placeholder="Ex: Due">
+                                            </div>
+                                        </div>
+                                        <div class="input_group d-flex">
+                                            <div class="single_d_input">
+                                                <label for="email_d2">Email</label>
+                                                <input type="email" name="email_d2" id="email_d2"
+                                                    placeholder="example1234@gmail.com">
+                                            </div>
+                                            <div class="single_d_input">
+                                                <label for="number_d2">Phone Number(Optional)</label>
+                                                <input type="number" name="number_d2" id="number_d2"
+                                                    placeholder="+1234-567-8910">
+                                            </div>
+                                        </div>
+                                        <div class="extra_info">
+                                            <p>To make an offline donation toward this cause, follow these steps::</p>
+                                            <ol>
+                                                <li>Write a check payable to 'CharityZone'</li>
+                                                <li>On the memo line of the check, indicate that
+                                                    the donation is for 'CharityZone'</li>
+                                                <li>Mail your check to:</li>
+                                            </ol>
+                                            <p>
+                                                <em>CharityZone</em><br>
+                                                <em>Sique-121, U-block</em><br>
+                                                <em>Himpondi, 144-Khup</em>
+                                            </p>
+                                        </div>
+                                        <div class="single_checkbox">
+                                            <input type="checkbox" id="agree_btn1">
+                                            <label for="agree_btn1">By checked this box, you agree to <a href="#">Our
+                                                    Terms</a> of Use and <a href="#">Privacy Policy</a> .
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="scc-tab-pane" role="tabpanel" tabindex="0">
+                                <div class="tab_form mb-3">
+                                    <h4>Personal Info</h4>
+                                    <div class="input_group d-flex">
+                                        <div class="single_d_input">
+                                            <label for="first_name3">First Name</label>
+                                            <input type="text" name="first_name3" id="first_name3"
+                                                placeholder="Ex: Jhon">
+                                        </div>
+                                        <div class="single_d_input">
+                                            <label for="last_name3">Last Name</label>
+                                            <input type="text" name="last_name3" id="last_name3" placeholder="Ex: Due">
+                                        </div>
+                                    </div>
+                                    <div class="input_group d-flex">
+                                        <div class="single_d_input">
+                                            <label for="email_d2">Email</label>
+                                            <input type="email" name="email_d3" id="email_d3"
+                                                placeholder="example1234@gmail.com">
+                                        </div>
+                                        <div class="single_d_input">
+                                            <label for="number_d3">Phone Number(Optional)</label>
+                                            <input type="number" name="number_d3" id="number_d3"
+                                                placeholder="+1234-567-8910">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_form">
+                                    <h4>Credit Card Info</h4>
+                                    <div class="input_group d-flex">
+                                        <div class="single_d_input">
+                                            <label for="donate_cc">Select A Card</label>
+                                            <select name="donate_cc" id="donate_cc">
+                                                <option value="" disabled selected>Chooes Card</option>
+                                                <option value="">Visa</option>
+                                                <option value="">Master Card</option>
+                                                <option value="">Mastro</option>
+                                                <option value="">American Express</option>
+                                                <option value="">UkrCard</option>
+                                                <option value="">Switch</option>
+                                                <option value="">GPN</option>
+                                            </select>
+                                        </div>
+                                        <div class="single_d_input">
+                                            <label for="donate_card_number">Card Number</label>
+                                            <input type="number" name="donate_card_number" id="donate_card_number"
+                                                placeholder="Ex: 1234 5678 9101 1111
+                                        ">
+                                        </div>
+                                    </div>
+                                    <div class="input_group d-flex">
+                                        <div class="single_d_input">
+                                            <label for="expair_date">Expair Date</label>
+                                            <input type="date" name="expair_date" id="expair_date"
+                                                placeholder="2025-02-09">
+                                        </div>
+                                        <div class="single_d_input">
+                                            <label for="sequrity_code">Sequrity Code</label>
+                                            <input type="number" name="sequrity_code" id="sequrity_code"
+                                                placeholder="Ex: 1111">
+                                        </div>
+                                    </div>
+                                    <div class="single_checkbox">
+                                        <input type="checkbox" id="agree_btn3">
+                                        <label for="agree_btn3">By checked this box, you agree to <a href="#">Our
+                                                Terms</a> of Use and <a href="#">Privacy Policy</a> .
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="donation_bottom">
+                                <button type="submit">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--END OF DONATION POPUP-->
+    <!--START OF BECOMER A VOLUNTEER POPUP-->
+    <div class="volunteer_popup">
+        <div class="volunteer_bg"></div>
+        <div class="volunteer_wrapper">
+            <span class="volunteer_close">
+                <i class="fa-solid fa-x"></i>
+            </span>
+            <div class="volunteer_wrapper_inner">
+                <h3>Volunteer Application Form</h3>
+                <form>
+                    <div class="input_v_group">
+                        <div class="single_v_input">
+                            <label for="first_name_v">First Name</label>
+                            <input type="text" id="first_name_v" placeholder="Ex: Jhon" required>
+                        </div>
+                        <div class="single_v_input">
+                            <label for="last_name_v">Last Name</label>
+                            <input type="text" id="last_name_v" placeholder="Ex: Due" required>
+                        </div>
+                    </div>
+                    <div class="input_v_group">
+                        <div class="single_v_input">
+                            <label for="email_v">Email</label>
+                            <input type="email" id="email_v" placeholder="abc123@gmail.com" required>
+                        </div>
+                        <div class="single_v_input">
+                            <label for="number_v">Contact No.</label>
+                            <input type="text" id="number_v" placeholder="+1234 567 8910" required>
+                        </div>
+                    </div>
+                    <div class="input_v_group">
+                        <div class="single_v_input">
+                            <label for="city_v">City</label>
+                            <input type="text" id="city_v" placeholder="Sylhet" required>
+                        </div>
+                        <div class="single_v_input">
+                            <label for="state_v">State/ Province</label>
+                            <input type="text" id="state_v" placeholder="D-block, JH-2012" required>
+                        </div>
+                    </div>
+                    <div class="input_v_group">
+                        <div class="single_v_input">
+                            <label for="postal_v">Postal/ ZIP Code</label>
+                            <input type="number" id="postal_v" placeholder="1234" required>
+                        </div>
+                        <div class="single_v_input">
+                            <label for="country_v">Country</label>
+                            <select name="" id="country_v">
+                                <option value="" selected>Select Country</option>
+                                <option value="">Australia</option>
+                                <option value="">Malaysia</option>
+                                <option value="">India</option>
+                                <option value="">Japan</option>
+                                <option value="">Nepal</option>
+                                <option value="">Bhutan</option>
+                                <option value="">Bangladesh</option>
+                                <option value="">Srilanka</option>
+                                <option value="">United Kingdom</option>
+                                <option value="">United State</option>
+                                <option value="">UAE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="check_box_group">
+                        <h4>What time can you work?</h4>
+                        <ul class="inner_wrapper d-flex flex-column ">
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="radio" name="work_time" id="v_checkbox1">
+                                <label for="v_checkbox1">Any Time</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="radio" name="work_time" id="v_checkbox2">
+                                <label for="v_checkbox2">9am - 12pm</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="radio" name="work_time" id="v_checkbox3">
+                                <label for="v_checkbox3">1pm - 5am</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="radio" name="work_time" id="v_checkbox4">
+                                <label for="v_checkbox4">All Night</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="radio" name="work_time" id="v_checkbox5">
+                                <label for="v_checkbox5">Others</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="check_box_group">
+                        <h4>Interested in:</h4>
+                        <ul class="inner_wrapper d-flex flex-column ">
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_1">
+                                <label for="int_tp_1">Education</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_2">
+                                <label for="int_tp_2">Health</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_3">
+                                <label for="int_tp_3">Sports</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_4">
+                                <label for="int_tp_4">Human Rights</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_5">
+                                <label for="int_tp_5">Children</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_6">
+                                <label for="int_tp_6">Food</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_7">
+                                <label for="int_tp_7">Guest Services</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_8">
+                                <label for="int_tp_8">Cleaning</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="int_tp_9">
+                                <label for="int_tp_9">Others</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="check_box_group">
+                        <h4>Any special talents?</h4>
+                        <ul class="inner_wrapper d-flex flex-column ">
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="skill_1">
+                                <label for="skill_1">Designer/ Developer</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="skill_2">
+                                <label for="skill_2">Product Manager</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="skill_3">
+                                <label for="skill_3">Stage Performer</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="skill_4">
+                                <label for="skill_4">Electrician</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="skill_5">
+                                <label for="skill_5">Artist</label>
+                            </li>
+                            <li class="list-unstyled d-flex align-items-center gap-2">
+                                <input type="checkbox" name="check_things" id="skill_6">
+                                <label for="skill_6">Others</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single_v_input">
+                        <label for="comment_text">Comment</label>
+                        <textarea id="comment_text" placeholder="Write Something..." required></textarea>
+                    </div>
+                    <div class="v_form_actions d-flex justify-content-between align-items-center ">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!--END OF BECOMER A VOLUNTEER POPUP-->
+    <!--START OF MOBILE SEARCH POPUP-->
+    <section class="mobile_search_popup">
+        <span class="mobile_search_close">
+            <i class="fa-solid fa-x"></i>
+        </span>
+        <div class="mobile_search_popup_bg"></div>
+        <div class="mobile_search_wrapper">
+            <form action="" class="mobile_search_form">
+                <input type="search" list="search_items" placeholder="Searching For" required>
+                <datalist id="search_items">
+                    <option value="Charity">
+                    <option value="Education">
+                    <option value="Human Right">
+                    <option value="Safty">
+                    <option value="Medical">
+                    <option value="Children Care">
+                    <option value="Sports">
+                    <option value="Children Of Africa">
+                </datalist>
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="single_item">
+                <h4>Recent Search</h4>
+                <ul class="link_container d-flex flex-column  gap-2">
+                    <li class="list-unstyled "><a href="#"><span class="me-2"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>Children Care<span
+                                class="delete_search"><i class="fa-solid fa-x"></i></span></a></li>
+                    <li class="list-unstyled "><a href="#"><span class="me-2"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>Donation For Starving<span
+                                class="delete_search"><i class="fa-solid fa-x"></i></span></a></li>
+                    <li class="list-unstyled "><a href="#"><span class="me-2"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>Upcoming Event Schedule<span
+                                class="delete_search"><i class="fa-solid fa-x"></i></span></a></li>
+
+                </ul>
+            </div>
+            <div class="single_item">
+                <h4>Tags</h4>
+                <ul class="tags_container  d-flex align-items-center gap-2 flex-wrap ">
+                    <li class="list-unstyled"><a href="#">#Charity</a></li>
+                    <li class="list-unstyled"><a href="#">#Education</a></li>
+                    <li class="list-unstyled"><a href="#">#Health</a></li>
+                    <li class="list-unstyled"><a href="#">#Human Right</a></li>
+                    <li class="list-unstyled"><a href="#">#Environmental</a></li>
+                    <li class="list-unstyled"><a href="#">#Safty</a></li>
+                    <li class="list-unstyled"><a href="#">#Community</a></li>
+                    <li class="list-unstyled"><a href="#">#Disaster Relief</a></li>
+                    <li class="list-unstyled"><a href="#">#Woman Education</a></li>
+                </ul>
+            </div>
+            <div class="single_item">
+                <h4>Categories</h4>
+                <ul class="category_container d-flex align-items-center gap-2 flex-wrap">
+                    <li class="list-unstyled"><a href="#">Education</a></li>
+                    <li class="list-unstyled"><a href="#">Medical</a></li>
+                    <li class="list-unstyled"><a href="#">Health Care</a></li>
+                    <li class="list-unstyled"><a href="#">Children</a></li>
+                    <li class="list-unstyled"><a href="#">Old Members</a></li>
+                    <li class="list-unstyled"><a href="#">Sports</a></li>
+                    <li class="list-unstyled"><a href="#">Human Rights</a></li>
+                    <li class="list-unstyled"><a href="#">Relief</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--END OF MOBILE SEARCH POPUP-->
+    <!--==================
+         START OF MOBILE MENU 
+    ====================-->
+    <div class="mobile_menu">
+        <div class="mobile_menu_bg"></div>
+        <div class="mobile_wrapper">
+            <span class="mobile_menu_close">
+                <i class="fa-solid fa-x"></i>
+            </span>
+            <div class="mobile_menu_header">
+                <img class="img-fluid" src="img/logo.png" alt="logo image">
+            </div>
+            <div class="mobile_menu_body">
+                <ul>
+                    <li class="list-unstyled menu_item dropdowm_p"><span>Home</span>
+                        <span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                        <div class="inner_items_area">
+                            <h4><span class="back_page">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>Home</h4>
+                            <ul>
+                                <li class="list-unstyled"><a href="index.html">Go To Home</a></li>
+                                <li class="list-unstyled"><a href="#">Home -01</a></li>
+                                <li class="list-unstyled"><a href="#">Home -02</a></li>
+                                <li class="list-unstyled"><a href="#">Home -03</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-unstyled menu_item"><a href="#">About us</a></li>
+                    <li class="list-unstyled menu_item"><a href="#">Causes</a></li>
+                    <li class="list-unstyled menu_item dropdowm_p"><span>Pages</span>
+                        <span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                        <div class="inner_items_area">
+                            <h4><span class="back_page">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>Pages</h4>
+                            <ul>
+                                <li class="list-unstyled "><a href="volunter.html">Became A Volunter</a></li>
+                                <li class="list-unstyled "><a href="blog.html">Blog</a></li>
+                                <li class="list-unstyled "><a href="gallery.html">Gallery</a></li>
+                                <li class="list-unstyled "><a href="event.html">Events</a></li>
+                                <li class="list-unstyled "><a href="testimonial.html">Testimonials</a></li>
+                                <li class="list-unstyled "><a href="404-error-page.html">404 Error Page</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-unstyled menu_item"><a href="#">Blog</a></li>
+                    <li class="list-unstyled menu_item"><a href="#">Contact</a></li>
+                </ul>
+                <div class="menu_buttons">
+                    <a href="#" class="btn_hover">Donate Now</a>
+                    <a href="#" class="btn_hover btn_x">Become A Volunter</a>
+                </div>
+                <div class="menu_header_optoin">
+                    <h4>Languages</h4>
+                    <ul class="d-flex gap-3 flex-wrap menu_language">
+                        <li class="list-unstyled"><a href="#" class="active"><span class="flag_ln us"></span>English</a>
+                        </li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln es"></span>Spanish</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln fr"></span>Franch</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln sa"></span>English</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln ru"></span>Russian</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln cn"></span>Chinies</a></li>
+                        <li class="list-unstyled"><a href="#"><span class="flag_ln bd"></span>Bangali</a></li>
+                    </ul>
+                </div>
+                <div class="menu_header_optoin">
+                    <h4>Currancy</h4>
+                    <ul class="d-flex gap-3 flex-wrap menu_currancy">
+                        <li class="list-unstyled "><a href="#" class="active">USD ($)</a></li>
+                        <li class="list-unstyled "><a href="#">EURO (€)</a></li>
+                        <li class="list-unstyled "><a href="#">POUND (£)</a></li>
+                        <li class="list-unstyled "><a href="#">TAKA (৳)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=================  
+         START OF HEADER
+    ===================== -->
+    <header>
+        <!--START OF SCROL INFO-->
+        <div class="scrolling_news header_news">
+            <div class="container-fluid container-xl">
+                <div class="scrolling_news_wrapper d-flex align-items-center gap-5">
+                    <div class="single_news d-flex align-items-center">
+                        <a href="#">How Your Support Transforms Lives</a>
+                        <a href="#">Innovation and Progress in the World of Charity</a>
+                        <a href="#">Partnering with Organizations for Greater Impact</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                    </div>
+                    <div class="single_news d-flex align-items-center">
+                        <a href="#">How Your Support Transforms Lives</a>
+                        <a href="#">Innovation and Progress in the World of Charity</a>
+                        <a href="#">Partnering with Organizations for Greater Impact</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                    </div>
+                    <div class="single_news d-flex align-items-center">
+                        <a href="#">How Your Support Transforms Lives</a>
+                        <a href="#">Innovation and Progress in the World of Charity</a>
+                        <a href="#">Partnering with Organizations for Greater Impact</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                        <a href="#">Medical Relief Initiative: Bringing Hope and Healing</a>
+
+                        <a href="#">Educational Empowerment: Building Brighter Futures</a>
+                        <a href="#">Healthcare Access for Underserved Communities</a>
+                        <a href="#">Sustainable Agriculture and Food Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF SCROL INFO-->
+        <!--START OF HEADER INFO-->
+        <div class="header_info_area">
+            <div class="container-fluid container-xl">
+                <div
+                    class="info_area_wrapper flex-column flex-md-row d-flex align-items-center justify-content-center justify-content-md-between gap-2 gap-md-0">
+                    <div
+                        class="hb_left_side d-flex align-items-center gap-2 justify-content-center justify-content-sm-start">
+                        <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        <p class="mb-0 ">Donation Update: <b>$5035 USD</b> raised of<b>$ 100000 USD</b> goal</p>
+                    </div>
+
+                    <div class="hb_right_side d-flex justify-content-center  justify-content-sm-end ">
+                        <a href="#">
+                            <span>
+                                <i class="fa-solid fa-heart"></i>
+                            </span>
+                            Give Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF HEADER INFO-->
+        <!--START OF TOP HEADER-->
+        <div class="top_header">
+            <div class="container-fluid container-xl">
+                <div class="top_header_wrapper d-flex align-items-center justify-content-between">
+                    <div class="left_side d-flex align-items-center gap-4">
+                        <a href="tel:123-456-7890" class="phone d-flex align-items-center gap-2">
+                            <span>
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span>+0121 21223 321</span>
+                        </a>
+                        <a href="mailto:email@example.com" class="email d-flex align-items-center gap-2">
+                            <span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span>abc1234@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="right_side d-flex justify-content-end ">
+                        <div class="right_side_wrapper d-flex align-items-center gap-4">
+                            <div class="language_dropdown">
+                                <div class="selected_item">
+                                    English <span><i class="fa-solid fa-chevron-down"></i></span>
+                                </div>
+                                <ul class="option_dropdown">
+                                    <li class="list-unstyled "><a href="#">English</a></li>
+                                    <li class="list-unstyled es"><a href="#">Spanish</a></li>
+                                    <li class="list-unstyled fr"><a href="#">Franch</a></li>
+                                    <li class="list-unstyled sa"><a href="#">Arabic</a></li>
+                                    <li class="list-unstyled cN"><a href="#">Chinies</a></li>
+                                    <li class="list-unstyled ru"><a href="#">Russian</a></li>
+                                    <li class="list-unstyled bd"><a href="#">Bangali</a></li>
+                                </ul>
+                            </div>
+                            <div class="currancy_dropdown">
+                                <div class="selected_item">
+                                    USD ($)<span><i class="fa-solid fa-chevron-down"></i></span>
+                                </div>
+                                <ul class="option_dropdown">
+                                    <li class="list-unstyled "><a href="#">USD ($)</a></li>
+                                    <li class="list-unstyled "><a href="#">EURO (€)</a></li>
+                                    <li class="list-unstyled "><a href="#">POUND (£)</a></li>
+                                    <li class="list-unstyled "><a href="#">TAKA (৳)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF TOP HEADER-->
+        <!--START OF MIDDLE HEADER-->
+        <div class="middle_header">
+            <div class="container-fluid container-xl ">
+                <div class="middle_header_wrapper d-flex align-items-center justify-content-between ">
+                    <div class="left_side">
+                        <a class="logo">
+                            <img class="img-fluid" src="img/logo.png" alt="logo image">
+                        </a>
+                    </div>
+                    <div class="right_side d-flex align-items-center justify-content-end  gap-4">
+                        <form class="search_bar d-none d-md-block">
+                            <input type="search" id="desktop_searcbar" placeholder="Searching For...." required>
+                            <button class="search_btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <ul class="side_icons d-flex d-lg-none align-items-center gap-4 mb-0 ps-0 ">
+                            <li class="list-unstyled d-block d-md-none">
+                                <button class="menu_list_item sm_search_icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </li>
+                            <li class="list-unstyled">
+                                <button class="menu_list_item menu_open  d-grid ">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF MIDDLE HEADER-->
+        <!--START OF MENU HEADER-->
+        <div class="menu_header d-none d-lg-block">
+            <div class="container-fluid container-xl ">
+                <div class="menu_header_wrapper d-flex align-items-center justify-content-between ">
+                    <ul class="main_menu d-none d-lg-flex ps-0 mb-0 align-items-center">
+                        <li class="list-unstyled">
+                            <a href="index.html">Home <span class="ms-1"><i
+                                        class="fa-solid fa-chevron-down"></i></span></a>
+                            <ul class="dropdown_menu">
+                                <li class="list-unstyled "><a href="#">Home -01</a></li>
+                                <li class="list-unstyled "><a href="#">Home -02</a></li>
+                                <li class="list-unstyled "><a href="#">Home -03</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-unstyled">
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li class="list-unstyled">
+                            <a href="cause.html">Causes <span class="ms-1"><i
+                                        class="fa-solid fa-chevron-down"></i></span></a>
+                            <div class="mega_menu">
+                                <h2>Recent Causes</h2>
+                                <div class="mega_menu_wrapper">
+                                    <div class="row align-items-center ">
+                                        <div class="col-3">
+                                            <div class="mega_menu_left">
+                                                <h2 class="text-center ">Became A Volunter?</h2>
+                                                <p class="text-center ">Lorem ipsum dolor, sit amet consectetur
+                                                    adipisicing elit. Doloremque libero eos accusantium ullam
+                                                    .</p>
+                                                <a href="#" class="btn">Sign up Today</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="mega_menu_slider">
+                                                <div class="swiper mySwiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="single_cause d-flex align-items-center">
+                                                                <div class="cause_img">
+                                                                    <img class="img-fluid" src="img/cause/h_cause-3.jpg"
+                                                                        alt="cause image">
+                                                                </div>
+                                                                <div class="cause_info">
+                                                                    <a href="#" class="cause_category">Education</a>
+                                                                    <a href="#">Empowering Minds Investing in
+                                                                        Education</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
+                                                                    <div class="progress_bar">
+                                                                        <div class="main_pb">
+                                                                            <span>33.33%</span>
+                                                                            <div class="fill_pb"></div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Goal</b>
+                                                                                <span>$15000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Raised</b>
+                                                                                <span>$5000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>To Go</b>
+                                                                                <span>$8000</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_cause d-flex align-items-center two">
+                                                                <div class="cause_img">
+                                                                    <img class="img-fluid" src="img/cause/h_cause-2.jpg"
+                                                                        alt="cause image">
+                                                                </div>
+                                                                <div class="cause_info">
+                                                                    <a href="#" class="cause_category">Health</a>
+                                                                    <a href="#">Health Awareness and Support</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
+                                                                    <div class="progress_bar">
+                                                                        <div class="main_pb">
+                                                                            <span>20%</span>
+                                                                            <div class="fill_pb"></div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Goal</b>
+                                                                                <span>$10000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Raised</b>
+                                                                                <span>$2000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>To Go</b>
+                                                                                <span>$5000</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_cause d-flex align-items-center three">
+                                                                <div class="cause_img">
+                                                                    <img class="img-fluid" src="img/cause/h_cause-1.jpg"
+                                                                        alt="cause image">
+                                                                </div>
+                                                                <div class="cause_info">
+                                                                    <a href="#" class="cause_category">Medical</a>
+                                                                    <a href="#">Medical Relief Initiative: Bringing Hope
+                                                                        and Healing</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
+                                                                    <div class="progress_bar">
+                                                                        <div class="main_pb">
+                                                                            <span>71%</span>
+                                                                            <div class="fill_pb"></div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Goal</b>
+                                                                                <span>$30000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Raised</b>
+                                                                                <span>$22000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>To Go</b>
+                                                                                <span>$25000</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_cause d-flex align-items-center four">
+                                                                <div class="cause_img">
+                                                                    <img class="img-fluid" src="img/cause/h_cause-4.jpg"
+                                                                        alt="cause image">
+                                                                </div>
+                                                                <div class="cause_info">
+                                                                    <a href="#" class="cause_category">Human Rights</a>
+                                                                    <a href="#">Indigenous People's Rights and Cultural
+                                                                        Preservation</a>
+                                                                    <p>Lorem ipsum dolor sit amet consectetur
+                                                                        adipisicing elit. Quis facere optio aperiam,
+                                                                        cumque corporis dolore.</p>
+                                                                    <div class="progress_bar">
+                                                                        <div class="main_pb">
+                                                                            <span>65%</span>
+                                                                            <div class="fill_pb"></div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="d-flex align-items-center gap-3 justify-content-between ">
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Goal</b>
+                                                                                <span>$15000</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>Raised</b>
+                                                                                <span>$7500</span>
+                                                                            </div>
+                                                                            <div
+                                                                                class="single_box d-flex flex-column gap-1">
+                                                                                <b>To Go</b>
+                                                                                <span>$12000</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-unstyled">
+                            <a href="#">Pages <span class="ms-1"><i class="fa-solid fa-chevron-down"></i></span></a>
+                            <ul class="dropdown_menu">
+                                <li class="list-unstyled "><a href="volunter.html">Became A Volunter</a></li>
+                                <li class="list-unstyled "><a href="blog.html">Blog</a></li>
+                                <li class="list-unstyled "><a href="gallery.html">Gallery</a></li>
+                                <li class="list-unstyled "><a href="about.html">About Us</a></li>
+                                <li class="list-unstyled "><a href="event.html">Events</a></li>
+                                <li class="list-unstyled "><a href="testimonial.html">Testimonials</a></li>
+                                <li class="list-unstyled "><a href="404-error-page.html">404 Error Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-unstyled"><a href="#">Blog <span class="ms-1"><i
+                                        class="fa-solid fa-chevron-down"></i></span></a>
+                            <div class="mega_menu">
+                                <h2>Latest News</h2>
+                                <div class="mega_menu_wrapper">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="list_blogs">
+                                                <div class="single_blog d-flex align-items-center">
+                                                    <div class="blog_thmb_img">
+                                                        <img class="img-fluid" src="img/blog/blog_1.jpg"
+                                                            alt="blog image">
+                                                    </div>
+                                                    <div class="blog_info">
+                                                        <a href="#" class="blog_category">Eudcation</a>
+                                                        <h3><a href="#">Breaking Barriers: Empowering Women in
+                                                                Sports</a></h3>
+                                                        <span>12 Jun, 2024</span>
+                                                    </div>
+                                                </div>
+                                                <div class="single_blog d-flex align-items-center">
+                                                    <div class="blog_thmb_img">
+                                                        <img class="img-fluid" src="img/blog/blog_2.jpg"
+                                                            alt="blog image">
+                                                    </div>
+                                                    <div class="blog_info">
+                                                        <a href="#" class="blog_category">Eudcation</a>
+                                                        <h3><a href="#">Breaking Barriers: Empowering Women in
+                                                                Sports</a></h3>
+                                                        <span>12 Jun, 2024</span>
+                                                    </div>
+                                                </div>
+                                                <div class="single_blog d-flex align-items-center">
+                                                    <div class="blog_thmb_img">
+                                                        <img class="img-fluid" src="img/blog/blog_3.jpg"
+                                                            alt="blog image">
+                                                    </div>
+                                                    <div class="blog_info">
+                                                        <a href="#" class="blog_category">Eudcation</a>
+                                                        <h3><a href="#">Breaking Barriers: Empowering Women in
+                                                                Sports</a></h3>
+                                                        <span>12 Jun, 2024</span>
+                                                    </div>
+                                                </div>
+                                                <div class="view_btn d-flex align-items-center justify-content-center ">
+                                                    <a href="#" class="btn">View All</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="recent_blog_h_slider">
+                                                <div class="swiper mySwiper2">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_4.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_5.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="single_blog">
+                                                                <div class="blog_img">
+                                                                    <img class="img-fluid" src="img/blog/blog_4.jpg"
+                                                                        alt="blog_image">
+                                                                    <a href="#">Education</a>
+                                                                </div>
+                                                                <div class="blog_info">
+                                                                    <div
+                                                                        class="blog_head d-flex align-items-center  justify-content-between ">
+                                                                        <div class="date">
+                                                                            <span>
+                                                                                <i
+                                                                                    class="fa-regular fa-calendar-days"></i>
+                                                                            </span>
+                                                                            <span>14 Jun 2024</span>
+                                                                        </div>
+                                                                        <div class="author">
+                                                                            <span>
+                                                                                <i class="fa-regular fa-user"></i>
+                                                                            </span>
+                                                                            <span>By Admin</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="blog_body">
+                                                                        <h3>
+                                                                            <a href="#">
+                                                                                Stories of Hope: Inspiring Tales from
+                                                                                Our Beneficiarie
+                                                                            </a>
+                                                                        </h3>
+                                                                        <p>Suscipit necessitatibus voluptatum id velit,
+                                                                            temporibus nisi veniam incidunt excepturi,
+                                                                            officiis qui omnis alias, adipisci beatae!
+                                                                            Ullam error provident, Obcaecati, temporibus
+                                                                            commodi.</p>
+                                                                        <a href="#" class="btn">Read More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                                                    <div class="swiper-button-next swiper-button-next2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-unstyled"><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="menu_header_btns d-flex align-items-center gap-3">
+                        <button class="donate_btn btn_hover">Donate Now</button>
+                        <button class="volunter_btn btn_hover btn_x">Became a Volunter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF MENU HEADER-->
+    </header>
+    <!--=================
+        END OF HEADER
+    ===================== -->
+    <!--============================*****header content**** end====================================-->
+    <main>
+        <!--=====================START OF PAGE INTRO SECTION====================-->
+        <section class="page_intro_section">
+            <div class="container-fluid container-xl">
+                <div class="page_intro_wrapper">
+                    <div class="page_info">
+                        <h2>Our Blogs</h2>
+                        <ul>
+                            <li class="list-unstyled">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="list-unstyled">Blog</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====================END OF PAGE INTRO SECTION====================-->
+
+        <!--**START OF FEATURED BLOG SECTION-->
+        <section class="featured_section">
+            <div class="container-fluid container-xl">
+                <div class="featured_wrapper">
+                    <div class="row">
+                        <div class="col-12 col-md-8 mb-4 mb-md-0">
+                            <div class="f_blog_slider">
+                                <h2 class="area_title">Featured Blogs</h2>
+                                <div class="swiper blog_slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <article class="single_featured_blog">
+                                                <div class="f_blog_image">
+                                                    <img class="img-fluid" src="img/blog/blog_1.jpg" alt="Blog Image">
+                                                </div>
+                                                <div class="f_blog_content">
+                                                    <div
+                                                        class="f_blog_content_header d-flex align-items-center justify-content-between">
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-calendar-days"></i>
+                                                            </span>
+                                                            <span>12 February 2024</span>
+                                                        </div>
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                            <span>By Developer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="f_blog_title">
+                                                        <h3><a href="#">Empowering Communities: How Your Support Changes
+                                                                Lives</a></h3>
+                                                        <button class="button-body two">Read More</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <article class="single_featured_blog">
+                                                <div class="f_blog_image">
+                                                    <img class="img-fluid" src="img/blog/blog_2.jpg" alt="Blog Image">
+                                                </div>
+                                                <div class="f_blog_content">
+                                                    <div
+                                                        class="f_blog_content_header d-flex align-items-center justify-content-between">
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-calendar-days"></i>
+                                                            </span>
+                                                            <span>12 February 2024</span>
+                                                        </div>
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                            <span>By Developer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="f_blog_title">
+                                                        <h3><a href="#">Why Your Involvement Is Crucial: Exploring the
+                                                                Long-Lasting Effects of Charity Work</a></h3>
+                                                        <button class="button-body two">Read More </button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <article class="single_featured_blog">
+                                                <div class="f_blog_image">
+                                                    <img class="img-fluid" src="img/blog/blog_3.jpg" alt="Blog Image">
+                                                </div>
+                                                <div class="f_blog_content">
+                                                    <div
+                                                        class="f_blog_content_header d-flex align-items-center justify-content-between">
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-calendar-days"></i>
+                                                            </span>
+                                                            <span>12 February 2024</span>
+                                                        </div>
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                            <span>By Developer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="f_blog_title">
+                                                        <h3><a href="#">Sustaining Change: The Long-Term Impact of Our
+                                                                Charity’s Work Across Different Causes</a></h3>
+                                                        <button class="button-body two">Read More </button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <article class="single_featured_blog">
+                                                <div class="f_blog_image">
+                                                    <img class="img-fluid" src="img/blog/blog_4.jpg" alt="Blog Image">
+                                                </div>
+                                                <div class="f_blog_content">
+                                                    <div
+                                                        class="f_blog_content_header d-flex align-items-center justify-content-between">
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-calendar-days"></i>
+                                                            </span>
+                                                            <span>12 February 2024</span>
+                                                        </div>
+                                                        <div class="blog_header_info d-flex align-items-center gap-1">
+                                                            <span>
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </span>
+                                                            <span>By Developer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="f_blog_title">
+                                                        <h3><a href="#">From Crisis to Hope: How Our Programs Are
+                                                                Offering a Lifeline to Those in Need</a></h3>
+                                                        <button class="button-body two">Read More </button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next swiper-button-next_fb"></div>
+                                    <div class="swiper-button-prev swiper-button-prev_fb"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <aside>
+                                <div class="aside_wrapper">
+                                    <div class="asid_title">
+                                        <h2 class="area_title">Recent Blogs</h2>
+                                    </div>
+                                    <div class="recent_blog_list">
+                                        <ul>
+                                            <li class="list-unstyled d-flex gap-2">
+                                                <span></span>
+                                                <div class="recent_blog_info">
+                                                    <a href="#">Hope Gala 2024: A Night of Giving and Gratitude</a>
+                                                    <div class="recent_blog_time d-flex align-items-center gap-2">
+                                                        <span><i class="fa-regular fa-clock"></i></span>
+                                                        <span>03 Apr, 2024</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-unstyled d-flex gap-2">
+                                                <span></span>
+                                                <div class="recent_blog_info">
+                                                    <a href="#">Educational Symposium: Knowledge Sharing for Impact</a>
+                                                    <div class="recent_blog_time d-flex align-items-center gap-2">
+                                                        <span><i class="fa-regular fa-clock"></i></span>
+                                                        <span>30 Mar, 2024</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-unstyled d-flex gap-2">
+                                                <span></span>
+                                                <div class="recent_blog_info">
+                                                    <a href="#">Community Cleanup Day: Making Our Neighborhood Shine</a>
+                                                    <div class="recent_blog_time d-flex align-items-center gap-2">
+                                                        <span><i class="fa-regular fa-clock"></i></span>
+                                                        <span>25 Mar, 2024</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-unstyled d-flex gap-2">
+                                                <span></span>
+                                                <div class="recent_blog_info">
+                                                    <a href="#">Community Cleanup Day: Making Our Neighborhood Shine</a>
+                                                    <div class="recent_blog_time d-flex align-items-center gap-2">
+                                                        <span><i class="fa-regular fa-clock"></i></span>
+                                                        <span>25 Mar, 2024</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-unstyled d-flex gap-2">
+                                                <span></span>
+                                                <div class="recent_blog_info">
+                                                    <a href="#">Community Cleanup Day: Making Our Neighborhood Shine</a>
+                                                    <div class="recent_blog_time d-flex align-items-center gap-2">
+                                                        <span><i class="fa-regular fa-clock"></i></span>
+                                                        <span>25 Mar, 2024</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-unstyled d-flex gap-2">
+                                                <span></span>
+                                                <div class="recent_blog_info">
+                                                    <a href="#">Community Cleanup Day: Making Our Neighborhood Shine</a>
+                                                    <div class="recent_blog_time d-flex align-items-center gap-2">
+                                                        <span><i class="fa-regular fa-clock"></i></span>
+                                                        <span>25 Mar, 2024</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--**END OF FEATURED BLOG SECTION-->
+
+        <!--**START OF MORE BLOG SECTION-->
+        <div class="more_blog_section">
+            <div class="container-fluid container-xl">
+                <div class="more_blog_wrapper">
+                    <h2 class="area_title">More Blogs</h2>
+                    <div class="more_blog_container">
+                        <article class="single_blog_card">
+                            <div class="blog_card_image">
+                                <img class="img-fluid" src="img/blog/blog_2.jpg" alt="Blog Image">
+                            </div>
+                            <div class="blog_card_content">
+                                <div class="blog_card_content_header d-flex align-items-center justify-content-between">
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>21 July 2024</span>
+                                    </div>
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                        <span>By Developer</span>
+                                    </div>
+                                </div>
+                                <div class="blog_card_title">
+                                    <h3><a href="#">The Journey of Giving: Stories of Hope and Resilience</a></h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                                        doloribus cum facilis.</p>
+                                    <button class="button-body two">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single_blog_card">
+                            <div class="blog_card_image">
+                                <img class="img-fluid" src="img/blog/blog_3.jpg" alt="Blog Image">
+                            </div>
+                            <div class="blog_card_content">
+                                <div class="blog_card_content_header d-flex align-items-center justify-content-between">
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>21 July 2024</span>
+                                    </div>
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                        <span>By Developer</span>
+                                    </div>
+                                </div>
+                                <div class="blog_card_title">
+                                    <h3><a href="#">From Small Acts to Big Impact: How You Can Help</a></h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                                        doloribus cum facilis.</p>
+                                    <button class="button-body two">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single_blog_card">
+                            <div class="blog_card_image">
+                                <img class="img-fluid" src="img/blog/blog_4.jpg" alt="Blog Image">
+                            </div>
+                            <div class="blog_card_content">
+                                <div class="blog_card_content_header d-flex align-items-center justify-content-between">
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>21 July 2024</span>
+                                    </div>
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                        <span>By Developer</span>
+                                    </div>
+                                </div>
+                                <div class="blog_card_title">
+                                    <h3><a href="#">Why Your Contribution Matters: Real Stories of Impact</a></h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                                        doloribus cum facilis.</p>
+                                    <button class="button-body two">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single_blog_card">
+                            <div class="blog_card_image">
+                                <img class="img-fluid" src="img/blog/blog_5.jpg" alt="Blog Image">
+                            </div>
+                            <div class="blog_card_content">
+                                <div class="blog_card_content_header d-flex align-items-center justify-content-between">
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>21 July 2024</span>
+                                    </div>
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                        <span>By Developer</span>
+                                    </div>
+                                </div>
+                                <div class="blog_card_title">
+                                    <h3><a href="#">Why Your Contribution Matters: Real Stories of Impact</a></h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                                        doloribus cum facilis.</p>
+                                    <button class="button-body two">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single_blog_card">
+                            <div class="blog_card_image">
+                                <img class="img-fluid" src="img/blog/blog_1.jpg" alt="Blog Image">
+                            </div>
+                            <div class="blog_card_content">
+                                <div class="blog_card_content_header d-flex align-items-center justify-content-between">
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>21 July 2024</span>
+                                    </div>
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                        <span>By Developer</span>
+                                    </div>
+                                </div>
+                                <div class="blog_card_title">
+                                    <h3><a href="#">Changing Lives, One Step at a Time: Join Our Cause</a></h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                                        doloribus cum facilis.</p>
+                                    <button class="button-body two">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single_blog_card">
+                            <div class="blog_card_image">
+                                <img class="img-fluid" src="img/cause/h_cause-21.jpg" alt="Blog Image">
+                            </div>
+                            <div class="blog_card_content">
+                                <div class="blog_card_content_header d-flex align-items-center justify-content-between">
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>21 July 2024</span>
+                                    </div>
+                                    <div class="blog_card_info d-flex align-items-center gap-1">
+                                        <span>
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                        <span>By Developer</span>
+                                    </div>
+                                </div>
+                                <div class="blog_card_title">
+                                    <h3><a href="#">Bridging Gaps: How Our Programs Foster Inclusion</a></h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                                        doloribus cum facilis.</p>
+                                    <button class="button-body two">Read More</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**END OF MORE BLOG SECTION-->
+   <!--=====================START OF GET IN TOUCH SECTION====================-->
+   <section class="contact_section">
+    <div class="container-fluid container-lg">
+        <div class="contact_wrapper d-flex flex-column align-items-center justify-content-center">
+            <h2 class="text-center">Get in Touch with Us</h2>
+            <p class="text-center">Have any questions about our causes or ways you can help? Reach out, and let’s work together to make a difference.</p>
+            <button class="button-body">Get In Touch</button>
+        </div>
+    </div>
+</section>
+<!--=====================END OF GET IN TOUCH SECTION====================-->
+    </main>
+
+    <!--======================
+    START OF FOOTER SECTION 
+    =========================-->
+    <footer>
+        <div class="container-fluid container-xl">
+            <div class="footer_wrapper">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-0 ">
+                        <div class="footer_intro">
+                            <a href="index.html" class="footer_logo d-block">
+                                <img src="img/logo.png" alt="footer logo" class="img-fluid">
+                            </a>
+                            <p>Join us in making a difference. Together, we're transforming lives and building a better
+                                tomorrow. CharityZone</p>
+                            <ul class="m-0 p-0">
+                                <li class="list-unstyled"><a href="tel:12345" class="d-flex align-items-center gap-2"
+                                        target="_blank">
+                                        <span>
+                                            <i class="fa-solid fa-phone"></i>
+                                        </span>
+                                        <span>+ 1234 567 8910</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled"><a href="mailto: expamle@gmail.com"
+                                        class="d-flex align-items-center gap-2" target="_blank">
+                                        <span>
+                                            <i class="fa-regular fa-envelope"></i>
+                                        </span>
+                                        <span>abc1234@gmail.com</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled"><a
+                                        href="https://www.google.com/maps/d/viewer?mid=1oJFDzbsaJiuUBqLvEKChBCW0S7o&hl=en&usp=sharing"
+                                        class="d-flex align-items-center gap-2" target="_blank">
+                                        <span>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </span>
+                                        <span>123 Charity Street, Compassionville, Hope County, Unityland</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-0">
+                        <div class="single_footer_list">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li class="list-unstyled">
+                                    <a href="about.html">About Us</a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="event.html">Events</a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="cause.html">Our Causes</a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">FAQs</a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">Trems & Conditions</a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5 mb-sm-0">
+                        <div class="single_footer_list recent_post">
+                            <h3>Recent Post</h3>
+                            <ul>
+                                <li class="list-unstyled d-flex align-items-center gap-2">
+                                    <div class="fc_post_img">
+                                        <img class="img-fluid" src="img/blog/blog_1.jpg" alt="Post image">
+                                    </div>
+                                    <div class="fc_post_info">
+                                        <a href="#">Recent Initiatives in Action</a>
+                                        <div class="fc_post_time d-flex align-items-center gap-2">
+                                            <span><i class="fa-regular fa-clock"></i></span>
+                                            <span>28 Mar, 2024</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-unstyled d-flex align-items-center gap-2">
+                                    <div class="fc_post_img">
+                                        <img class="img-fluid" src="img/blog/blog_2.jpg" alt="Post image">
+                                    </div>
+                                    <div class="fc_post_info">
+                                        <a href="#">A Look into Our Work</a>
+                                        <div class="fc_post_time d-flex align-items-center gap-2">
+                                            <span><i class="fa-regular fa-clock"></i></span>
+                                            <span>05 Mar, 2024</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-unstyled d-flex align-items-center gap-2">
+                                    <div class="fc_post_img">
+                                        <img class="img-fluid" src="img/blog/blog_3.jpg" alt="Post image">
+                                    </div>
+                                    <div class="fc_post_info">
+                                        <a href="#">Our Latest Outreach Efforts</a>
+                                        <div class="fc_post_time d-flex align-items-center gap-2">
+                                            <span><i class="fa-regular fa-clock"></i></span>
+                                            <span>20 Feb, 2024</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="single_footer_list latest_events">
+                            <h3>Latest Events</h3>
+                            <ul>
+                                <li class="list-unstyled d-flex gap-2">
+                                    <span></span>
+                                    <div class="fc_event_info">
+                                        <a href="#">Hope Gala 2024: A Night of Giving and Gratitude</a>
+                                        <div class="fc_event_time d-flex align-items-center gap-2">
+                                            <span><i class="fa-regular fa-clock"></i></span>
+                                            <span>03 Apr, 2024</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-unstyled d-flex gap-2">
+                                    <span></span>
+                                    <div class="fc_event_info">
+                                        <a href="#">Educational Symposium: Knowledge Sharing for Impact</a>
+                                        <div class="fc_event_time d-flex align-items-center gap-2">
+                                            <span><i class="fa-regular fa-clock"></i></span>
+                                            <span>30 Mar, 2024</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-unstyled d-flex gap-2">
+                                    <span></span>
+                                    <div class="fc_event_info">
+                                        <a href="#">Community Cleanup Day: Making Our Neighborhood Shine</a>
+                                        <div class="fc_event_time d-flex align-items-center gap-2">
+                                            <span><i class="fa-regular fa-clock"></i></span>
+                                            <span>25 Mar, 2024</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social_section">
+            <div class="social_section_container d-flex align-items-center justify-content-center">
+                <div class="social_section_wrapper">
+                    <a href="#" class="single_social">
+                        <div class="single_social_inner d-flex align-items-center">
+                            <div class="social_icon">
+                                <span>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </div>
+                            <div class="social_name">
+                                Facebook
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="single_social d-flex align-items-center">
+                        <div class="social_icon">
+                            <span>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </span>
+                        </div>
+                        <div class="social_name">
+                            Linkedin
+                        </div>
+                    </a>
+                    <a href="#" class="single_social d-flex align-items-center">
+                        <div class="social_icon">
+                            <span>
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                        </div>
+                        <div class="social_name">
+                            Instagram
+                        </div>
+                    </a>
+                    <a href="#" class="single_social d-flex align-items-center">
+                        <div class="social_icon">
+                            <span>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </span>
+                        </div>
+                        <div class="social_name">
+                            Twiter
+                        </div>
+                    </a>
+                    <a href="#" class="single_social d-flex align-items-center">
+                        <div class="social_icon">
+                            <span>
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </span>
+                        </div>
+                        <div class="social_name">
+                            Google
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="bottom_section">
+            <div class="container-fluid container-xl ">
+                <div class="bottom_section_wrapper">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-4 mb-md-0">
+                            <div class="bottom_left">
+                                <h4>Payment System</h4>
+                                <div class="bottom_img">
+                                    <img class="img-fluid" src="img/payments.png" alt="payment iamge">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="bottom_right">
+                                <h4>Shipping System</h4>
+                                <div class="bottom_img">
+                                    <img class="img-fluid" src="img/shipping.png.webp" alt="payment iamge">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="copyright_section">
+            <div class="copyright_wrapper d-flex align-items-center justify-content-center">
+                <p class="mb-0">Copyright 2024. CharityZone All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!--======================
+    END OF FOOTER SECTION 
+    =========================-->
+
+
+
+    <!--script-->
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>
