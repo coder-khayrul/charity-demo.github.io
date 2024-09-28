@@ -3048,6 +3048,10 @@ footer {
 
 /**STYLE FOR SMALL SCREEN**/
 @media only screen and (max-width: 576px) {
+
+.page_intro_wrapper .page_info>h2 {
+    font-size: 30px;
+}
     section.contact_section .contact_wrapper > p {
         font-size: 14px;
         width: 95%;
