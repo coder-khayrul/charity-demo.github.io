@@ -187,11 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //***SCRIPT OF DONATE POPUP */
+    //***SCRIPT OF volunteer POPUP */
     const volunteer_popup = document.querySelector(".volunteer_popup")
     const volunteer_wrapper = document.querySelector(".volunteer_wrapper")
     const volunteer_popup_close = document.querySelector(".volunteer_close")
-    const volunteer_popup_open = document.querySelector(".volunter_btn ")
+    const volunteer_popup_open = document.querySelector(".volunteer_btn ")
 
     volunteer_popup_open.addEventListener("click", () => {
 

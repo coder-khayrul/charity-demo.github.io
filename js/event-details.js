@@ -346,30 +346,4 @@ document.addEventListener('DOMContentLoaded', () => {
       },
   });
 
-
-//FEATURED BLOG SLIDER
-var featuredBlogSlider = new Swiper(".blog_slider", {
-    // loop: true,
-    // autoplay: true,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    effect: 'creative',
-    creativeEffect: {
-      prev: {
-        // will set `translateZ(-400px)` on previous slides
-        translate: [0, 0, -400],
-      },
-      next: {
-        // will set `translateX(100%)` on next slides
-        translate: ['100%', 0, 0],
-      },
-    },
-    navigation: {
-        nextEl: ".swiper-button-next_fb",
-        prevEl: ".swiper-button-prev_fb",
-    },
-});
-
-
-
 })
