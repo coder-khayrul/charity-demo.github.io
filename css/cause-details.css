@@ -2706,6 +2706,92 @@ form.comment_form .comment_form_wrapper button {
 /***END OF CAUSE DETAILS SECTION STYLE***/
 
 
+/***========================START OF PAGE INTRO SECTION STYLE***/
+
+section.page_intro_section {
+    background: linear-gradient(#00000080, #00000080), url(../img/blog_intro.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.page_intro_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_intro_wrapper .page_info>h2 {
+    font-size: 45px;
+    margin-bottom: 24px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+
+.page_intro_wrapper .page_info>ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_intro_wrapper .page_info>ul>li {
+    font-size: 16px;
+    color: var(--sub-bg-color);
+    font-weight: 500;
+}
+
+.page_intro_wrapper .page_info>ul>li>a {
+    color: var(--secondary-color);
+    transition: .6s;
+}
+
+.page_intro_wrapper .page_info>ul>li>a::after {
+    content: " / ";
+    margin-inline: 10px;
+    color: var(--primary-color);
+}
+
+.page_image_container {
+    width: calc(100% - 55%);
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+.page_img {
+    background: red;
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid var(--accent-color);
+    position: absolute;
+}
+
+.page_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page_intro_wrapper .page_info>ul>li>a:hover {
+    color: var(--accent-color);
+    transition: .6s;
+}
+
+/***========================END OF PAGE INTRO SECTION STYLE***/
+
+
 
 /***========================START OF FOOTER SECTION STYLE***/
 footer {
