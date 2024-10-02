@@ -2226,7 +2226,7 @@ aside {
 ul.popular_category {
     padding: 0;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 ul.popular_category > li > a {
@@ -2273,15 +2273,30 @@ ul.popular_category > li > a> span:last-child {
     border-radius: 50px;
     border: 1px solid var(--border-color);
     transition: .6s;
+    font-size: 14px;
+}
+ul.popular_category > li::after {
+    content: " ";
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    display: block;
+    background: var(--accent-color);
+    bottom: 0;
+    transition: .8s;
 }
 
+ul.popular_category > li:hover::after {
+    width: 100%;
+    transition: .8s;
+}
 ul.popular_category > li:hover > a> span:last-child {
     background: var(--accent-color);
     color: var(--primary-color);
     transition: .6s;
 }
 .cause_report {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .recent_causes_area {
@@ -2289,7 +2304,7 @@ ul.popular_category > li:hover > a> span:last-child {
     flex-direction: column;
     gap: 15px;
     padding-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .single_rc_cause .rc_cause_img {
@@ -2709,7 +2724,7 @@ form.comment_form .comment_form_wrapper button {
 /***========================START OF PAGE INTRO SECTION STYLE***/
 
 section.page_intro_section {
-    background: linear-gradient(#00000080, #00000080), url(../img/blog_intro.jpg);
+    background: linear-gradient(#00000080, #00000080), url(../img/cause/h_cause-2.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

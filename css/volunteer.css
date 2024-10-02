@@ -2042,8 +2042,8 @@ input[type="number"]::-webkit-outer-spin-button {
 /***========================START OF PAGE INTRO SECTION STYLE***/
 
 section.page_intro_section {
-    background: linear-gradient(#00000080, #00000080), url(../img/blog_intro.jpg);
-    background-position: center center;
+    background: linear-gradient(#00000080, #00000080), url(../img/volunteer.png);
+    background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
