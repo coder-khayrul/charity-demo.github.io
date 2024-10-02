@@ -4,62 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity | Event Details</title>
+    <title>Charity | Cause Details</title>
     <!--style-->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/event-details.css">
+    <link rel="stylesheet" href="css/cause-details.css">
 </head>
 
 <body>
-    <div class="event_form_popup">
-        <div class="event_form_bg"></div>
-        <div class="event_form_popup_wrapper">
-            <button class="event_popup_close"><i class="fa-solid fa-xmark"></i></button>
-            <h3 class="event_details_area_title">Book A Seat</h3>
-            <form>
-                <div class="popup_input_group">
-                    <input type="text" name="person_first_name" id="person_first_name" placeholder="First Name"/>
-                    <input type="text" name="person_last_name" id="person_last_name" placeholder="Last Name"/>
-                </div>
-                <div class="popup_input_group">
-                    <input type="number" name="person_phone" id="person_phone" placeholder="Phone Number"/>
-                    <input type="email" name="person_email" id="person_email" placeholder="Email Address"/>
-                </div>
-                <div class="popup_input_group">
-                    <input type="text" name="person_city" id="person_city" placeholder="City"/>
-                    <select type="text" name="person_country" id="person_country">
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="United State">United State</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Srilanka">Srilanka</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="Itely">Itely</option>
-                        <option value="UAE">UAE</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                    </select>
-                </div>
-                <input type="text" name="person_address" id="person_address" placeholder="Address">
-                <div class="aggree_area">
-                    <span>I prefer to communicate by</span>
-                    <ul class="mb-0 ps-0">
-                        <li class="list-unstyled d-flex align-items-center">
-                            <input type="checkbox" name="person_checkbox1" id="person_checkbox1">
-                           <span>Email</span>
-                        </li>
-                        <li class="list-unstyled d-flex align-items-center">
-                            <input type="checkbox" name="person_checkbox2" id="person_checkbox2">
-                            <span>Phone</span>
-                        </li>
-                    </ul>
-                </div>
-                <button type="submit" class="button-body two">Submit</button>
-            </form>
-        </div>
-    </div>
+
 
     <!--============================header content start====================================-->
 
@@ -1215,365 +1169,108 @@
     ===================== -->
     <!--============================*****header content**** end====================================-->
     <main>
-        <section class="event_details_section">
+        <section class="cause_details_section">
             <div class="container-fluid container-xl">
-                <div class="booking_alert d-flex align-items-center justify-content-center">
-                    <span><i class="fa-solid fa-triangle-exclamation"></i></span>
-                   <p>Hurry! Only 45 Spots Left for the Share the Warmth Campaign</p> 
-                </div>
-                <div class="event_details_wrapper">
-                    <div class="main_event_container">
-                        <div class="event_details_img">
-                            <img src="img/event/event-01.jpg" alt="Event Image">
-                            <div class="event_post_info event_post_date d-flex align-items-center">
-                                <span><i class="fa-regular fa-calendar-days"></i></span>
-                                <span>28 September</span>
-                            </div>
-                            <div class="event_post_info event_post_category d-flex align-items-center">
+                <div class="cause_details_wrapper">
+                    <div class="cause_details_container">
+                        <div class="cause_details_img">
+                            <img src="img/cause/h_cause-10.jpg" alt="Causes Image" class="img-fluid">
+                            <button class="cause_react">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="sidebar_show d-lg-none">
+                                <span><i class="fa-solid fa-arrow-left"></i> Cause Details</span>
+                            </button>
+                            <div class="cause_post_category d-flex align-items-center">
                                 <span><i class="fa-regular fa-folder-open"></i></span>
                                 <span>Children</span>
                             </div>
-                            <button class="sidebar_show d-lg-none">
-                                <span><i class="fa-solid fa-arrow-left"></i> Event Details</span>
-                            </button>
                         </div>
-                        <div class="event_content">
-                            <h2>Share the Warmth Winter Clothing Campaign</h2>
-                            <p>As the cold months approach, many in our community struggle to stay warm. The Share the
-                                Warmth Winter Clothing Campaign is our effort to ensure that everyone, regardless of
-                                their circumstances, can face the winter season with comfort and dignity. This campaign
-                                is dedicated to collecting and distributing essential winter wear such as coats, hats,
-                                scarves, gloves, and boots to those in need.</p>
-                            <p>We invite you to donate new or gently used winter clothing or
-                                contribute financially to
-                                help us purchase new items. Your support will directly benefit individuals and families
-                                who may otherwise go without the warmth they need to get through the harsh winter.</p>
-                            <p>Every piece of warm clothing you give can make a life-changing difference, and together,
-                                we can spread warmth and kindness across the community. Join us in this vital cause, and
-                                let’s ensure that no one is left in the cold this winter. </p>
-                            <p>This campaign is more than just a clothing drive. It's about coming together as a
-                                community to support those who are less fortunate. We are accepting donations of new or
-                                gently used winter clothing items, including coats, jackets, hats, scarves, gloves,
-                                boots, and socks. All sizes are welcome, as we aim to help people of all ages, from
-                                children to the elderly, who are facing difficult circumstances.</p>
-                            <p class="event_para_last">In addition to clothing donations, we encourage monetary
-                                contributions to help us
-                                purchase high-demand items and cover logistics costs. Every dollar raised will go
-                                directly toward acquiring quality winter wear, ensuring that no one in our community is
-                                left without protection against the cold.</p>
-                            <div class="event_actions d-flex align-items-center justify-content-between">
-                                <button class="button-body two event_booking_btn">Book A Seat</button>
-                                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Charity+Event&dates=20240928T120000Z/20240928T130000Z&details=Join+our+charity+event+to+make+a+difference!&location=City+Park"
-                                    target="_blank" class="button-body">Add Calendar</a>
+                        <div class="cause_details_content">
+                            <div class="cause_post_info">
+                                <ul class="ps-0 mb-0 d-flex align-items-center">
+                                    <li class="list-unstyled d-flex align-items-center">
+                                        <div class="cause_post_img">
+                                            <img class="img-fluid" src="img/man-4.png" alt="Admin Profile">
+                                        </div>
+                                        <span>Admin</span>
+                                    </li>
+                                    <li class="list-unstyled d-flex align-items-center">
+                                        <span>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </span>
+                                        <span>25 Sep, 2024</span>
+                                    </li>
+                                    <li class="list-unstyled d-flex align-items-center">
+                                        <span>
+                                            <i class="fa-regular fa-comment"></i>
+                                        </span>
+                                        <div>Comments (<span>02</span>)</div>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="event_timer">
-                            <h3 class="event_details_area_title">Start In</h3>
-                            <div class="event_timer_wrapper">
-                                <div class="single_timer_box">
-                                    <span class="day">23</span>
-                                    <b>Day</b>
-                                </div>
-                                <div class="single_timer_box">
-                                    <span class="hrs">11</span>
-                                    <b>Hrs</b>
-                                </div>
-                                <div class="single_timer_box">
-                                    <span class="min">53</span>
-                                    <b>Min</b>
-                                </div>
-                                <div class="single_timer_box">
-                                    <span class="sec">55</span>
-                                    <b>Sec</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="guest_list_container">
-                            <h3 class="event_details_area_title">Cheif Guest</h3>
-                            <div class="guest_list">
-                                <div class="single_guest">
-                                    <div class="guest_img"><img src="img/man-2.png" alt="guest Image" class="img-fluid">
-                                    </div>
-                                    <div class="guest_info">
-                                        <h3>Alex Turnerfield</h3>
-                                        <em>CSR Manage</em>
-                                        <div class="social_links_container">
-                                            <div class="social_sign"><i class="fa-solid fa-plus"></i></div>
-                                            <div class="admin_social_links">
-                                                <a href="#">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
+                            <h2>Bringing Hope to Underprivileged Children</h2>
+                            <p>In a world filled with opportunities, millions of children are left behind due to
+                                poverty, lack of access to education, and inadequate healthcare. Our mission is to bring
+                                hope and a brighter future to underprivileged children by addressing the fundamental
+                                barriers they face</p>
+                            <p>We provide access to quality education, ensuring that every child, regardless of their
+                                background, has the chance to learn, grow, and achieve their dreams. By offering
+                                essential resources such as school supplies, scholarships, and after-school programs, we
+                                aim to bridge the gap and give these children the tools they need to succeed.</p>
+                            <div class="causes_img_slider_container">
+                                <div class="swiper causes_img_slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="single_cause_img">
+                                                <img class="img-fluid" src="img/cause/h_cause-11.jpg"
+                                                    alt="Causes Image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="single_cause_img">
+                                                <img class="img-fluid" src="img/cause/h_cause-15.jpg"
+                                                    alt="Causes Image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="single_cause_img">
+                                                <img class="img-fluid" src="img/cause/h_cause-14.jpg"
+                                                    alt="Causes Image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="single_cause_img">
+                                                <img class="img-fluid" src="img/cause/h_cause-12.jpg"
+                                                    alt="Causes Image">
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="single_guest">
-                                    <div class="guest_img"><img src="img/man-3.png" alt="guest Image" class="img-fluid">
-                                    </div>
-                                    <div class="guest_info">
-                                        <h3>Samantha Reid</h3>
-                                        <em>Nonprofit Consultant</em>
-                                        <div class="social_links_container">
-                                            <div class="social_sign"><i class="fa-solid fa-plus"></i></div>
-                                            <div class="admin_social_links">
-                                                <a href="#">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single_guest">
-                                    <div class="guest_img"><img src="img/man-4.png" alt="guest Image" class="img-fluid">
-                                    </div>
-                                    <div class="guest_info">
-                                        <h3>Jordan Whitmore</h3>
-                                        <em>Donor Relations Lead</em>
-                                        <div class="social_links_container">
-                                            <div class="social_sign"><i class="fa-solid fa-plus"></i></div>
-                                            <div class="admin_social_links">
-                                                <a href="#">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single_guest">
-                                    <div class="guest_img"><img src="img/man-5.jpg" alt="guest Image" class="img-fluid">
-                                    </div>
-                                    <div class="guest_info">
-                                        <h3>Nathan Crosswell</h3>
-                                        <em>Head of Fundraising</em>
-                                        <div class="social_links_container">
-                                            <div class="social_sign"><i class="fa-solid fa-plus"></i></div>
-                                            <div class="admin_social_links">
-                                                <a href="#">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single_guest">
-                                    <div class="guest_img"><img src="img/man-6.jpg" alt="guest Image" class="img-fluid">
-                                    </div>
-                                    <div class="guest_info">
-                                        <h3>Emily Hawthorne</h3>
-                                        <em>Sustainability Advocate</em>
-                                        <div class="social_links_container">
-                                            <div class="social_sign"><i class="fa-solid fa-plus"></i></div>
-                                            <div class="admin_social_links">
-                                                <a href="#">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single_guest">
-                                    <div class="guest_img"><img src="img/man-7.jpg" alt="guest Image" class="img-fluid">
-                                    </div>
-                                    <div class="guest_info">
-                                        <h3>Victoria Blaine</h3>
-                                        <em>Impact Strategist</em>
-                                        <div class="social_links_container">
-                                            <div class="social_sign"><i class="fa-solid fa-plus"></i></div>
-                                            <div class="admin_social_links">
-                                                <a href="#">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-twitter"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div class="swiper-button-prev swiper-button-prev_cis"></div>
+                                    <div class="swiper-button-next swiper-button-next_cis"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="qa_area">
-                            <h3 class="event_details_area_title">Question & Answer</h3>
-                            <div class="qa_dropped_area">
-                                <div class="single_comment user_question">
-                                    <div class="commenter_profile">
-                                        JW
-                                    </div>
-                                    <div class="commenter_info">
-                                        <h3>Jordan Whitmore</h3>
-                                        <span>Aug 15, 2024 / 03:54pm</span>
-                                        <b>What is the purpose of the charity event?</b>
-                                    </div>
+                            <p class="para_last_child">Together, we can break the cycle of poverty and create a world
+                                where every child, no matter where they come from, has the opportunity to grow up with
+                                hope, dignity, and the promise of a better tomorrow. Join us in bringing hope to the
+                                next generation and making a lasting difference in their lives.</p>
+                            <div class="cause_bottom_option d-flex align-items-center justify-content-between">
+                                <div class="cause_tags d-flex">
+                                    <a href="#">Children</a>
+                                    <a href="#">Education</a>
+                                    <a href="#">Charity</a>
+                                    <a href="#">Africa</a>
                                 </div>
-                                <div class="single_comment admin_ans">
-                                    <div class="commenter_profile">
-                                        MD
-                                    </div>
-                                    <div class="commenter_info">
-                                        <h3>Mark Davidson</h3>
-                                        <span>Aug 15, 2024 / 04:00pm</span>
-                                        <p>This event aims to raise awareness and funds for this charity, bringing
-                                            together community members, donors, and volunteers to support our mission.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <form class="qa_form">
-                                <h3 class="event_details_area_title">Ask A Question</h3>
-                                <div class="qa_form_wrapper">
-                                    <div class="input_group">
-                                        <input type="text" name="commenterName" id="commenterName" placeholder="Name">
-                                        <input type="email" name="commenterEmail" id="commenterEmail"
-                                            placeholder="Email">
-                                    </div>
-                                    <input type="url" name="commenterWebsite" id="commenterWebsite"
-                                        placeholder="Website">
-                                    <textarea name="commenterText" id="commenterText"
-                                        placeholder="Write your question..."></textarea>
-                                    <div class="qa_form_action">
-                                        <button type="submit" class="button-body two">Post Question</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <aside>
-                        <button class="aside_close_btn d-lg-none">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                        <article>
-                            <h3 class="event_details_area_title">Event Details</h3>
-                            <ul class="event_details_info mb-0 ps-0">
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-regular fa-calendar-check"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>Start Date</b>
-                                        <span>5th October, 2024</span>
-                                    </div>
-                                </li>
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-regular fa-calendar-xmark"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>End Date</b>
-                                        <span>10th October, 2024</span>
-                                    </div>
-                                </li>
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-regular fa-circle-check"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>Status</b>
-                                        <span>Available</span>
-                                    </div>
-                                </li>
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>Location</b>
-                                        <a href="https://maps.app.goo.gl/KzAH6ygz5KzXqmg6A" target="_blank">NewYork , USA</a>
-                                    </div>
-                                </li>
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-solid fa-map-location-dot"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>Venue</b>
-                                        <a href="https://maps.app.goo.gl/KzAH6ygz5KzXqmg6A" target="_blank">NewYork City Club, US</a>
-                                    </div>
-                                </li>
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>Phone</b>
-                                        <a href="tel:123435">++123 3445 3435</a>
-                                    </div>
-                                </li>
-                                <li class="list-unstyled d-flex align-item-center">
-                                    <div class="e_info_icon">
-                                        <i class="fa-regular fa-envelope"></i>
-                                    </div>
-                                    <div class="e_info_text">
-                                        <b>Email</b>
-                                        <a href="mailto:abc@gmail.com">xyz1234@gmail.com</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </article>
-                        <article>
-                            <div class="event_admin">
-                                <div class="event_admin_img">
-                                    <img src="img/man-2.png" alt="Event Admin" class="img-fluid">
-                                </div>
-                                <div class="event_admin_info">
-                                    <h3>Fredi Zeo</h3>
-                                    <em>Event Menager</em>
-                                    <div class="admin_social_links">
+                                <div class="cause_share">
+                                    <span class="share_link_button">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                    </span>
+                                    <div class="cause_share_links d-flex">
                                         <a href="#">
                                             <i class="fa-brands fa-facebook-f"></i>
                                         </a>
                                         <a href="#">
-                                            <i class="fa-brands fa-twitter"></i>
+                                            <i class="fa-brands fa-x-twitter"></i>
                                         </a>
                                         <a href="#">
                                             <i class="fa-brands fa-linkedin"></i>
@@ -1584,74 +1281,112 @@
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                            <div class="comment_area">
+                                <h3 class="cause_details_area_title">Comments (<span>02</span>)</h3>
+                                <div class="comment_dropped_area">
+                                    <div class="single_comment user_question">
+                                        <div class="commenter_profile">
+                                            JW
+                                        </div>
+                                        <div class="commenter_info">
+                                            <h3>Jordan Whitmore</h3>
+                                            <span>Aug 15, 2024 / 03:54pm</span>
+                                            <b>What is the purpose of the charity event?</b>
+                                        </div>
+                                    </div>
+                                    <div class="single_comment admin_ans">
+                                        <div class="commenter_profile">
+                                            MD
+                                        </div>
+                                        <div class="commenter_info">
+                                            <h3>Mark Davidson</h3>
+                                            <span>Aug 15, 2024 / 04:00pm</span>
+                                            <p>This event aims to raise awareness and funds for this charity, bringing
+                                                together community members, donors, and volunteers to support our
+                                                mission.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="comment_form">
+                                    <h3 class="cause_details_area_title">Ask A Question</h3>
+                                    <div class="comment_form_wrapper">
+                                        <div class="input_group">
+                                            <input type="text" name="commenterName" id="commenterName"
+                                                placeholder="Name">
+                                            <input type="email" name="commenterEmail" id="commenterEmail"
+                                                placeholder="Email">
+                                        </div>
+                                        <input type="url" name="commenterWebsite" id="commenterWebsite"
+                                            placeholder="Website">
+                                        <textarea name="commenterText" id="commenterText"
+                                            placeholder="Write your question..."></textarea>
+                                        <div class="qa_form_action">
+                                            <button type="submit" class="button-body two">Post Question</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <aside>
+                        <button class="aside_close_btn d-lg-none">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                         <article>
-                            <h3 class="event_details_area_title">Upcomming Events</h3>
-                            <div class="upcomming_event_area">
-                                <div class="single_up_event d-flex align-items-center">
-                                    <div class="up_event_img">
-                                        <img class="img-fluid" src="img/event/event-02.jpg" alt="Event Image">
-                                    </div>
-                                    <div class="up_event_info">
-                                        <h3><a href="event-details.html">Unity in Action Community Cleanup</a></h3>
-                                        <span>
-                                            <i class="fa-solid fa-calendar"></i>
-                                            20 Sep, Saturday
-                                        </span>
-                                    </div>
+                            <h3 class="cause_details_area_title">Causes details</h3>
+                            <div class="cause_report d-flex flex-column">
+                                <h4>We Need Your Help</h4>
+                                <b>$4000 of $10000 Raised</b>
+                                <div class="d-flex align-items-center justify-content-center flex-column">
+                                    <canvas id="donationChart"></canvas>
                                 </div>
-                                <div class="single_up_event d-flex align-items-center">
-                                    <div class="up_event_img">
-                                        <img class="img-fluid" src="img/event/event-03.jpg" alt="Event Image">
-                                    </div>
-                                    <div class="up_event_info">
-                                        <h3><a href="event-details.html">Community Cares Volunteer Day</a></h3>
-                                        <span>
-                                            <i class="fa-solid fa-calendar"></i>
-                                            10 Oct, Monday
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="single_up_event d-flex align-items-center">
-                                    <div class="up_event_img">
-                                        <img class="img-fluid" src="img/event/event-04.jpg" alt="Event Image">
-                                    </div>
-                                    <div class="up_event_info">
-                                        <h3><a href="event-details.html">Art for a Cause Charity Art Show</a></h3>
-                                        <span>
-                                            <i class="fa-solid fa-calendar"></i>
-                                            20 Oct, Saturday
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="single_up_event d-flex align-items-center">
-                                    <div class="up_event_img">
-                                        <img class="img-fluid" src="img/event/event-05.jpg" alt="Event Image">
-                                    </div>
-                                    <div class="up_event_info">
-                                        <h3><a href="event-details.html">Run for Change 5K for a Cause</a></h3>
-                                        <span>
-                                            <i class="fa-solid fa-calendar"></i>
-                                            05 Nov, Sunday
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="single_up_event d-flex align-items-center">
-                                    <div class="up_event_img">
-                                        <img class="img-fluid" src="img/event/event-06.jpg" alt="Event Image">
-                                    </div>
-                                    <div class="up_event_info">
-                                        <h3><a href="event-details.html">Day of Compassion Food Drive</a></h3>
-                                        <span>
-                                            <i class="fa-solid fa-calendar"></i>
-                                            20 Nov, Monday
-                                        </span>
-                                    </div>
-                                </div>
+                                <button class="button-body two">Donate Now</button>
                             </div>
                         </article>
                         <article>
-                            <h3 class="event_details_area_title">Recent Causes</h3>
+                            <h3 class="cause_details_area_title">Categories</h3>
+                            <ul class="popular_category">
+                                <li class="list-unstyled">
+                                    <a href="#">
+                                        <span>Children</span>
+                                        <span>15</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">
+                                        <span>Old Charity</span>
+                                        <span>10</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">
+                                        <span>Water & Sefty</span>
+                                        <span>05</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">
+                                        <span>Children</span>
+                                        <span>11</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">
+                                        <span>Children</span>
+                                        <span>15</span>
+                                    </a>
+                                </li>
+                                <li class="list-unstyled">
+                                    <a href="#">
+                                        <span>Children</span>
+                                        <span>15</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h3 class="cause_details_area_title">Recent Causes</h3>
                             <div class="recent_causes_area">
                                 <div class="single_rc_cause d-flex align-items-center">
                                     <div class="rc_cause_img">
@@ -1703,10 +1438,36 @@
                                 </div>
                             </div>
                         </article>
+                        <article>
+                            <h3>Tags Post</h3>
+                            <ul class="cause_tags_container  d-flex align-items-center gap-2 flex-wrap ">
+                                <li class="list-unstyled"><a href="#">Charity</a></li>
+                                <li class="list-unstyled"><a href="#">Education</a></li>
+                                <li class="list-unstyled"><a href="#">Health</a></li>
+                                <li class="list-unstyled"><a href="#">Human Right</a></li>
+                                <li class="list-unstyled"><a href="#">Environmental</a></li>
+                                <li class="list-unstyled"><a href="#">Safty</a></li>
+                                <li class="list-unstyled"><a href="#">Community</a></li>
+                                <li class="list-unstyled"><a href="#">Disaster Relief</a></li>
+                                <li class="list-unstyled"><a href="#">Woman Education</a></li>
+                            </ul>
+                        </article>
                     </aside>
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
     <!--======================
@@ -1959,7 +1720,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/event-details.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/cause-details.js"></script>
 </body>
 
 </html>
