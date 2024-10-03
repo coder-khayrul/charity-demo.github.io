@@ -3459,6 +3459,103 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
 
 /***========END OF NEWSLETTER SECTION STYLE===============***/
 
+/***========================START OF MORE BLOG SECTION STYLE***/
+.more_blog_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 30px;
+    padding-top: 50px;
+}
+.more_blog_contain .single_blog_card{
+    background-color: var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.blog_card_content_header {
+    padding: 7px 0px;
+}
+
+.more_blog_section{
+    padding: 70px 0;
+    padding-top: 0;
+}
+.blog_card_info span {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.blog_card_info span:first-child {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+article.single_blog_card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blog_card_content {
+    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.blog_card_title >h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blog_card_title a {
+    color: var(--text-color);
+    transition: .6s;
+}
+
+.blog_card_title >p {
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.blog_card_image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.blog_card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog_card_title a:hover {
+    color: var(--accent-color);
+    transition: .6s;
+}
+.blog_card_title button {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+.section_action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.section_action > a {
+    width: 150px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+section.blog_section {
+    padding: 70px 0;
+    padding-top: 0;
+}
+/***========================END OF MORE BLOG SECTION STYLE***/
+
+
+
+
 /***========================START OF GALLERY SECTION STYLE***/
 
 .gallery_section {
