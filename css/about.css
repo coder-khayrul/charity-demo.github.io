@@ -720,6 +720,7 @@ a.logo {
     font-weight: 500;
     padding: 10px 30px;
     display: inline-block;
+    border-radius: 10px;
 }
 
 .view_btn>a {
@@ -729,6 +730,7 @@ a.logo {
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
+    border-radius: 10px;
 }
 
 .view_btn {
@@ -2321,7 +2323,7 @@ section.testimonial_section {
 }
 
 section.page_intro_section {
-    background: linear-gradient(#00000080, #00000080), url(../img/event/event-02.jpg);
+    background: linear-gradient(#00000080, #00000080), url(../img/cause/h_cause-47.jpg);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;

@@ -472,7 +472,8 @@ a.logo {
     transform: translate(130%, 0px);
 }
 
-.mySwiper:hover :where(.swiper-button-next, .swiper-button-prev) {
+.mySwiper:hover :where(.swiper-button-next, .swiper-button-prev),
+.mySwiper2:hover :where(.swiper-button-next, .swiper-button-prev) {
     transform: translate(0px, 0px);
     visibility: visible;
     opacity: 1;
@@ -2130,9 +2131,11 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 20px;
     z-index: 9;
 }
-.event_popup_close>svg{
+
+.event_popup_close>svg {
     transition: .6s;
 }
+
 .event_popup_close:hover>svg {
     rotate: 180deg;
     transition: .6s;
@@ -2148,6 +2151,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    align-items: start;
 }
 
 .event_details_wrapper .main_event_container {
@@ -2157,9 +2161,136 @@ input[type="number"]::-webkit-outer-spin-button {
 .event_details_wrapper aside {
     width: 380px;
     border: var(--primary-color);
+    width: 380px;
+    position: sticky;
+    top: 20px;
+}form.aside_search {
+    height: 50px;
     position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
-.aside_close_btn{
+
+form.aside_search input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--border-color);
+    padding: 0px 15px;
+    font-size: 14px;
+    color: var(--text-color);
+    border-radius: 50px;
+    transition: .6s;
+}
+
+form.aside_search button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    right: 0;
+    color: var(--primary-color);
+    background: var(--accent-color);
+}
+form.aside_search input:focus {
+    border: 1px solid var(--accent-color);
+    transition: .6s;
+}
+
+.nav_post_img {
+    width: 100px;
+    height: 80px;
+}
+
+.nav_post_img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.single_navigation > h5 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.nav_post_wrapper {
+    gap: 15px;
+}
+
+.nav_post_info > a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: .6s;
+}
+
+.nav_post_category > span {
+    font-size: 14px;
+    color: #666;
+}
+
+.nav_post_category > span:first-child {
+    padding: 2px 10px;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.nav_post_info > a:hover {
+    color: var(--accent-color);
+    transition: .6s;
+}
+
+.single_navigation {
+    padding: 15px;
+}
+
+.event_navigation {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_post_category {
+    flex-wrap: wrap;
+}
+.event_navigation_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.single_navigation:first-child {
+    border-right: 1px solid var(--border-color);
+}
+
+.event_navigation_wrapper .view_all_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.event_navigation_wrapper .view_all_btn > a {
+    background: var(--accent-color);
+    border-radius: 10px;
+    width: 100px;
+}
+.nav_post_info {
+    width: calc(100% - 120px);
+}
+
+
+.aside_close_btn {
     width: 40px;
     height: 40px;
     display: grid;
@@ -2175,13 +2306,16 @@ input[type="number"]::-webkit-outer-spin-button {
     outline: none;
     z-index: 9;
 }
-.aside_close_btn > svg{
+
+.aside_close_btn>svg {
     transition: .6s;
 }
-.aside_close_btn:hover > svg{
+
+.aside_close_btn:hover>svg {
     rotate: 180deg;
     transition: .6s;
 }
+
 .event_details_img {
     width: 100%;
     height: 430px;
@@ -3376,9 +3510,10 @@ footer {
 
 /**STYLE FOR MEDIUM SCREEN**/
 @media only screen and (max-width: 767px) {
-    .event_form_popup_wrapper{
+    .event_form_popup_wrapper {
         width: calc(100% - 100px);
     }
+
     .top_header {
         display: none !important;
     }
@@ -3408,17 +3543,20 @@ footer {
 
 /**STYLE FOR SMALL SCREEN**/
 @media only screen and (max-width: 576px) {
-    .event_form_popup_wrapper{
+    .event_form_popup_wrapper {
         width: calc(100% - 50px);
     }
+
     a.logo {
         width: 170px;
     }
 
 }
+
 @media only screen and (max-width: 500px) {
-.event_details_wrapper aside {
-    width: 100%;
+    .event_details_wrapper aside {
+        width: 100%;
+    }
 }
-}
+
 /**=================END OF RESPONSIVE STYLE=====================**/

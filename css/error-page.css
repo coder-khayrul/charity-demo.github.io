@@ -470,7 +470,8 @@ a.logo {
     transform: translate(130%, 0px);
 }
 
-.mySwiper:hover :where(.swiper-button-next, .swiper-button-prev) {
+.mySwiper:hover :where(.swiper-button-next, .swiper-button-prev),
+.mySwiper2:hover :where(.swiper-button-next, .swiper-button-prev) {
     transform: translate(0px, 0px);
     visibility: visible;
     opacity: 1;

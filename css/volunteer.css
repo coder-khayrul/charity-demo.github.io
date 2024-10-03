@@ -473,6 +473,7 @@ a.logo {
 }
 
 .mySwiper:hover :where(.swiper-button-next, .swiper-button-prev),
+.mySwiper2:hover :where(.swiper-button-next, .swiper-button-prev),
 .f_vlunteer_slider:hover :where(.swiper-button-next, .swiper-button-prev) {
     transform: translate(0px, 0px);
     visibility: visible;
