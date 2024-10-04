@@ -2963,6 +2963,14 @@ footer {
         font-size: 13px;
         text-align: center;
     }
+    .section_title>h2 {
+        font-size: 25px;
+    }
+
+    .section_title>p {
+        font-size: 14px;
+        width: 95%;
+    }
 }
 
 @media only screen and (max-width: 668px) {
