@@ -29,6 +29,7 @@ CharityZone is a fully responsive charity website template built using HTML, CSS
 - **jQuery Plugins**: Includes several jQuery plugins for enhanced interactivity and smooth animations.
 - **MixItUp.js**: A powerful filter and sort plugin for creating dynamic and interactive galleries.
 
+<<<<<<< HEAD
 
 ## Installation
 
@@ -36,3 +37,5 @@ CharityZone is a fully responsive charity website template built using HTML, CSS
 
    ```bash
    git clone https://github.com/coder-khayrul/charity-demo.github.io.git
+=======
+>>>>>>> ab1848a07d496075990b65e15f683c7171f2cc73
