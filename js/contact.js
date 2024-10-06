@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Get all input elements
-const ContactInputs = document.querySelectorAll('.single_contact input');
+const ContactInputs = document.querySelectorAll('.single_contact input, .single_contact textarea');
 
 
 ContactInputs.forEach(input => {

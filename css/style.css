@@ -3390,74 +3390,6 @@ section.testimonial_section {
 }
 
 /***========END OF TESTIMONIAL SECTION STYLE===============***/
-/***========START OF NEWSLETTER SECTION STYLE===============***/
-section.newsletter_section {
-    padding-bottom: 70px;
-}
-
-section.newsletter_section .newsletter_wrapper {
-    padding: 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background: var(--primary-color);
-}
-
-section.newsletter_section .newsletter_wrapper .newsletter_left img {
-    border-radius: 15px;
-}
-
-section.newsletter_section .newsletter_wrapper .newletter_right h2 {
-    font-size: 27px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-section.newsletter_section .newsletter_wrapper .newletter_right p {
-    font-size: 14px;
-    line-height: 1.3rem;
-    color: var(--text-color);
-    margin-bottom: 30px;
-}
-
-section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_form {
-    position: relative;
-    width: 100%;
-}
-
-section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_form input {
-    width: 100%;
-    height: 40px;
-    padding: 0px 10px;
-    font-size: 14px;
-    color: var(--text-color);
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    outline: none;
-    transition: .3s;
-}
-
-section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_form input:focus {
-    border: 2px solid var(--accent-color);
-    transition: .3s;
-}
-
-section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_form button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    padding: 0px 10px;
-    font-size: 14px;
-    font-weight: 700;
-    background: var(--accent-color);
-    color: var(--primary-color);
-    border: navajowhite;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-/***========END OF NEWSLETTER SECTION STYLE===============***/
 
 /***========================START OF MORE BLOG SECTION STYLE***/
 .more_blog_container{
@@ -4139,10 +4071,6 @@ footer {
         order: 3;
         grid-column-start: 1;
         grid-column-end: 3;
-    }
-
-    section.newsletter_section .newsletter_wrapper .newletter_right h2 {
-        font-size: 22px;
     }
 
     .upc_event_info {
