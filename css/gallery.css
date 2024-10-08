@@ -22,11 +22,16 @@ a {
     --sub-bg-color: hsl(40, 100%, 92%);
     --accent-color: #F74F22;
     --border-color: #f0f0f0;
-    --text-color: #333;
+     --text-color: #333;
+    --body-text-color: #666;
     --popup-bg: #00000070;
     --flag-image: url("https://flagsapi.com/US/flat/32.png");
 }
-
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+/***==============START OF HEADER STYLE==============***/
 .header_info_area {
     padding: 10px 0px;
     background: var(--secondary-color);
@@ -99,7 +104,7 @@ header.sticky_animation {
 
 .top_header .left_side a {
     font-size: 14px;
-    color: var(--text0color);
+    color: var(--text-color);
 }
 
 .top_header .left_side :where(.phone span:first-child, .email span:first-child) {
@@ -307,9 +312,10 @@ a.logo {
     margin-bottom: 10px;
 }
 
-.single_cause .cause_info > p {
+.single_cause .cause_info>p {
     font-size: 14px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    color: var(--body-text-color);
 }
 
 .cause_info {
@@ -372,10 +378,11 @@ a.logo {
     margin-bottom: 15px;
 }
 
-.mega_menu .mega_menu_left > p {
+.mega_menu .mega_menu_left>p {
     font-size: 14px;
     line-height: 1.5rem;
     margin-bottom: 20px;
+    color: var(--body-text-color);
 }
 
 .mega_menu .mega_menu_left > a {
@@ -418,9 +425,10 @@ a.logo {
     font-size: 14px;
 }
 
-.cause_info .single_box > span {
+.cause_info .single_box>span {
     font-size: 14px;
     font-weight: 600;
+    color: var(--body-text-color);
 }
 
 .menu_header .menu_header_wrapper .main_menu > li > .mega_menu .mega_menu_wrapper .single_cause .cause_img > img {
@@ -611,9 +619,9 @@ a.logo {
     margin-bottom: 5px;
 }
 
-.mega_menu_wrapper .list_blogs .single_blog .blog_info > span {
+.mega_menu_wrapper .list_blogs .single_blog .blog_info>span {
     font-size: 14px;
-    color: rgb(102, 102, 102);
+    color: var(--body-text-color);
 }
 
 .mega_menu_wrapper .recent_blog_h_slider .single_blog {
@@ -683,11 +691,13 @@ a.logo {
     color: var(--accent-color);
 }
 
-.mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_info .blog_body > p {
+.mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_info .blog_body>p {
     font-size: 14px;
     line-height: 1.5rem;
     margin-bottom: 20px;
+    color: var(--body-text-color);
 }
+
 
 .mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_info .blog_body>a {
     font-size: 14px;
@@ -2279,7 +2289,11 @@ section.gallery_tab_section {
     margin-bottom: 15px;
     margin-top: 10px;
 }
-
+.video_info > p {
+    color: var(--body-text-color);
+    line-height: 1.6rem;
+    font-size: 15px;
+}
 video#current-video {
     width: 100%;
     height: 100%;
@@ -2383,7 +2397,7 @@ section.newsletter_section .newsletter_wrapper .newletter_right h2 {
 section.newsletter_section .newsletter_wrapper .newletter_right p {
     font-size: 14px;
     line-height: 1.3rem;
-    color: var(--text-color);
+    color: var(--body-text-color);
     margin-bottom: 30px;
 }
 
@@ -2471,9 +2485,9 @@ footer {
     margin-bottom: 15px;
 }
 
-.footer_intro > p {
+.footer_intro>p {
     font-size: 15px;
-    color: rgb(85, 85, 85);
+    color: var(--body-text-color);
     line-height: 1.5rem;
     margin-bottom: 15px;
 }
@@ -2500,8 +2514,9 @@ footer {
     color: var(--primary-color);
 }
 
-.footer_intro > ul > li > a > span:last-child {
+.footer_intro>ul>li>a>span:last-child {
     width: calc(100% - 40px);
+    color: var(--body-text-color);
 }
 
 .footer_wrapper .single_footer_list > h3 {
@@ -2567,9 +2582,13 @@ footer {
     transition: 0.6s;
 }
 
-.footer_wrapper .single_footer_list.recent_post > ul > li .fc_post_info .fc_post_time > span {
+.footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_info .fc_post_time>span {
     font-size: 13px;
-    color: rgb(85, 85, 85);
+    color: var(--body-text-color);
+}
+.footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_info .fc_post_time>span:first-child,
+.footer_wrapper .single_footer_list.latest_events>ul>li .fc_event_info>.fc_event_time>span:first-child {
+    color: var(--accent-color);
 }
 
 .footer_wrapper .single_footer_list.recent_post > ul > li .fc_post_img img {

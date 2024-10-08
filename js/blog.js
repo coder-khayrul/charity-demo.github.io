@@ -298,6 +298,8 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log("Inner menu item or close button not found for parent item:", p_item);
       }
   });
+
+  
   //**MOBILE SEARCH POPUP HANDLER */
   const sm_search_popup = document.querySelector(".mobile_search_popup")
   const sm_search_close = document.querySelector(".mobile_search_close")
@@ -349,18 +351,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //FEATURED BLOG SLIDER
 var featuredBlogSlider = new Swiper(".blog_slider", {
-    // loop: true,
-    // autoplay: true,
+    loop: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 20,
     effect: 'creative',
     creativeEffect: {
       prev: {
-        // will set `translateZ(-400px)` on previous slides
         translate: [0, 0, -400],
       },
       next: {
-        // will set `translateX(100%)` on next slides
         translate: ['100%', 0, 0],
       },
     },
@@ -369,7 +369,5 @@ var featuredBlogSlider = new Swiper(".blog_slider", {
         prevEl: ".swiper-button-prev_fb",
     },
 });
-
-
 
 })

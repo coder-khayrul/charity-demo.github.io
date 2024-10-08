@@ -31,11 +31,16 @@ a {
     --sub-bg-color: hsl(40, 100%, 92%);
     --accent-color: #F74F22;
     --border-color: #f0f0f0;
-    --text-color: #333;
+     --text-color: #333;
+    --body-text-color: #666;
     --popup-bg: #00000070;
     --flag-image: url("https://flagsapi.com/US/flat/32.png");
 }
 
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
 /***==============START OF HEADER STYLE==============***/
 .header_info_area {
     padding: 10px 0;
@@ -110,7 +115,7 @@ header.sticky_animation {
 
 .top_header .left_side a {
     font-size: 14px;
-    color: var(--text0color);
+    color: var(--text-color);
 }
 
 .top_header .left_side :where(.phone span:first-child, .email span:first-child) {
@@ -322,6 +327,7 @@ a.logo {
 .single_cause .cause_info>p {
     font-size: 14px;
     margin-bottom: 0;
+    color: var(--body-text-color);
 }
 
 .cause_info {
@@ -388,6 +394,7 @@ a.logo {
     font-size: 14px;
     line-height: 1.5rem;
     margin-bottom: 20px;
+    color: var(--body-text-color);
 }
 
 .mega_menu .mega_menu_left>a {
@@ -433,6 +440,7 @@ a.logo {
 .cause_info .single_box>span {
     font-size: 14px;
     font-weight: 600;
+    color: var(--body-text-color);
 }
 
 
@@ -449,8 +457,8 @@ a.logo {
 
 .swiper-button-next,
 .swiper-button-prev {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: var(--secondary-color);
     transition: .6s;
@@ -632,7 +640,7 @@ a.logo {
 
 .mega_menu_wrapper .list_blogs .single_blog .blog_info>span {
     font-size: 14px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .mega_menu_wrapper .recent_blog_h_slider .single_blog {
@@ -675,7 +683,7 @@ a.logo {
 
 .mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_head span:last-child {
     font-size: 14px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_info {
@@ -706,6 +714,7 @@ a.logo {
     font-size: 14px;
     line-height: 1.5rem;
     margin-bottom: 20px;
+    color: var(--body-text-color);
 }
 
 .mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_info .blog_body>a {
@@ -1615,7 +1624,7 @@ section.mobile_search_popup .mobile_search_wrapper .single_item ul.category_cont
 
 .tab_form .input_group .single_d_input label {
     font-size: 15px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .tab_form .input_group .single_d_input input,
@@ -1674,18 +1683,18 @@ span.d_popup_close:hover svg {
     align-items: center;
     gap: 10px;
     font-size: 14px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .extra_info>p {
     font-size: 15px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 
 .extra_info ol li {
     font-size: 15px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .extra_info ol li:not(:last-child) {
@@ -1923,7 +1932,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form .input_v_group>.single_v_input>label {
     font-size: 15px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form {
@@ -1951,7 +1960,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner .check_box_group>ul>li {
-    color: #666;
+    color: var(--body-text-color);
     font-size: 15px;
 
 }
@@ -1968,7 +1977,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form>.single_v_input label {
     font-size: 15px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form>.single_v_input textarea {
@@ -2060,10 +2069,12 @@ input[type="number"]::-webkit-outer-spin-button {
 .blog_post_info ul {
     gap: 25px;
 }
-
+.blog_post_info ul > li> span:first-child {
+    color: var(--secondary-color);
+}
 .blog_post_info ul > li {
     gap: 10px;
-    color: #666;
+    color: var(--body-text-color);
     font-size: 14px;
 }
 
@@ -2078,7 +2089,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .blog_details_content>p {
-    color: #666;
+    color: var(--body-text-color);
     font-size: 15px;
     line-height: 1.7rem;
 }
@@ -2334,7 +2345,7 @@ ul.popular_category > li:hover > a> span:last-child {
 
 .single_rc_blog .rc_blog_info>span {
     font-size: 14px;
-    color: var(--text-color);
+    color: var(--body-text-color);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -2516,7 +2527,7 @@ aside>article {
 
 .blog_author_info > span {
     font-size: 13px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .blog_author_profile {
@@ -2648,7 +2659,7 @@ form.aside_search input:focus {
 }
 .single_navigation > h5 {
     font-size: 18px;
-    color: #666;
+    color: var(--body-text-color);
     margin-bottom: 10px;
 }
 
@@ -2667,7 +2678,7 @@ form.aside_search input:focus {
 
 .nav_post_category > span {
     font-size: 14px;
-    color: #666;
+    color: var(--body-text-color);
 }
 
 .nav_post_category > span:first-child {
@@ -2843,7 +2854,7 @@ form.aside_search input:focus {
 
 .comment_dropped_area .single_comment .commenter_info>span {
     font-size: 14px;
-    color: #666;
+    color: var(--body-text-color);
     display: block;
     margin-bottom: 10px;
 }
@@ -3057,7 +3068,7 @@ footer {
 
 .footer_intro>p {
     font-size: 15px;
-    color: #555;
+    color: var(--body-text-color);
     line-height: 1.5rem;
     margin-bottom: 15px;
 }
@@ -3086,6 +3097,7 @@ footer {
 
 .footer_intro>ul>li>a>span:last-child {
     width: calc(100% - 40px);
+    color: var(--body-text-color);
 }
 
 .footer_wrapper .single_footer_list>h3 {
@@ -3153,7 +3165,11 @@ footer {
 
 .footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_info .fc_post_time>span {
     font-size: 13px;
-    color: #555;
+    color: var(--body-text-color);
+}
+.footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_info .fc_post_time>span:first-child,
+.footer_wrapper .single_footer_list.latest_events>ul>li .fc_event_info>.fc_event_time>span:first-child {
+    color: var(--accent-color);
 }
 
 .footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_img img {
@@ -3197,7 +3213,7 @@ footer {
 
 .footer_wrapper .single_footer_list.latest_events>ul>li .fc_event_info>.fc_event_time>span {
     font-size: 13px;
-    color: #555;
+    color: var(--body-text-color);
 }
 
 .footer_wrapper .single_footer_list.latest_events>ul {

@@ -456,9 +456,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-
-
-
   //**========================SWIPER SCRIPTS ===========================*/
 
 
@@ -519,10 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
+      
     },
   });
   var cause_slider2 = new Swiper(".cause_slider2", {
@@ -540,10 +534,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 4,
         spaceBetween: 20,
       },
     },
@@ -565,10 +555,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
     },
   });
   var cause_slider4 = new Swiper(".cause_slider4", {
@@ -588,10 +574,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
     },
   });
   var cause_slider5 = new Swiper(".cause_slider5", {
@@ -609,10 +591,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 4,
         spaceBetween: 20,
       },
     },
@@ -676,12 +654,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1400: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-      },
+        spaceBetween: 30,
+      }
     },
   });
 
