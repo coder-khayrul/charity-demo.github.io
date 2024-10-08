@@ -38,4 +38,4 @@ CharityZone is a fully responsive charity website template built using HTML, CSS
    ```bash
    git clone https://github.com/coder-khayrul/charity-demo.github.io.git
 =======
->>>>>>> ab1848a07d496075990b65e15f683c7171f2cc73
+
