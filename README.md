@@ -30,11 +30,3 @@ CharityZone is a fully responsive charity website template built using HTML, CSS
 - **MixItUp.js**: A powerful filter and sort plugin for creating dynamic and interactive galleries.
 
 
-## Installation
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/coder-khayrul/charity-demo.github.io.git
-=======
-
