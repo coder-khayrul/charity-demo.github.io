@@ -2648,10 +2648,6 @@ section.team_section::after {
 /***========================END OF TEAM SECTION STYLE***/
 
 
-
-
-
-
 /***========================START OF FOOTER SECTION STYLE***/
 footer {
     padding: 50px 0;
@@ -2940,22 +2936,18 @@ footer {
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
     }
 
 }
+/**Responsive styles for screens with a maximum width of 991px**/
 
-/**STYLE FOR SM LAPTOP SCREEN**/
 @media only screen and (max-width: 991px) {
     .about_info>h2 {
         font-size: 30px;
@@ -2982,7 +2974,8 @@ footer {
 
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
 
     .mission_section_content>p,
@@ -3056,12 +3049,20 @@ footer {
     }
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
     a.logo {
         width: 170px;
     }
+   
+}
+/**Responsive styles for screens with a maximum width of 500px**/
 
+@media only screen and (max-width: 500px) {
+    .statistic_boxs_container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /**=================END OF RESPONSIVE STYLE=====================**/

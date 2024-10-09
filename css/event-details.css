@@ -3029,11 +3029,7 @@ aside::-webkit-scrollbar-thumb {
     background: var(--accent-color);
     border-radius: 50px;
 }
-
-
 /**END OF EVENT DETAILS SECTION STYLE**/
-
-
 
 
 /***========================START OF PAGE INTRO SECTION STYLE***/
@@ -3411,30 +3407,10 @@ footer {
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
@@ -3442,7 +3418,9 @@ footer {
 
 }
 
-/**STYLE FOR SM LAPTOP SCREEN**/
+
+/**Responsive styles for screens with a maximum width of 991px**/
+
 @media only screen and (max-width: 991px) {
     .aside_active {
         animation: aside_open_animation .8s ease-in forwards alternate !important;
@@ -3523,7 +3501,8 @@ footer {
 
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
     .event_form_popup_wrapper {
         width: calc(100% - 100px);
@@ -3556,7 +3535,8 @@ footer {
     }
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
     .event_form_popup_wrapper {
         width: calc(100% - 50px);
@@ -3567,6 +3547,8 @@ footer {
     }
 
 }
+
+/**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
     .event_details_wrapper aside {

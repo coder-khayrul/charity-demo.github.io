@@ -2533,25 +2533,6 @@ input#event_search_location {
 }
 /***========================END OF EVENT CONTAINER SECTION STYLE***/
 
-/* .single_page_event {
-    display: flex;
-    align-items: center;
-}
-
-.event_main_container_wrapper {
-    grid-template-columns: 1fr;
-}
-
-.single_page_event .event_content .content_body > h3 {
-    font-size: 25px;
-}
-
-.event_image {
-    width: 340px;
-} */
-
-
-
 /***========================START OF CONTACT SECTION STYLE***/
 section.contact_section{
     margin-bottom: 70px;
@@ -2581,17 +2562,11 @@ section.contact_section .contact_wrapper > h2 {
     color: var(--primary-color);
 }
 
-
-
 section.contact_section .contact_wrapper button {
     background: var(--secondary-color);
     border-radius: 10px;
 }
-
-
-
-
-
+/***========================END OF CONTACT SECTION STYLE***/
 
 
 
@@ -2885,32 +2860,10 @@ footer {
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {
-    
-}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
@@ -2918,7 +2871,8 @@ footer {
 
 }
 
-/**STYLE FOR SM LAPTOP SCREEN**/
+/**Responsive styles for screens with a maximum width of 991px**/
+
 @media only screen and (max-width: 991px) {
     .middle_header .right_side ul.side_icons>li>a {
         width: 40px;
@@ -2941,7 +2895,8 @@ footer {
 
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
     .event_main_container_wrapper {
         grid-template-columns: 1fr;
@@ -2989,6 +2944,8 @@ footer {
     }
 }
 
+/**Responsive styles for screens with a maximum width of 668px**/
+
 @media only screen and (max-width: 668px) {
 
     .event_search_area>form {
@@ -3002,7 +2959,8 @@ footer {
 
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
 
 .page_intro_wrapper .page_info>h2 {
@@ -3018,8 +2976,9 @@ footer {
 }
 
 
-/**STYLE FOR SMALL SCREEN**/
-@media only screen and (max-width: 502px) {
+/**Responsive styles for screens with a maximum width of 500px**/
+
+@media only screen and (max-width: 500px) {
     .search_input_container {
         grid-template-columns: 1fr;
         overflow: hidden;

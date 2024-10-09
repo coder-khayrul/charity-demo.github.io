@@ -4066,18 +4066,10 @@ footer {
 
 
 
-
-
-
-
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
@@ -4085,7 +4077,8 @@ footer {
 
 }
 
-/**STYLE FOR SM LAPTOP SCREEN**/
+/**Responsive styles for screens with a maximum width of 991px**/
+
 @media only screen and (max-width: 991px) {
     .contact_wrapper {
         grid-template-rows: 1fr 1fr;
@@ -4109,7 +4102,8 @@ footer {
     }
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
     .gallery {
         top: -10px;
@@ -4174,7 +4168,8 @@ footer {
 
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
 
     .single_contact_box>iframe {
@@ -4210,11 +4205,6 @@ footer {
         width: 170px;
     }
 
-    /* html {
-        overflow-y: auto;
-        overflow-x: hidden;
-    } */
-
     section.hero_section .single_hero_slider .slider_left>h2 {
         font-size: 40px;
         line-height: normal;
@@ -4224,6 +4214,8 @@ footer {
         font-size: 14px;
     }
 }
+
+/**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
     .lightbox_header>h3 {

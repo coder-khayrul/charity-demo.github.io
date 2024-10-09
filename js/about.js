@@ -340,9 +340,6 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('resize', updateCardWidth);
 
 
-
-
-
     //***CHART.JS INITIALIZE */
     var ctx = document.getElementById('mission_chart').getContext('2d');
     var myBarChart = new Chart(ctx, {
@@ -377,11 +374,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-
-
-
-
-
 
 
 

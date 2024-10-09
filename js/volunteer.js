@@ -344,11 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-
-
-
-
     //**========================SWIPER SCRIPTS ===========================*/
 
 

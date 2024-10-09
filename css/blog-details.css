@@ -2732,13 +2732,6 @@ form.aside_search input:focus {
 }
 
 
-
-
-
-
-
-
-
 /*button style 2*/
 /* CSS */
 
@@ -3339,30 +3332,10 @@ footer {
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
@@ -3370,7 +3343,8 @@ footer {
 
 }
 
-/**STYLE FOR SM LAPTOP SCREEN**/
+/**Responsive styles for screens with a maximum width of 991px**/
+
 @media only screen and (max-width: 991px) {
     .blog_details_img button.blog_react{
         top: 60px;
@@ -3454,7 +3428,8 @@ footer {
 
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
     .single_blog_img{
         height: 200px;
@@ -3486,13 +3461,17 @@ footer {
     }
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
     a.logo {
         width: 170px;
     }
 
 }
+
+/**Responsive styles for screens with a maximum width of 500px**/
+
 @media only screen and (max-width: 500px) {
     .single_blog_img{
         height: 250px;

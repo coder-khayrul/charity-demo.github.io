@@ -31,7 +31,7 @@ a {
     --sub-bg-color: hsl(40, 100%, 92%);
     --accent-color: #F74F22;
     --border-color: #f0f0f0;
-     --text-color: #333;
+    --text-color: #333;
     --body-text-color: #666;
     --popup-bg: #00000070;
     --flag-image: url("https://flagsapi.com/US/flat/32.png");
@@ -41,6 +41,7 @@ a {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
+
 /***==============START OF HEADER STYLE==============***/
 .header_info_area {
     padding: 10px 0;
@@ -2641,9 +2642,10 @@ section.helping_card_section {
 
 /***========================END OF HELPING CARD SECTION STYLE***/
 /***========================START OF CONTACT SECTION STYLE***/
-section.contact_section{
+section.contact_section {
     margin-bottom: 70px;
 }
+
 section.contact_section .contact_wrapper {
     background: linear-gradient(#f75022d6, #f75022d6), url(../img/cause/h_cause-7.jpg);
     background-position: center center;
@@ -2655,7 +2657,7 @@ section.contact_section .contact_wrapper {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-section.contact_section .contact_wrapper > p {
+section.contact_section .contact_wrapper>p {
     width: 483px;
     font-size: 15px;
     line-height: 1.6rem;
@@ -2663,11 +2665,12 @@ section.contact_section .contact_wrapper > p {
     margin-bottom: 25px;
 }
 
-section.contact_section .contact_wrapper > h2 {
+section.contact_section .contact_wrapper>h2 {
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--primary-color);
 }
+
 section.contact_section .contact_wrapper button {
     background: var(--secondary-color);
     border-radius: 10px;
@@ -2800,6 +2803,7 @@ footer {
     font-size: 13px;
     color: var(--body-text-color);
 }
+
 .footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_info .fc_post_time>span:first-child,
 .footer_wrapper .single_footer_list.latest_events>ul>li .fc_event_info>.fc_event_time>span:first-child {
     color: var(--accent-color);
@@ -2972,30 +2976,10 @@ footer {
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
@@ -3003,7 +2987,8 @@ footer {
 
 }
 
-/**STYLE FOR SM LAPTOP SCREEN**/
+/**Responsive styles for screens with a maximum width of 9914px**/
+
 @media only screen and (max-width: 991px) {
     .middle_header .right_side ul.side_icons>li>a {
         width: 40px;
@@ -3026,7 +3011,8 @@ footer {
 
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
     .single_help_card {
         margin-inline: 80px;
@@ -3062,6 +3048,7 @@ footer {
         font-size: 13px;
         text-align: center;
     }
+
     .section_title>h2 {
         font-size: 25px;
     }
@@ -3072,16 +3059,19 @@ footer {
     }
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
 
-.page_intro_wrapper .page_info>h2 {
-    font-size: 30px;
-}
-    section.contact_section .contact_wrapper > p {
+    .page_intro_wrapper .page_info>h2 {
+        font-size: 30px;
+    }
+
+    section.contact_section .contact_wrapper>p {
         font-size: 14px;
         width: 95%;
     }
+
     .single_help_card {
         margin-inline: 20px;
     }

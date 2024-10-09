@@ -31,7 +31,7 @@ a {
     --sub-bg-color: hsl(40, 100%, 92%);
     --accent-color: #F74F22;
     --border-color: #f0f0f0;
-     --text-color: #333;
+    --text-color: #333;
     --body-text-color: #666;
     --popup-bg: #00000070;
     --flag-image: url("https://flagsapi.com/US/flat/32.png");
@@ -41,6 +41,7 @@ a {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
+
 /***==============START OF HEADER STYLE==============***/
 .header_info_area {
     padding: 10px 0;
@@ -2148,9 +2149,11 @@ section.page_intro_section {
     font-size: 13px;
     color: var(--body-text-color);
 }
+
 .recent_blog_list>ul>li .recent_blog_info>.recent_blog_time>span:first-child {
     color: var(--secondary-color);
 }
+
 .recent_blog_list>ul {
     display: flex;
     flex-direction: column;
@@ -2167,7 +2170,7 @@ section.featured_section {
     padding: 50px 0;
 }
 
-.area_title{
+.area_title {
     font-size: 30px;
     font-weight: 600;
     position: relative;
@@ -2210,11 +2213,13 @@ section.featured_section {
     font-size: 24px;
     margin-bottom: 10px;
 }
+
 .f_blog_title>p {
     font-size: 16px;
     color: var(--body-text-color);
     margin-bottom: 15px;
 }
+
 .f_blog_title a {
     color: var(--text-color);
     transition: .6s;
@@ -2248,7 +2253,9 @@ article.single_featured_blog {
     color: var(--accent-color);
     transition: .6s;
 }
-.swiper-button-next_fb, .swiper-button-prev_fb {
+
+.swiper-button-next_fb,
+.swiper-button-prev_fb {
     width: 50px;
     height: 50px;
 }
@@ -2326,23 +2333,26 @@ article.single_featured_blog {
 
 /***========================END OF FEATURED BLOG SECTION STYLE***/
 /***========================START OF MORE BLOG SECTION STYLE***/
-.more_blog_container{
+.more_blog_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 30px;
 }
-.more_blog_contain .single_blog_card{
+
+.more_blog_contain .single_blog_card {
     background-color: var(--primary-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
 .blog_card_content_header {
     padding: 7px 0px;
 }
 
-.more_blog_section{
+.more_blog_section {
     padding: 70px 0;
     padding-top: 0;
 }
+
 .blog_card_info span {
     font-size: 14px;
     color: var(--body-text-color);
@@ -2364,7 +2374,8 @@ article.single_blog_card {
     padding-top: 0;
     padding-bottom: 20px;
 }
-.blog_card_title >h3 {
+
+.blog_card_title>h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -2374,12 +2385,13 @@ article.single_blog_card {
     transition: .6s;
 }
 
-.blog_card_title >p {
+.blog_card_title>p {
     font-size: 15px;
     line-height: 1.5rem;
     color: var(--body-text-color);
     margin-bottom: 15px;
 }
+
 .blog_card_image {
     width: 100%;
     height: 230px;
@@ -2391,20 +2403,24 @@ article.single_blog_card {
     height: 100%;
     object-fit: cover;
 }
+
 .blog_card_title a:hover {
     color: var(--accent-color);
     transition: .6s;
 }
+
 .blog_card_title button {
     background: var(--accent-color);
     border-radius: 10px;
 }
+
 /***========================END OF MORE BLOG SECTION STYLE***/
 
 /***========================START OF CONTACT SECTION STYLE***/
-section.contact_section{
+section.contact_section {
     margin-bottom: 70px;
 }
+
 section.contact_section .contact_wrapper {
     background: linear-gradient(#f75022d6, #f75022d6), url(../img/cause/h_cause-7.jpg);
     background-position: center center;
@@ -2416,7 +2432,7 @@ section.contact_section .contact_wrapper {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-section.contact_section .contact_wrapper > p {
+section.contact_section .contact_wrapper>p {
     width: 483px;
     font-size: 15px;
     line-height: 1.6rem;
@@ -2424,7 +2440,7 @@ section.contact_section .contact_wrapper > p {
     margin-bottom: 25px;
 }
 
-section.contact_section .contact_wrapper > h2 {
+section.contact_section .contact_wrapper>h2 {
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--primary-color);
@@ -2436,23 +2452,8 @@ section.contact_section .contact_wrapper button {
     background: var(--secondary-color);
     border-radius: 10px;
 }
+
 /***========================END OF CONTACT SECTION STYLE***/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***========================START OF FOOTER SECTION STYLE***/
 footer {
@@ -2572,6 +2573,7 @@ footer {
     font-size: 13px;
     color: var(--body-text-color);
 }
+
 .footer_wrapper .single_footer_list.recent_post>ul>li .fc_post_info .fc_post_time>span:first-child,
 .footer_wrapper .single_footer_list.latest_events>ul>li .fc_event_info>.fc_event_time>span:first-child {
     color: var(--accent-color);
@@ -2744,30 +2746,10 @@ footer {
 /**=============================END OF FOOTER SECTION STYLE=========================****/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**=================START OF RESPONSIVE STYLE=====================**/
 
-/**STYLE FOR DESKTOP SCREEN**/
-@media only screen and (max-width: 1200px) {}
+/**Responsive styles for screens with a maximum width of 1024px**/
 
-/**STYLE FOR LAPTOP SCREEN**/
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu>li>.mega_menu {
         width: 935px;
@@ -2775,12 +2757,14 @@ footer {
 
 }
 
-/**STYLE FOR SM LAPTOP SCREEN**/
+/**Responsive styles for screens with a maximum width of 991px**/
+
 @media only screen and (max-width: 991px) {
-   
+
     .f_blog_image {
         height: 360px;
     }
+
     .middle_header .right_side ul.side_icons>li>a {
         width: 40px;
         height: 40px;
@@ -2802,7 +2786,8 @@ footer {
 
 }
 
-/**STYLE FOR MEDIUM SCREEN**/
+/**Responsive styles for screens with a maximum width of 767px**/
+
 @media only screen and (max-width: 767px) {
     .top_header {
         display: none !important;
@@ -2819,7 +2804,7 @@ footer {
 
     .header_info_area {
         display: none;
-    } 
+    }
 
     .top_header {
         display: none !important;
@@ -2829,6 +2814,7 @@ footer {
         font-size: 13px;
         text-align: center;
     }
+
     .section_title>h2 {
         font-size: 25px;
     }
@@ -2839,16 +2825,19 @@ footer {
     }
 }
 
-/**STYLE FOR SMALL SCREEN**/
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
 
-.page_intro_wrapper .page_info>h2 {
-    font-size: 30px;
-}
-    section.contact_section .contact_wrapper > p {
+    .page_intro_wrapper .page_info>h2 {
+        font-size: 30px;
+    }
+
+    section.contact_section .contact_wrapper>p {
         font-size: 14px;
         width: 95%;
     }
+
     a.logo {
         width: 170px;
     }

@@ -2442,31 +2442,6 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /***========START OF FOOTER SECTION STYLE===============***/
 
 
@@ -2751,14 +2726,21 @@ footer {
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 1200px) {
-}
+
+
+
+
+/**=================START OF RESPONSIVE STYLE=====================**/
+
+/**Responsive styles for screens with a maximum width of 1024px**/
 
 @media only screen and (max-width: 1024px) {
     .menu_header .menu_header_wrapper .main_menu > li > .mega_menu {
         width: 935px;
     }
 }
+
+/**Responsive styles for screens with a maximum width of 991px**/
 
 @media only screen and (max-width: 991px) {
     .middle_header .right_side ul.side_icons > li > a {
@@ -2782,6 +2764,8 @@ footer {
         right: -5px;
     }
 }
+
+/**Responsive styles for screens with a maximum width of 767px**/
 
 @media only screen and (max-width: 767px) {
     .top_header {
@@ -2818,6 +2802,8 @@ footer {
     }
 }
 
+/**Responsive styles for screens with a maximum width of 576px**/
+
 @media only screen and (max-width: 576px) {
 
 .page_intro_wrapper .page_info>h2 {
@@ -2827,3 +2813,5 @@ footer {
         width: 170px;
     }
 }
+
+/**=================END OF RESPONSIVE STYLE=====================**/

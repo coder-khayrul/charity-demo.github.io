@@ -319,8 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
     //***CHART.JS INITIALIZE */
     var ctx = document.getElementById('mission_chart').getContext('2d');
     var myBarChart = new Chart(ctx, {
