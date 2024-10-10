@@ -456,6 +456,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
+  //**========================Scroll animation intialized===========================*/
+
+
+  AOS.init({
+    once: true // A
+  });
+
+  
   //**========================SWIPER SCRIPTS ===========================*/
 
 

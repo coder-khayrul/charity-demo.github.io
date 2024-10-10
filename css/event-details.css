@@ -2880,7 +2880,7 @@ ul.event_details_info>li:not(last-child) {
 }
 
 .single_comment.admin_ans .commenter_profile {
-    background: navajowhite;
+    background:none;
 }
 
 .qa_dropped_area .single_comment.admin_ans {

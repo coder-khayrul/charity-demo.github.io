@@ -2778,7 +2778,7 @@ aside>article {
 }
 
 .single_comment.admin_ans .commenter_profile {
-    background: navajowhite;
+    background:none;
 }
 
 .comment_dropped_area .single_comment.admin_ans {

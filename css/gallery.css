@@ -2366,6 +2366,7 @@ video#current-video {
 
 section.video_gallery_section {
     padding: 70px 0px;
+    background: var(--sub-bg-color);
 }
 
 /***VIDEO GALLERY SECTION END*/
@@ -2373,7 +2374,7 @@ section.video_gallery_section {
 /***========START OF NEWSLETTER SECTION STYLE===============***/
 section.newsletter_section {
     padding: 70px 0;
-    background: var(--sub-bg-color);
+    background: var(--primary-color);
 }
 
 section.newsletter_section .newsletter_wrapper {
@@ -2381,7 +2382,7 @@ section.newsletter_section .newsletter_wrapper {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background: var(--primary-color);
+    background: var(--accent-color);
 }
 
 section.newsletter_section .newsletter_wrapper .newsletter_left img {
@@ -2392,12 +2393,13 @@ section.newsletter_section .newsletter_wrapper .newletter_right h2 {
     font-size: 27px;
     font-weight: 700;
     margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 section.newsletter_section .newsletter_wrapper .newletter_right p {
     font-size: 14px;
     line-height: 1.3rem;
-    color: var(--body-text-color);
+    color: var(--sub-bg-color);
     margin-bottom: 30px;
 }
 
@@ -2408,7 +2410,7 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
 
 section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_form input {
     width: 100%;
-    height: 40px;
+    height: 45px;
     padding: 0px 10px;
     font-size: 14px;
     color: var(--text-color);
@@ -2431,9 +2433,9 @@ section.newsletter_section .newsletter_wrapper .newletter_right form.newsletter_
     padding: 0px 10px;
     font-size: 14px;
     font-weight: 700;
-    background: var(--accent-color);
+    background: var(--secondary-color);
     color: var(--primary-color);
-    border: navajowhite;
+    border:none;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
