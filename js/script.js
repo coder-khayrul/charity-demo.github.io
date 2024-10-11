@@ -1,3 +1,16 @@
+
+/**loading animation script**/
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader');
+  document.body.style.overflow = "hidden";
+
+  setTimeout(() => {
+    preloader.style.display = 'none'; // Hide the preloader
+    document.body.style.overflow = "revert-layer"
+     },3000)
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   //****STICKY HEADER HANDLER */
