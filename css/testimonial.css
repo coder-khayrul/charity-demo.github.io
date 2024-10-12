@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -43,210 +45,58 @@ a {
     color: var(--primary-color);
 }
 
+
 /***==============END LOADING ANIMATION STYLE==============***/
 
 
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.load {
+#preloader {
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
-    background: #ffffff00;
-    backdrop-filter: blur(10px);
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preloader_text {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 70px;
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+   background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -.2rem;
 }
 
-.load::before,
-.load::after,
-.dot,
-.outline {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+.preloader_text span:hover {
+    transform: scaley(4.5);
+    transform-origin: center;
+    transition: .6s;
 }
 
-.dot {
-    width: calc(var(--size) - var(--size) / 100 * 20);
-    height: calc(var(--size) - var(--size) / 100 * 20);
-    background: var(--accent-color);
-    animation: in 4s linear infinite;
-    z-index: 2;
+.preloader_text > span {
+    transition: .6s;
+    display: inline-block;
+    color: black;
+    background: inherit; 
+   background-clip: text;
+    -webkit-background-clip: text;
+    transform: scaley(1);
+    transition: transform 1s ease, opacity 1s ease; 
+    font-family: "Bebas Neue", sans-serif;
 }
 
-.load::before {
-    content: "";
-    width: 0;
-    height: 0;
-    background: var(--secondary-color);
-    animation: out1 4s linear infinite;
-}
 
-.load::after {
-    content: "";
-    width: 0;
-    height: 0;
-    background: var(--accent-color);
-    animation: out2 4s linear infinite;
-}
-
-.outline {
-    width: var(--size);
-    height: var(--size);
-    z-index: 2;
-}
-
-.outline span {
-    width: calc(var(--size) / 2 + 8px);
-    height: calc(var(--size) / 2 + 8px);
-    transform-origin: 100% 100%;
-    transform: rotate(45deg) skewX(80deg);
-    overflow: hidden;
-    position: absolute;
-    bottom: 50%;
-    right: 50%;
-    animation: outline 4s linear infinite;
-}
-
-.outline span::before {
-    content: "";
-    display: block;
-    border: solid 5px var(--accent-color);
-    width: 200%;
-    height: 200%;
-    border-radius: 50%;
-    transform: skewX(-80deg);
-    animation: outlineBefore 4s linear infinite;
-}
-
-/* Keyframe animations */
-@keyframes outline {
-    0% {
-        transform: rotate(0deg) skewX(80deg);
-    }
-    25% {
-        transform: rotate(500deg) skewX(15deg);
-    }
-    50% {
-        transform: rotate(1000deg) skewX(40deg);
-    }
-    75% {
-        transform: rotate(1500deg) skewX(60deg);
-    }
-    100% {
-        transform: rotate(2160deg) skewX(80deg);
-    }
-}
-
-@keyframes outlineBefore {
-    0% {
-        transform: skewX(-80deg);
-        border: solid 5px var(--accent-color);
-    }
-    25% {
-        transform: skewX(-15deg);
-        border: solid 5px var(--accent-color);
-    }
-    49% {
-        border: solid 5px var(--accent-color);
-    }
-    50% {
-        transform: skewX(-40deg);
-        border: solid 5px var(--secondary-color);
-    }
-    75% {
-        transform: skewX(-60deg);
-        border: solid 5px var(--secondary-color);
-
-    }
-    100% {
-        transform: skewX(-80deg);
-        border: solid 5px var(--secondary-color);
-
-    }
-}
-
-@keyframes in {
-    0% {
-        width: calc(var(--size) + var(--size) / 100 * 20);
-        height: calc(var(--size) + var(--size) / 100 * 20);
-        background: var(--accent-color);
-    }
-    40% {
-        width: 0;
-        height: 0;
-        background: var(--accent-color);
-    }
-    41% {
-        width: 0;
-        height: 0;
-        background: var(--secondary-color);
-    }
-    50% {
-        width: calc(var(--size) + var(--size) / 100 * 20);
-        height: calc(var(--size) + var(--size) / 100 * 20);
-        background: var(--secondary-color);
-    }
-    90% {
-        width: 0;
-        height: 0;
-        background: var(--secondary-color);
-    }
-    91% {
-        width: 0;
-        height: 0;
-        background: var(--accent-color);
-    }
-    100% {
-        width: calc(var(--size) + var(--size) / 100 * 20);
-        height: calc(var(--size) + var(--size) / 100 * 20);
-        background: var(--accent-color);
-    }
-}
-
-@keyframes out1 {
-    0% {
-        width: 0;
-        height: 0;
-    }
-    30% {
-        width: 120vw;
-        height: 120vw;
-    }
-    100% {
-        width: 120vw;
-        height: 120vw;
-    }
-}
-
-@keyframes out2 {
-    0% {
-        width: 0;
-        height: 0;
-    }
-    30% {
-        width: 0;
-        height: 0;
-    }
-    60% {
-        width: 120vw;
-        height: 120vw;
-    }
-    100% {
-        width: 120vw;
-        height: 120vw;
-    }
-}
+  .zoomed {
+    transform: scaley(4.5) !important;
+    opacity: 1; 
+  }
+      
+ 
 
 /***==============END LOADING ANIMATION STYLE==============***/
 
@@ -2969,5 +2819,19 @@ footer {
     }
 
 }
+/**Responsive styles for screens with a maximum width of 500px**/
 
+@media only screen and (max-width: 500px) {
+    .preloader_text span:hover {
+        transform: scaley(3.5);
+    }
+   
+      .zoomed {
+        transform: scaley(3.5) !important;
+      }
+          
+    .preloader_text {
+        font-size: 50px;
+    }
+}
 /**=================END OF RESPONSIVE STYLE=====================**/

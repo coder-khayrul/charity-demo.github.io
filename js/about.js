@@ -7,8 +7,36 @@ window.addEventListener('load', function () {
   setTimeout(() => {
     preloader.style.display = 'none'; // Hide the preloader
     document.body.style.overflow = "revert-layer"
-     },3000)
-});
+     },4000)
+}); 
+
+const spans = document.querySelectorAll('.preloader_text span');
+    let currentIndex = 0; 
+
+    function animateLetters() {
+    
+      spans.forEach(span => span.classList.remove('zoomed'));
+
+      if (currentIndex < spans.length) {
+     
+        spans[currentIndex].classList.add('zoomed');
+
+        currentIndex++;
+
+        setTimeout(animateLetters, 500);
+      } else {
+       
+        setTimeout(() => {
+
+          currentIndex = 0;
+
+          animateLetters();
+        }, 500); 
+      }
+    }
+
+    // Start the animation
+    animateLetters();
 
 
 
