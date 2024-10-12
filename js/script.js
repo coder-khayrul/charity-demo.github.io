@@ -50,33 +50,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let lastScrollTop = 0;
 
-  $(window).on("scroll", () => {
-    let currentScrollTop = $(window).scrollTop();
-
+  window.addEventListener("scroll", () => {
+    let currentScrollTop = window.scrollY;
+  
     if (currentScrollTop < lastScrollTop && currentScrollTop > 0) {
-
       header.classList.add(toggleClass);
       top_header.style.display = "none";
       news_section.style.display = "none";
       header_info_section.style.display = "none";
-
     } else {
-
       header.classList.remove(toggleClass);
       top_header.style.display = "block";
       news_section.style.display = "block";
-      window.addEventListener("resize", () => {
-        if (window.matchMedia("(max-width: 767px)").matches) {
-          header_info_section.style.display = "none";
-        } else {
-          header_info_section.style.display = "block";
-        }
-      })
-      window.dispatchEvent(new Event('resize'));
+      handleResize();
     }
-    
     lastScrollTop = currentScrollTop;
   });
+  
+  const handleResize = () => {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      header_info_section.style.display = "none";
+    } else {
+      header_info_section.style.display = "block";
+    }
+  };
+  
+  window.addEventListener("resize", handleResize);
+  handleResize(); // Initial call to handle resize
 
 
 
@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  //**======================TOP HEADER CURRANCY DROPDOWN ================== */
+  //**======================TOP HEADER currency DROPDOWN ================== */
 
-  const currancy_area = document.querySelector(".currancy_dropdown");
-  const dropdown_c_elements = currancy_area.querySelectorAll(".option_dropdown a");
-  const selected_c_item = currancy_area.querySelector(".selected_item");
+  const currency_area = document.querySelector(".currency_dropdown");
+  const dropdown_c_elements = currency_area.querySelectorAll(".option_dropdown a");
+  const selected_c_item = currency_area.querySelector(".selected_item");
 
   dropdown_c_elements.forEach(item => {
     item.addEventListener("click", () => {
@@ -179,15 +179,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  //**=====================MOBILE MENU CURRANCY HANDLER====================== */
+  //**=====================MOBILE MENU currency HANDLER====================== */
 
-  const currancy_items = document.querySelectorAll(".menu_currancy li a");
-  const currancy_array = Array.from(currancy_items);
+  const currency_items = document.querySelectorAll(".menu_currency li a");
+  const currency_array = Array.from(currency_items);
 
-  currancy_array.forEach(item => {
+  currency_array.forEach(item => {
     item.addEventListener("click", () => {
       item.classList.add("active");
-      currancy_array.forEach(otherItem => {
+      currency_array.forEach(otherItem => {
         if (otherItem !== item) {
           otherItem.classList.remove("active")
         }
