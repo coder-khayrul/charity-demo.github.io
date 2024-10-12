@@ -2095,7 +2095,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /***========================START OF PAGE INTRO SECTION STYLE***/
 
 section.page_intro_section {
-    background: linear-gradient(#00000080, #00000080), url(../img/cause/h_cause-49.jpg);
+    background: linear-gradient(#00000080, #00000080), url(../images/cause/h_cause-49.jpg);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2408,7 +2408,7 @@ section.contact_section {
 }
 
 section.contact_section .contact_wrapper {
-    background: linear-gradient(#f75022d6, #f75022d6), url(../img/cause/h_cause-7.jpg);
+    background: linear-gradient(#f75022d6, #f75022d6), url(../images/cause/h_cause-7.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

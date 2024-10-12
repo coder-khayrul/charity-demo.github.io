@@ -2149,15 +2149,15 @@ section.hero_section .single_hero_slider {
 }
 
 section.hero_section .single_hero_slider.slider1 {
-    background-image: linear-gradient(rgb(12 10 10 / 48%), rgb(12 10 10 / 48%)), url(../img/hero_slider_bg-1.jpg);
+    background-image: linear-gradient(rgb(12 10 10 / 48%), rgb(12 10 10 / 48%)), url(../images/hero_slider_bg-1.jpg);
 }
 
 section.hero_section .single_hero_slider.slider2 {
-    background-image: linear-gradient(rgb(12 10 10 / 60%), rgba(12, 10, 10, 0.32)), url(../img/hero_slider_bg-2.jpg);
+    background-image: linear-gradient(rgb(12 10 10 / 60%), rgba(12, 10, 10, 0.32)), url(../images/hero_slider_bg-2.jpg);
 }
 
 section.hero_section .single_hero_slider.slider3 {
-    background-image: linear-gradient(rgb(12 10 10 / 60%), rgba(12, 10, 10, 0.32)), url(../img/hero_slider_bg-3.jpg);
+    background-image: linear-gradient(rgb(12 10 10 / 60%), rgba(12, 10, 10, 0.32)), url(../images/hero_slider_bg-3.jpg);
 }
 
 section.hero_section .single_hero_slider .slider_left>span {

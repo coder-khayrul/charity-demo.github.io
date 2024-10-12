@@ -384,7 +384,7 @@ let arrVideos = [
   
   // Current video element
   let currentVideo = document.getElementById('current-video');
-  currentVideo.src = `img/gallery_videos/${arrVideos[0].data}`;
+  currentVideo.src = `images/gallery_videos/${arrVideos[0].data}`;
   let currentVideoTitle = document.querySelector(".video_title");
   currentVideoTitle.textContent = arrVideos[0].name; // Set initial title
   
@@ -395,7 +395,7 @@ let arrVideos = [
   for (let i = 0; i < arrVideos.length; i++) {
     gallery.innerHTML += `
       <div class="gallery__item" data="${arrVideos[i].data}" title="${arrVideos[i].name}">
-        <video class="gallery__item__video" src="img/gallery_videos/${arrVideos[i].data}" width="120" height="80" muted></video>
+        <video class="gallery__item__video" src="images/gallery_videos/${arrVideos[i].data}" width="120" height="80" muted></video>
       </div>`;
   }
   
@@ -420,7 +420,7 @@ let arrVideos = [
     if (e.target.classList.contains('gallery__item__span')) {
       for (let i = 0; i < arrVideos.length; i++) {
         if (arrVideos[i].name === e.target.innerText) {
-          selectedVideo = `img/gallery_videos/${arrVideos[i].data}`;
+          selectedVideo = `images/gallery_videos/${arrVideos[i].data}`;
           selectedTitle = arrVideos[i].name;
           break;
         }

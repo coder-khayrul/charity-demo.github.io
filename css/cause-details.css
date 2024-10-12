@@ -2908,7 +2908,7 @@ form.comment_form .comment_form_wrapper button {
 /***========================START OF PAGE INTRO SECTION STYLE***/
 
 section.page_intro_section {
-    background: linear-gradient(#00000080, #00000080), url(../img/cause/h_cause-2.jpg);
+    background: linear-gradient(#00000080, #00000080), url(../images/cause/h_cause-2.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

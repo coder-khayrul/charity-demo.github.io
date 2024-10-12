@@ -2038,7 +2038,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 
 
 section.page_intro_section {
-    background: linear-gradient(#00000080, #00000080), url(../img/team.jpg);
+    background: linear-gradient(#00000080, #00000080), url(../images/team.jpg);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
