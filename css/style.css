@@ -114,9 +114,6 @@ header {
 }
 
 /*/sticky header style */
-.hidden {
-    display: none;
-  }
 header.sticky_animation {
     position: sticky;
     top: 0;
@@ -228,7 +225,6 @@ header.sticky_animation {
 }
 
 a.logo {
-    width: 200px;
     display: block;
 }
 
@@ -908,7 +904,7 @@ a.logo {
 }
 
 .single_news {
-    animation: title_anim 30s linear infinite;
+    animation: title_anim 50s linear infinite;
     gap: 29px;
 }
 

@@ -233,7 +233,6 @@ header.sticky_animation {
 }
 
 a.logo {
-    width: 200px;
     display: block;
 }
 
@@ -819,7 +818,7 @@ a.logo {
 }
 
 .single_news {
-    animation: 30s linear 0s infinite normal none running title_anim;
+    animation: title_anim 50s linear infinite;
     gap: 29px;
 }
 
