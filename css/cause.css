@@ -461,7 +461,7 @@ a.logo {
     font-size: 14px;
     font-weight: 600;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     background: var(--accent-color);
     color: var(--primary-color);
 }
@@ -2063,7 +2063,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 600;
     height: 50px;
     padding: 0px 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: var(--secondary-color);
     color: var(--primary-color);
     transition: .6s;
@@ -2661,7 +2661,10 @@ section.page_intro_section {
     margin-bottom: 25px;
     transition: .6s;
 }
-
+.h_card_action > button {
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
 .single_help_card {
     padding: 45px 15px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;

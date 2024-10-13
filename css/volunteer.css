@@ -460,7 +460,7 @@ a.logo {
     font-size: 14px;
     font-weight: 600;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     background: var(--accent-color);
     color: var(--primary-color);
 }
@@ -2073,7 +2073,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 600;
     height: 50px;
     padding: 0px 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: var(--secondary-color);
     color: var(--primary-color);
     transition: .6s;
@@ -2293,6 +2293,12 @@ section.volunteer_page_section {
 .volunteer_events > .aside_area_title {
     margin-bottom: 30px;
     margin-top: 20px;
+}
+.volunteer_events > h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
 }
 .volunteer_popup.volunteer_page .volunteer_wrapper {
     padding-top: 0;

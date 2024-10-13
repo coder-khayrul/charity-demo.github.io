@@ -793,7 +793,7 @@ a.logo {
     object-fit: cover;
 }
 
-.mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_img a {
+.mega_menu_wrapper .recent_blog_h_slider .single_blog .blog_img > a {
     position: absolute;
     display: block;
     bottom: 10px;
@@ -2177,7 +2177,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 600;
     height: 50px;
     padding: 0px 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: var(--secondary-color);
     color: var(--primary-color);
     transition: .6s;

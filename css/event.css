@@ -460,7 +460,7 @@ a.logo {
     font-size: 14px;
     font-weight: 600;
     padding: 10px 30px;
-    border-radius: 50px;
+    border-radius: 10px;
     background: var(--accent-color);
     color: var(--primary-color);
 }
@@ -2062,7 +2062,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 600;
     height: 50px;
     padding: 0px 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: var(--secondary-color);
     color: var(--primary-color);
     transition: .6s;
@@ -2621,7 +2621,7 @@ section.contact_section .contact_wrapper > h2 {
     color: var(--primary-color);
 }
 
-section.contact_section .contact_wrapper button {
+section.contact_section .contact_wrapper >a{
     background: var(--secondary-color);
     border-radius: 10px;
 }
