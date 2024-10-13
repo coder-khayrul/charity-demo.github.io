@@ -421,8 +421,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 
-  //**========================SWIPER SCRIPTS ===========================*/
+  //**========================BOTTOM TO TOP BUTTON HANDLER ===========================*/
 
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#F74F22 ${scrollValue}%, #ededed ${scrollValue}%)`;
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+
+  //**========================SWIPER SCRIPTS ===========================*/
 
   //MAIN MENU "CAUSE" MEGA MENU SLIDER
   var swiper = new Swiper(".mySwiper", {
@@ -450,8 +472,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
  //CAUSES IMAGE SLIDER
  var causeImgSlider = new Swiper(".causes_img_slider", {
-    // loop: true,
-    // autoplay: true,
+    loop: true,
+    autoplay: true,
     slidesPerView: 1,
     spaceBetween: 20,
     breakpoints: {

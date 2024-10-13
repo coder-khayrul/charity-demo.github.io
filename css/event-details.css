@@ -3184,6 +3184,43 @@ section.page_intro_section {
 
 /***========================END OF PAGE INTRO SECTION STYLE***/
 
+/*bottom to top button style*/
+
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 99;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    color: var(--text-color);
+    transition: .6s;
+
+  }
+  #progress-value svg{
+    transition: .6s;
+  }
+  #progress-value:hover > svg {
+    color: var(--accent-color);
+    transition: .6s;
+  }
+
+
 /***========================START OF FOOTER SECTION STYLE***/
 footer {
     padding: 50px 0;

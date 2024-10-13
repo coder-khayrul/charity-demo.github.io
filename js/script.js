@@ -244,6 +244,26 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
+ //***SCRIPT OF HERO VIDEO POPUP */
+ const hero_video_popup = document.querySelector(".video_popup")
+ const video_popup_wrapper = document.querySelector(".video_popup_wrapper")
+ const video_popup_close = document.querySelector(".video_close_btn")
+ const video_popup_open = document.querySelector(".slide_video_btn")
+
+ video_popup_open.addEventListener("click", () => {
+
+  hero_video_popup.style.animation = "fade_in 1s ease-in forwards"
+  video_popup_wrapper.style.animation = "slide_right 1s ease-in forwards"
+
+ })
+ video_popup_close.addEventListener("click", () => {
+
+  hero_video_popup.style.animation = "fade_out 1s ease-in forwards"
+  video_popup_wrapper.style.animation = "slide_left 1s ease-in forwards"
+
+ })
+
+
   //***SCRIPT OF DONATE POPUP */
   const donate_popup = document.querySelector(".donation_popup")
   const donate_wrapper = document.querySelector(".donation_wrapper")
@@ -496,10 +516,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   AOS.init({
-    once: true // A
+    once: true,
+    disable: 'mobile'
   });
 
   
+
+  //**========================BOTTOM TO TOP BUTTON HANDLER ===========================*/
+
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#F74F22 ${scrollValue}%, #ededed ${scrollValue}%)`;
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+
   //**========================SWIPER SCRIPTS ===========================*/
 
 

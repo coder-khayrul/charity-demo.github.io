@@ -1396,6 +1396,75 @@ ul.option_dropdown>li>a:hover {
 }
 
 /**=====================END OF MOBILE MENU STYLE========================**/
+/**==============START HERO VIDEO POPUP STYLE===================***/
+
+.video_popup {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden;
+    opacity: 0;
+}
+
+.video_popup_bg {
+    background: var(--popup-bg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.video_popup_wrapper {
+    width: 720px;
+    height: 530px;
+    position: relative;
+    z-index: 99;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    background: var(--primary-color);
+}
+
+.video_popup_wrapper > button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    color: var(--primary-color);
+    background: var(--accent-color);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: .6s;
+    z-index: 99;
+}
+
+
+.video_popup_wrapper > button:hover > svg {
+    transform: rotate(180deg);
+    transition: .6s;
+}
+
+.video_popup_wrapper > button > svg {
+    transition: .6s;
+}
+
+.video_popup_wrapper> video {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+/**==============END HERO VIDEO POPUP STYLE===================***/
+
+
 /**==============START OF MOBILE SEARCH POPUP STYLE===================***/
 section.mobile_search_popup {
     width: 100%;
@@ -3830,6 +3899,42 @@ section.contact_section {
 /***========================END OF CONTACT SECTION STYLE***/
 
 
+
+/*bottom to top button style*/
+
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 99;
+  }
+  #progress-value {
+    display: block;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    color: var(--text-color);
+    transition: .6s;
+
+  }
+  #progress-value svg{
+    transition: .6s;
+  }
+  #progress-value:hover > svg {
+    color: var(--accent-color);
+    transition: .6s;
+  }
 
 
 /***========================START OF FOOTER SECTION STYLE***/
