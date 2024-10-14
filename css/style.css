@@ -2478,6 +2478,7 @@ form.hs_newsletter_form button {
     height: 100%;
     padding: 0px 30px;
     position: absolute;
+    top: 0;
     right: 0;
     outline: none;
     border: 1px solid transparent;
@@ -4380,6 +4381,9 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    section.hero_section .single_hero_slider .slider_left .slider_button_container {
+        gap: 20px;
+    }
     .preloader_text span:hover {
         transform: scaley(3.5);
     }
@@ -4411,6 +4415,35 @@ footer {
     .statistic_boxs_container {
         grid-template-columns: 1fr;
     }
+    .section_title>h2 {
+        line-height: unset;
+    }
 }
 
+
+/**Responsive styles for screens with a maximum width of 500px**/
+
+@media only screen and (max-width: 400px) {
+
+
+.single_f_event {
+    flex-direction: column;
+}
+
+.f_event_left::before {
+    width: 100%;
+}
+
+.f_event_left {
+    justify-content: center;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+}
+
+.f_event_info {
+    width: 100%;
+    padding: 15px;
+    padding-top: 0;
+}
+}
 /**=================END OF RESPONSIVE STYLE=====================**/

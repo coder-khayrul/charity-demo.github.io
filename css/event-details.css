@@ -2946,7 +2946,7 @@ ul.event_details_info>li:not(last-child) {
 }
 
 .single_comment.admin_ans .commenter_profile {
-    background: none;
+    background: bisque;
 }
 
 .qa_dropped_area .single_comment.admin_ans {
@@ -3643,6 +3643,9 @@ footer {
 /**Responsive styles for screens with a maximum width of 576px**/
 
 @media only screen and (max-width: 576px) {
+    .page_intro_wrapper .page_info>h2 {
+        font-size: 30px;
+    }
     .event_form_popup_wrapper {
         width: calc(100% - 50px);
     }
@@ -3656,6 +3659,12 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    .event_details_img {
+        height: 300px;
+    }
+    .event_details_wrapper .main_event_container .event_content>h2{
+        font-size: 23px;
+    }
     .preloader_text span:hover {
         transform: scaley(3.5);
     }

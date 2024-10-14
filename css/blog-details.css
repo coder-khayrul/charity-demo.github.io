@@ -2098,7 +2098,11 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 10px;
     overflow: hidden;
 }
-
+.blog_details_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .blog_details_img button.blog_react {
     width: 45px;
     height: 45px;
@@ -2947,7 +2951,7 @@ form.aside_search input:focus {
 }
 
 .single_comment.admin_ans .commenter_profile {
-    background:none;
+    background: bisque;
 }
 
 .comment_dropped_area .single_comment.admin_ans {
@@ -3560,6 +3564,9 @@ footer {
 /**Responsive styles for screens with a maximum width of 576px**/
 
 @media only screen and (max-width: 576px) {
+    .page_intro_wrapper .page_info>h2 {
+        font-size: 30px;
+    }
     a.logo {
         width: 170px;
     }
@@ -3569,6 +3576,10 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    .blog_details_img {height: 300px;}
+    .blog_details_content >h2 {
+        font-size: 23px;
+    }
     .preloader_text span:hover {
         transform: scaley(3.5);
     }
@@ -3576,7 +3587,6 @@ footer {
       .zoomed {
         transform: scaley(3.5) !important;
       }
-          
     .preloader_text {
         font-size: 50px;
     }

@@ -2273,6 +2273,10 @@ section.featured_section {
     margin-bottom: 10px;
 }
 
+.f_blog_title > button {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
 .f_blog_title>p {
     font-size: 16px;
     color: var(--body-text-color);
@@ -2974,5 +2978,16 @@ footer {
     .preloader_text {
         font-size: 50px;
     }
+    article.single_featured_blog {
+        margin-inline: 0;
+    }
+    
+    .f_blog_title>h3 {
+        font-size: 20px;
+    }
+    .f_blog_image {
+        height: 300px;
+    }
+    
 }
 /**=================END OF RESPONSIVE STYLE=====================**/

@@ -411,8 +411,8 @@ window.onload = calcScrollValue;
 
 //FEATURED BLOG SLIDER
 var featuredBlogSlider = new Swiper(".blog_slider", {
-    loop: true,
-    autoplay: true,
+    // loop: true,
+    // autoplay: true,
     slidesPerView: 1,
     spaceBetween: 20,
     effect: 'creative',
