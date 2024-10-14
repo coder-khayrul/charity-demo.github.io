@@ -2847,6 +2847,9 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    .volunteer_section_wrapper aside {
+        width: 100%;
+    }
     .preloader_text span:hover {
         transform: scaley(3.5);
     }

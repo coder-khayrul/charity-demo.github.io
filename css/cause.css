@@ -62,12 +62,13 @@ a {
     align-items: center;
     justify-content: center;
 }
+
 .preloader_text {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 70px;
     background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
-   background-clip: text;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -.2rem;
@@ -79,25 +80,25 @@ a {
     transition: .6s;
 }
 
-.preloader_text > span {
+.preloader_text>span {
     transition: .6s;
     display: inline-block;
     color: black;
-    background: inherit; 
-   background-clip: text;
+    background: inherit;
+    background-clip: text;
     -webkit-background-clip: text;
     transform: scaley(1);
-    transition: transform 1s ease, opacity 1s ease; 
+    transition: transform 1s ease, opacity 1s ease;
     font-family: "Bebas Neue", sans-serif;
 }
 
 
-  .zoomed {
+.zoomed {
     transform: scaley(4.5) !important;
-    opacity: 1; 
-  }
-      
- 
+    opacity: 1;
+}
+
+
 
 /***==============END LOADING ANIMATION STYLE==============***/
 
@@ -2313,12 +2314,12 @@ section.page_intro_section {
     transition: .6s;
     display: inline-block;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     background: var(--secondary-color);
     padding: 2px 10px;
     border-radius: 50px;
-    transform: translate(-50%, 3px);
+    transform: translate(-50%, -3px);
 }
 
 .single_cause_box .causes_info {
@@ -2463,8 +2464,8 @@ section.page_intro_section {
 }
 
 .single_cause_box .causes_info .single_cause_bottom>.cause_share>ul li>a {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -2661,10 +2662,12 @@ section.page_intro_section {
     margin-bottom: 25px;
     transition: .6s;
 }
-.h_card_action > button {
+
+.h_card_action>button {
     background: var(--secondary-color);
     border-radius: 10px;
 }
+
 .single_help_card {
     padding: 45px 15px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
@@ -2762,8 +2765,9 @@ section.contact_section .contact_wrapper button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     z-index: 99;
-  }
-  #progress-value {
+}
+
+#progress-value {
     display: block;
     height: calc(100% - 10px);
     width: calc(100% - 10px);
@@ -2775,14 +2779,16 @@ section.contact_section .contact_wrapper button {
     color: var(--text-color);
     transition: .6s;
 
-  }
-  #progress-value svg{
+}
+
+#progress-value svg {
     transition: .6s;
-  }
-  #progress-value:hover > svg {
+}
+
+#progress-value:hover>svg {
     color: var(--accent-color);
     transition: .6s;
-  }
+}
 
 
 /***========================START OF FOOTER SECTION STYLE***/
@@ -3180,19 +3186,21 @@ footer {
     }
 
 }
+
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
     .preloader_text span:hover {
         transform: scaley(3.5);
     }
-   
-      .zoomed {
+
+    .zoomed {
         transform: scaley(3.5) !important;
-      }
-          
+    }
+
     .preloader_text {
         font-size: 50px;
     }
 }
+
 /**=================END OF RESPONSIVE STYLE=====================**/

@@ -601,7 +601,7 @@ window.onload = calcScrollValue;
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      768: {
+      991: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -621,7 +621,7 @@ window.onload = calcScrollValue;
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      768: {
+      991: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -640,7 +640,7 @@ window.onload = calcScrollValue;
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      768: {
+      991: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -659,7 +659,7 @@ window.onload = calcScrollValue;
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      768: {
+      991: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -678,7 +678,7 @@ window.onload = calcScrollValue;
         slidesPerView: 2,
         spaceBetween: 20,
       },
-      768: {
+      991: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -690,15 +690,20 @@ window.onload = calcScrollValue;
   //DONNER SECTION SLIDER
 
   var DonnerSlider = new Swiper(".donner_slider", {
+    autoplay: true,
     loop: true,
-    slidesPerView: 2,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 5,
     navigation: {
       nextEl: ".swiper-button-next_ds",
       prevEl: ".swiper-button-prev_ds",
     },
     breakpoints: {
-      450: {
+      400:{
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      576: {
         slidesPerView: 3,
         spaceBetween: 10,
       },
