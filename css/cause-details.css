@@ -2866,24 +2866,27 @@ form.comment_form .comment_form_wrapper textarea {
     height: 45px;
     padding: 0px 10px;
     font-size: 14px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     outline: none;
 }
-
+form.comment_form .comment_form_wrapper input:focus, form.comment_form .comment_form_wrapper textarea:focus {
+    border: 1px solid var(--accent-color);
+    transition: .6s;
+}
 form.comment_form .comment_form_wrapper textarea {
     padding-block: 10px;
     height: 100px;
 }
 
 form.comment_form .comment_form_wrapper .input_group {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    gap: 15px
 }
 
 form.comment_form .comment_form_wrapper .input_group>input {
-    width: 50%;
+    transition: .6s;
 }
 
 form.comment_form .comment_form_wrapper button {

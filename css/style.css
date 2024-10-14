@@ -4402,6 +4402,9 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    .gallery_section {
+        padding: 50px 0;
+    }
     section.hero_section .single_hero_slider .slider_left .slider_button_container>a {
         font-size: 15px;
         font-weight: 500;

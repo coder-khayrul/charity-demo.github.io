@@ -1972,8 +1972,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form .input_v_group {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 20px;
 }
 
@@ -1981,7 +1981,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 50%;
+    /* width: 50%; */
 }
 
 .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form .input_v_group>.single_v_input>input,
@@ -2847,6 +2847,10 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    .volunteer_popup .volunteer_wrapper .volunteer_wrapper_inner form .v_form_actions>button {
+        padding: 0px 30px;
+        height: 45px;
+    }
     .volunteer_section_wrapper aside {
         width: 100%;
     }

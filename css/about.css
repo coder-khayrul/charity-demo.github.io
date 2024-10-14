@@ -3159,6 +3159,9 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    .section_title>h2 {
+        line-height: unset;
+    }
     .preloader_text span:hover {
         transform: scaley(3.5);
     }

@@ -2975,24 +2975,28 @@ form.qa_form .qa_form_wrapper textarea {
     height: 45px;
     padding: 0px 10px;
     font-size: 14px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     outline: none;
 }
-
+form.qa_form .qa_form_wrapper input:focus, form.qa_form .qa_form_wrapper textarea:focus {
+    border: 1px solid var(--accent-color);
+    transition: .6s;
+}
 form.qa_form .qa_form_wrapper textarea {
     padding-block: 10px;
     height: 100px;
+    transition: .6s;
 }
 
 form.qa_form .qa_form_wrapper .input_group {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
     gap: 15px;
 }
 
-form.qa_form .qa_form_wrapper .input_group>input {
-    width: 50%;
+form.qa_form .qa_form_wrapper input {
+    transition: .6s;
 }
 
 form.qa_form .qa_form_wrapper button {
