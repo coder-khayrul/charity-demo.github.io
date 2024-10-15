@@ -906,7 +906,7 @@ a.logo {
 
 .single_news {
     animation: title_anim 50s linear infinite;
-    gap: 29px;
+    gap: 30px;
 }
 
 .scrolling_news .scrolling_news_wrapper .single_news>a:hover {
@@ -4360,6 +4360,10 @@ footer {
 /**Responsive styles for screens with a maximum width of 576px**/
 
 @media only screen and (max-width: 576px) {
+    .single_news {
+        animation: title_anim 90s linear infinite;
+        gap: 30px;
+    }
 
     .single_contact_box>iframe {
         height: 320px;
