@@ -220,11 +220,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.body.addEventListener("click", (event) => {
         if (mobile_menu_area_wrapper.className.includes("show_menu")) {
-            if (!mobile_menu_area_wrapper.contains(event.target) && !mobile_menu_open_btn.contains(event.target)) {
-                closeMenu();
-            }
+          if (!mobile_menu_area_wrapper.contains(event.target) && !mobile_menu_open_btn.contains(event.target) &&
+            !donate_popup.contains(event.target) &&
+            !volunteer_popup.contains(event.target)) {
+            closeMenu();
+          }
         }
-    });
+      });
 
     //***SCRIPT OF DONATE POPUP */
     const volunteer_popup = document.querySelector(".volunteer_popup")

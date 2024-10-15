@@ -2,37 +2,37 @@
 /**loading animation script**/
 window.addEventListener('load', function () {
   const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none'; // Hide the preloader
-    document.body.style.overflow = "revert-layer"
-}); 
+  preloader.style.display = 'none'; // Hide the preloader
+  document.body.style.overflow = "revert-layer"
+});
 
 const spans = document.querySelectorAll('.preloader_text span');
-    let currentIndex = 0; 
+let currentIndex = 0;
 
-    function animateLetters() {
-    
-      spans.forEach(span => span.classList.remove('zoomed'));
+function animateLetters() {
 
-      if (currentIndex < spans.length) {
-     
-        spans[currentIndex].classList.add('zoomed');
+  spans.forEach(span => span.classList.remove('zoomed'));
 
-        currentIndex++;
+  if (currentIndex < spans.length) {
 
-        setTimeout(animateLetters, 500);
-      } else {
-       
-        setTimeout(() => {
+    spans[currentIndex].classList.add('zoomed');
 
-          currentIndex = 0;
+    currentIndex++;
 
-          animateLetters();
-        }, 500); 
-      }
-    }
+    setTimeout(animateLetters, 500);
+  } else {
 
-    // Start the animation
-    animateLetters();
+    setTimeout(() => {
+
+      currentIndex = 0;
+
+      animateLetters();
+    }, 500);
+  }
+}
+
+// Start the animation
+animateLetters();
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener("scroll", () => {
     let currentScrollTop = window.scrollY;
-  
+
     if (currentScrollTop < lastScrollTop && currentScrollTop > 0) {
       header.classList.add(toggleClass);
       top_header.style.display = "none";
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lastScrollTop = currentScrollTop;
   });
-  
+
   const handleResize = () => {
     if (window.matchMedia("(max-width: 767px)").matches) {
       header_info_section.style.display = "none";
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       header_info_section.style.display = "block";
     }
   };
-  
+
   window.addEventListener("resize", handleResize);
   handleResize(); // Initial call to handle resize
 
@@ -218,7 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.addEventListener("click", (event) => {
     if (mobile_menu_area_wrapper.className.includes("show_menu")) {
-      if (!mobile_menu_area_wrapper.contains(event.target) && !mobile_menu_open_btn.contains(event.target)) {
+      if (!mobile_menu_area_wrapper.contains(event.target) && !mobile_menu_open_btn.contains(event.target) &&
+        !donate_popup.contains(event.target) &&
+        !volunteer_popup.contains(event.target)) {
         closeMenu();
       }
     }
@@ -235,10 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       volunteer_popup.style.animation = "fade_in 1s ease-in forwards"
       volunteer_wrapper.style.animation = "slide_right 1s ease-in forwards"
-  
+
     })
   })
-  
+
   volunteer_popup_close.addEventListener("click", () => {
 
     volunteer_popup.style.animation = "fade_out 1s ease-in forwards"
@@ -247,24 +249,24 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
- //***SCRIPT OF HERO VIDEO POPUP */
- const hero_video_popup = document.querySelector(".video_popup")
- const video_popup_wrapper = document.querySelector(".video_popup_wrapper")
- const video_popup_close = document.querySelector(".video_close_btn")
- const video_popup_open = document.querySelector(".slide_video_btn")
+  //***SCRIPT OF HERO VIDEO POPUP */
+  const hero_video_popup = document.querySelector(".video_popup")
+  const video_popup_wrapper = document.querySelector(".video_popup_wrapper")
+  const video_popup_close = document.querySelector(".video_close_btn")
+  const video_popup_open = document.querySelector(".slide_video_btn")
 
- video_popup_open.addEventListener("click", () => {
+  video_popup_open.addEventListener("click", () => {
 
-  hero_video_popup.style.animation = "fade_in 1s ease-in forwards"
-  video_popup_wrapper.style.animation = "slide_right 1s ease-in forwards"
+    hero_video_popup.style.animation = "fade_in 1s ease-in forwards"
+    video_popup_wrapper.style.animation = "slide_right 1s ease-in forwards"
 
- })
- video_popup_close.addEventListener("click", () => {
+  })
+  video_popup_close.addEventListener("click", () => {
 
-  hero_video_popup.style.animation = "fade_out 1s ease-in forwards"
-  video_popup_wrapper.style.animation = "slide_left 1s ease-in forwards"
+    hero_video_popup.style.animation = "fade_out 1s ease-in forwards"
+    video_popup_wrapper.style.animation = "slide_left 1s ease-in forwards"
 
- })
+  })
 
 
   //***SCRIPT OF DONATE POPUP */
@@ -278,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       donate_popup.style.animation = "fade_in 1s ease-in forwards"
       donate_wrapper.style.animation = "slide_right 1s ease-in forwards"
-  
+
     })
   })
   donate_popup_close.addEventListener("click", () => {
@@ -503,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
   lightbox_close_button.addEventListener("click", () => {
     lightbox_popup.style.animation = "fade_out 1s ease-in forwards";
     lightbox_inner.style.animation = "slide_left 1s ease-in forwards";
-    document.body.style.overflow="revert-layer"
+    document.body.style.overflow = "revert-layer"
 
   })
 
@@ -511,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
     image.addEventListener("click", () => {
       lightbox_popup.style.animation = "fade_in 1s ease-in forwards";
       lightbox_inner.style.animation = "slide_right 1s ease-in forwards";
-    document.body.style.overflow="hidden";
+      document.body.style.overflow = "hidden";
       lightbox_selected_image.src = image.src;
       gallery_image_download.href = image.src
       lightbox_image_headline.textContent = image_headlines[index]
@@ -527,30 +529,30 @@ document.addEventListener('DOMContentLoaded', () => {
     disable: 'mobile'
   });
 
-  
+
 
   //**========================BOTTOM TO TOP BUTTON HANDLER ===========================*/
 
-let calcScrollValue = () => {
-  let scrollProgress = document.getElementById("progress");
-  let progressValue = document.getElementById("progress-value");
-  let pos = document.documentElement.scrollTop;
-  let calcHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrollValue = Math.round((pos * 100) / calcHeight);
-  if (pos > 100) {
-    scrollProgress.style.display = "grid";
-  } else {
-    scrollProgress.style.display = "none";
-  }
-  scrollProgress.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-  scrollProgress.style.background = `conic-gradient(#F74F22 ${scrollValue}%, #ededed ${scrollValue}%)`;
-};
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
+  let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    if (pos > 100) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
+    });
+    scrollProgress.style.background = `conic-gradient(#F74F22 ${scrollValue}%, #ededed ${scrollValue}%)`;
+  };
+  window.onscroll = calcScrollValue;
+  window.onload = calcScrollValue;
 
   //**========================SWIPER SCRIPTS ===========================*/
 
@@ -612,7 +614,7 @@ window.onload = calcScrollValue;
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      
+
     },
   });
   var cause_slider2 = new Swiper(".cause_slider2", {
@@ -706,7 +708,7 @@ window.onload = calcScrollValue;
       prevEl: ".swiper-button-prev_ds",
     },
     breakpoints: {
-      400:{
+      400: {
         slidesPerView: 2,
         spaceBetween: 10,
       },

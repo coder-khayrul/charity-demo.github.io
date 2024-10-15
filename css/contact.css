@@ -1552,7 +1552,7 @@ section.mobile_search_popup .mobile_search_wrapper .single_item ul.category_cont
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     visibility: hidden;
     opacity: 0;
 }
@@ -1907,7 +1907,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 9999;
     visibility: hidden;
     opacity: 0;
 }
