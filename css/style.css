@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-* {
+* , figure, figcaption{
     margin: 0;
     padding: 0;
     font-family: "Nunito Sans", sans-serif;
@@ -1676,7 +1676,7 @@ section.mobile_search_popup .mobile_search_wrapper .single_item ul.category_cont
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     visibility: hidden;
     opacity: 0;
 }
@@ -2026,7 +2026,7 @@ input[type="number"]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 9999;
     visibility: hidden;
     opacity: 0;
 }
@@ -3004,7 +3004,7 @@ section.event_section .upc_highlight .upc_highlight_event .upc_h_info {
 }
 
 .upc_h_info>a:hover h3 {
-    color: var(--accent-color);
+    color: var(--text-color);
     transition: .6s;
 }
 
@@ -3609,7 +3609,7 @@ article.single_blog_card:hover {
     font-size: 15px;
     line-height: 1.5rem;
     color: var(--body-text-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .blog_card_image {
@@ -4402,6 +4402,14 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 500px) {
+    section.mobile_search_popup .mobile_search_wrapper, .donation_popup .donation_wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    section.mobile_search_popup .mobile_search_wrapper{
+        padding-top: 60px;
+    }
     .gallery_section {
         padding: 50px 0;
     }
@@ -4412,7 +4420,7 @@ footer {
     }
 
     section.hero_section .single_hero_slider .slider_left .slider_button_container {
-        gap: 20px;
+        gap: 40px;
     }
 
     .preloader_text span:hover {
@@ -4457,6 +4465,17 @@ footer {
 /**Responsive styles for screens with a maximum width of 500px**/
 
 @media only screen and (max-width: 400px) {
+    .upc_h_info>a h3 {
+        font-size: 18px;
+    }
+    
+    .upc_date .upcommein_base h2 {
+        font-size: 12px;
+    }
+    
+    .upc_date b {
+        font-size: 15px;
+    }
     section.hero_section .single_hero_slider .slider_left>h2 {
         font-size: 33px;
     }

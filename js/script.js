@@ -228,14 +228,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const volunteer_popup = document.querySelector(".volunteer_popup")
   const volunteer_wrapper = document.querySelector(".volunteer_wrapper")
   const volunteer_popup_close = document.querySelector(".volunteer_close")
-  const volunteer_popup_open = document.querySelector(".volunteer_btn ")
+  const volunteer_popup_open = document.querySelectorAll(".volunteer_btn ")
 
-  volunteer_popup_open.addEventListener("click", () => {
+  volunteer_popup_open.forEach(volunteer_btn => {
+    volunteer_btn.addEventListener("click", () => {
 
-    volunteer_popup.style.animation = "fade_in 1s ease-in forwards"
-    volunteer_wrapper.style.animation = "slide_right 1s ease-in forwards"
-
+      volunteer_popup.style.animation = "fade_in 1s ease-in forwards"
+      volunteer_wrapper.style.animation = "slide_right 1s ease-in forwards"
+  
+    })
   })
+  
   volunteer_popup_close.addEventListener("click", () => {
 
     volunteer_popup.style.animation = "fade_out 1s ease-in forwards"
@@ -268,13 +271,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const donate_popup = document.querySelector(".donation_popup")
   const donate_wrapper = document.querySelector(".donation_wrapper")
   const donate_popup_close = document.querySelector(".d_popup_close")
-  const donate_popup_open = document.querySelector(".donate_btn")
+  const donate_popup_open = document.querySelectorAll(".donate_btn")
 
-  donate_popup_open.addEventListener("click", () => {
+  donate_popup_open.forEach(donate_btn => {
+    donate_btn.addEventListener("click", () => {
 
-    donate_popup.style.animation = "fade_in 1s ease-in forwards"
-    donate_wrapper.style.animation = "slide_right 1s ease-in forwards"
-
+      donate_popup.style.animation = "fade_in 1s ease-in forwards"
+      donate_wrapper.style.animation = "slide_right 1s ease-in forwards"
+  
+    })
   })
   donate_popup_close.addEventListener("click", () => {
 
@@ -496,8 +501,9 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
   lightbox_close_button.addEventListener("click", () => {
-    lightbox_popup.style.animation = "fade_out 1s ease-in forwards"
-    lightbox_inner.style.animation = "slide_left 1s ease-in forwards"
+    lightbox_popup.style.animation = "fade_out 1s ease-in forwards";
+    lightbox_inner.style.animation = "slide_left 1s ease-in forwards";
+    document.body.style.overflow="revert-layer"
 
   })
 
@@ -505,6 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
     image.addEventListener("click", () => {
       lightbox_popup.style.animation = "fade_in 1s ease-in forwards";
       lightbox_inner.style.animation = "slide_right 1s ease-in forwards";
+    document.body.style.overflow="hidden";
       lightbox_selected_image.src = image.src;
       gallery_image_download.href = image.src
       lightbox_image_headline.textContent = image_headlines[index]

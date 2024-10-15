@@ -2458,7 +2458,7 @@ article.single_blog_card:hover {
     font-size: 15px;
     line-height: 1.5rem;
     color: var(--body-text-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .blog_card_image {
     width: 100%;
