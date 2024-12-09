@@ -1,0 +1,217 @@
+/*font-family links*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* , figure, figcaption{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Quicksand", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #fff;
+    --size: 120px;
+    --secondary-color: #FFAC00;
+    --sub-bg-color: hsl(40, 100%, 92%);
+    --accent-color: #F74F22;
+    --border-color: #f0f0f0;
+    --text-color: #333;
+    --body-text-color: #666;
+    --popup-bg: #00000070;
+    --flag-image: url("https://flagsapi.com/US/flat/32.png");
+}
+
+::selection {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.header_wrapper {
+    padding-block: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_right > ul> li > a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .6s;
+}
+
+.header_right > ul {
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    flex-wrap: wrap;
+}
+.header_right > ul> li > a:hover {
+    color: var(--accent-color);
+    transition: .6s;
+}
+.mobile_menu_wrapper > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    gap: 15px;
+}
+
+.mobile_menu_wrapper > ul > li > a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .6s;
+}
+
+.mobile_menu_wrapper > ul > li > a:hover {
+    color: var(--accent-color);
+    transition: .6s;
+}
+
+.mobile_menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: end;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mobile_menu .mobile_menu_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--popup-bg);
+    opacity: 1;
+    transition: .6s;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+}
+
+.mobile_menu_wrapper {
+    width: 310px;
+    height: 100%;
+    background: var(--primary-color);
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .6s;
+}
+
+.mobile_menu_wrapper .menu_close_btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.mobile_menu_wrapper .menu_close_btn:hover > svg {
+    rotate: 180deg;
+    transition: .6s;
+}
+/* Open Moblie Menu Style */
+.mobile_menu.menu_open{
+    visibility: visible;
+    opacity: 1;
+    transition: .6s;
+}
+
+.mobile_menu.menu_open .mobile_menu_wrapper {
+    transform: translateX(0%);
+    transition: .6s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile_menu.menu_open .mobile_menu_bg {
+    opacity: 1;
+    visibility: visible;
+    transition: .6s;
+}
+/* Close Moblie Menu Style */
+.mobile_menu.menu_close{
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s;
+}
+.mobile_menu.menu_close .mobile_menu_wrapper {
+    transform: translateX(100%);
+    transition: .6s;
+    opacity: 0;
+    visibility: hidden;
+}
+.mobile_menu.menu_close .mobile_menu_bg {
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+}
+/**************************************/
+.mobile_menu_btn {
+    width: 45px;
+    height: 45px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 18px;
+    cursor: pointer;
+    transition: .6s;
+    border: 1px solid transparent;
+}
+
+.mobile_menu_btn:hover {
+    color: var(--accent-color);
+    transition: .6s;
+    background: var(--primary-color);
+    border-color: var(--accent-color);
+}
+
+/*** Coder For Reasponsive Screen ***/
+
+@media only screen and (max-width: 1024px) {
+    .header_right > ul {
+        display: none;
+    }
+    .mobile_menu_btn {
+        display: grid;
+    }
+}
