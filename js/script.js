@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let secValue = document.querySelectorAll(".sec");
 
   // Set the date you're counting down to (replace with your desired date)
-  const countdownDate = new Date("Dec 10, 2024 04:04:40").getTime();
+  const countdownDate = new Date("May 10, 2025 04:04:40").getTime();
 
   // Update the countdown every 1 second
   const countdownInterval = setInterval(function () {

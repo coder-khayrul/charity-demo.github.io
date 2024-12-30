@@ -3714,7 +3714,7 @@ section.blog_section {
 
 .gallery_lightbox {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: fixed;
     display: flex;
     align-items: center;
@@ -3914,7 +3914,7 @@ section.contact_section {
     color: var(--primary-color);
     font-size: 16px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid var(--accent-color);
     margin-top: 15px;
 }

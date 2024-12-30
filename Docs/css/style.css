@@ -45,6 +45,32 @@ a {
     color: var(--primary-color);
 }
 
+header {
+    z-index: 99;
+    position: relative;
+    background: var(--primary-color);
+}
+
+/*/sticky header style */
+header.sticky_animation {
+    position: sticky;
+    top: 0;
+    transform: translate(0px, 20px);
+    animation: sticky_anim 1s alternate forwards ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+@keyframes sticky_anim {
+    0% {
+        transform: translate(0px, -110px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
 .header_wrapper {
     padding-block: 15px;
     display: flex;
